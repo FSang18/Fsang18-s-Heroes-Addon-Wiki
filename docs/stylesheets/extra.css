@@ -145,6 +145,21 @@
   }
 }
 
+/* ===== Sub-pages sit under their parent, indented ===== */
+@media screen and (min-width: 60em) {
+  /* Material wraps an opened section's link in an extra box; it must not get padding too */
+  .md-sidebar--primary .md-nav--primary > .md-nav__list > .md-nav__item > .md-nav__container {
+    padding: 0 !important;
+    min-height: 0 !important;
+  }
+  /* children start exactly under the parent's text:
+     link padding (.6rem) + icon size + icon gap (.55rem) + Material's own gap (.4rem).
+     If you change the icon size above (clamp(1.2rem, ..., 1.7rem)), change it here too. */
+  .md-sidebar--primary .md-nav--primary > .md-nav__list > .md-nav__item > .md-nav > .md-nav__list {
+    padding-left: calc(.6rem + clamp(1.2rem, calc(var(--row) * .55), 1.7rem) + .55rem + .4rem) !important;
+  }
+}
+
 /* ---------- Home page ---------- */
 .hero { text-align: center; padding: 1.2rem 0 .4rem; }
 .hero img { width: 220px; max-width: 60%; }
