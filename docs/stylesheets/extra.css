@@ -181,3 +181,32 @@
 
 .md-copyright { width: 100%; text-align: center; }
 .md-copyright a { text-decoration: underline; }
+
+/* ===== Sidebar: fit every main entry without scrolling ===== */
+@media screen and (min-width: 60em) {
+  .md-sidebar--primary {
+    width: 17rem;
+    /* row height adapts to the window height; the 13 is the number of top-level entries */
+    --row: clamp(1.8rem, calc((100vh - 13.5rem) / 13), 2.5rem);
+  }
+  /* Material keeps the menu column narrow; let it use the full sidebar width */
+  .md-sidebar--primary .md-sidebar__inner {
+    padding-right: 0 !important;
+  }
+  .md-sidebar--primary .md-nav--primary > .md-nav__list > .md-nav__item > .md-nav__link,
+  .md-sidebar--primary .md-nav--primary > .md-nav__list > .md-nav__item > .md-nav__container > .md-nav__link {
+    display: flex !important;
+    align-items: center !important;
+    min-height: var(--row) !important;
+    padding: 0 .6rem !important;
+    margin-top: 0 !important;
+    font-size: clamp(.8rem, calc(var(--row) * .42), .95rem) !important;
+    line-height: 1.2 !important;
+  }
+  .md-sidebar--primary .md-nav--primary > .md-nav__list > .md-nav__item > .md-nav__link::before,
+  .md-sidebar--primary .md-nav--primary > .md-nav__list > .md-nav__item > .md-nav__container > .md-nav__link::before {
+    width: clamp(1rem, calc(var(--row) * .55), 1.35rem) !important;
+    height: clamp(1rem, calc(var(--row) * .55), 1.35rem) !important;
+    margin-right: .55rem !important;
+  }
+}
