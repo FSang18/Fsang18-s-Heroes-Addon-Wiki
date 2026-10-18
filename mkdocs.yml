@@ -779,3 +779,7 @@ nav:
   - villagers/index.md
   - Scientist: villagers/scientist.md
   - Wizard: villagers/wizard.md
+
+extra:
+  version:
+    provider: mike
