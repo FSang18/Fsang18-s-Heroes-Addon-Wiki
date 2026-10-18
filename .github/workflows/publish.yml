@@ -32,7 +32,6 @@ jobs:
         run: mkdocs build
         env:
           SITE_URL: https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/
-          REPO_URL: https://github.com/${{ github.repository }}
           EDIT_URI: edit/main/docs/
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
