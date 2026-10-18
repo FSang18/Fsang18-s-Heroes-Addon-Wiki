@@ -116,7 +116,14 @@
   background-color: var(--nav-bg, var(--y-deep));
 }
 
-  /* Material keeps the menu column narrow; let it use the full sidebar width */
+/* ===== Sidebar: fit every main entry without scrolling ===== */
+@media screen and (min-width: 60em) {
+  .md-sidebar--primary {
+    width: 17rem;
+    /* row height adapts to the window height; the 13 is the number of top-level entries */
+    --row: clamp(1.8rem, calc((100vh - 13.5rem) / 13), 2.5rem);
+  } 
+/* Material keeps the menu column narrow; let it use the full sidebar width */
   .md-sidebar--primary .md-sidebar__inner {
     padding-right: 0 !important;
   }
