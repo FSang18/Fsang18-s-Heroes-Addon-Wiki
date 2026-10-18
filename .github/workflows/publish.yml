@@ -1,49 +1,39 @@
 name: Publish wiki
 
-# Runs every time something is changed on the "main" branch (an edit made on github.com counts),
-# builds the website and publishes it to GitHub Pages. Nothing to configure.
 on:
   push:
     branches: [main]
-  workflow_dispatch:      # also lets you press "Run workflow" by hand
+  workflow_dispatch:
 
 permissions:
-  contents: read
-  pages: write
-  id-token: write
+  contents: write
 
 concurrency:
   group: pages
   cancel-in-progress: true
 
 jobs:
-  build:
+  deploy:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
           cache: pip
-      - run: pip install -r requirements.txt
+      - run: pip install -r requirements.txt mike
       - name: Build the menu from the files
         run: python tools/make_nav.py
-      - name: Build the website
-        run: mkdocs build
+      - name: Git identity
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+      - name: Publish version 1.20.1
+        run: |
+          mike deploy --push 1.20.1
+          mike set-default --push 1.20.1
         env:
           SITE_URL: https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/
           EDIT_URI: edit/main/docs/
-      - uses: actions/configure-pages@v5
-      - uses: actions/upload-pages-artifact@v3
-        with:
-          path: site
-
-  deploy:
-    needs: build
-    runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    steps:
-      - id: deployment
-        uses: actions/deploy-pages@v4
