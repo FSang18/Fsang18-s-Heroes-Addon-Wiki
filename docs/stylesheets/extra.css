@@ -39,11 +39,11 @@
 .md-typeset h1, .md-typeset h2 { border-bottom: 2px solid var(--y); padding-bottom: .25em; }
 
 /* ---------- Wider page + bigger sidebar ---------- */
-.md-grid { max-width: 82rem; }
+.md-grid { max-width: 90rem; }
 @media screen and (min-width: 60em) {
   .md-sidebar--primary { width: 16.5rem; }
 }
-.md-sidebar--primary .md-nav { font-size: .85rem; line-height: 1.35; }
+.md-sidebar--primary .md-nav { font-size: .95rem; line-height: 1.4; }
 
 /* sub-pages: soft grey, yellow when active or hovered */
 .md-nav__link { color: var(--md-default-fg-color--light); }
@@ -119,9 +119,9 @@
 /* ===== Sidebar: fit every main entry without scrolling ===== */
 @media screen and (min-width: 60em) {
   .md-sidebar--primary {
-    width: 17rem;
+    width: 19rem;
     /* row height adapts to the window height; the 13 is the number of top-level entries */
-    --row: clamp(1.8rem, calc((100vh - 13.5rem) / 13), 2.5rem);
+    --row: clamp(2.2rem, calc((100vh - 13.5rem) / 13), 3rem);
   } 
 /* Material keeps the menu column narrow; let it use the full sidebar width */
   .md-sidebar--primary .md-sidebar__inner {
@@ -134,13 +134,13 @@
     min-height: var(--row) !important;
     padding: 0 .6rem !important;
     margin-top: 0 !important;
-    font-size: clamp(.8rem, calc(var(--row) * .42), .95rem) !important;
+    font-size: clamp(.95rem, calc(var(--row) * .42), 1.15rem) !important;
     line-height: 1.2 !important;
   }
   .md-sidebar--primary .md-nav--primary > .md-nav__list > .md-nav__item > .md-nav__link::before,
   .md-sidebar--primary .md-nav--primary > .md-nav__list > .md-nav__item > .md-nav__container > .md-nav__link::before {
-    width: clamp(1rem, calc(var(--row) * .55), 1.35rem) !important;
-    height: clamp(1rem, calc(var(--row) * .55), 1.35rem) !important;
+    width: clamp(1.2rem, calc(var(--row) * .55), 1.7rem) !important;
+    height: clamp(1.2rem, calc(var(--row) * .55), 1.7rem) !important;
     margin-right: .55rem !important;
   }
 }
