@@ -1,13 +1,23 @@
 (function () {
-  // small style tweaks so the dropdown still looks right in its new spot
   var style = document.createElement("style");
   style.textContent =
-    ".md-header__inner > .md-version{position:relative;}" +
-    ".md-header__inner > .md-version .md-version__current{margin:0 .4rem;}" +
-    ".md-header__inner > .md-version .md-version__list{right:0;}";
+    ".md-header__inner > .md-version{" +
+    "order:98 !important;" +
+    "margin-left:auto !important;" +
+    "margin-right:.6rem !important;" +
+    "align-self:center !important;" +
+    "display:flex !important;" +
+    "align-items:center !important;" +
+    "position:relative;" +
+    "}" +
+    ".md-header__inner > .md-version .md-version__current{margin:0 .4rem !important;}" +
+    ".md-header__inner > .md-version .md-version__list{left:auto !important;right:0 !important;}" +
+    '.md-header__inner > [data-md-component="palette"]{' +
+    "order:99 !important;" +
+    "margin-left:0 !important;" +
+    "}";
   document.head.appendChild(style);
 
-  // move the version selector next to the theme switcher
   function place() {
     var inner = document.querySelector(".md-header__inner");
     var fresh = document.querySelector(".md-header .md-version");
@@ -20,7 +30,6 @@
     else inner.appendChild(fresh);
   }
 
-  // the selector is created after the page loads, and again on page changes
   new MutationObserver(place).observe(document.body, {
     childList: true,
     subtree: true,
