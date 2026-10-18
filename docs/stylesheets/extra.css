@@ -178,3 +178,6 @@
   transform: translateY(-2px);
   box-shadow: 0 .4rem 1.2rem rgba(0, 0, 0, .35);
 }
+
+.md-copyright { width: 100%; text-align: center; }
+.md-copyright a { text-decoration: underline; }
