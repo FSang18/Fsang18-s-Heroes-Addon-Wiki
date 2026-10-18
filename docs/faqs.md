@@ -16,19 +16,15 @@ A. They can spawn under Heart-Shaped herbs which can spawn anywhere in the overw
 
 # Q. Where can I find [Uru Ore](blocks/ores/uru.md)?
 
-A. It spawns naturally in any biome between Y=-40 and Y=-10)
+A. Uru Ore can be found in [Mjolnir Crashsite's](structures/mjolnir-crashsite.md).
 
 # Q. How can I charge RF?
 
-A. You can use various different mods. Some examples are: [Create: Crafts & Additions](https://www.curseforge.com/minecraft/mc-mods/createaddition/files/all?page=1&pageSize=20&version=1.20.1), [Powah](https://www.curseforge.com/minecraft/mc-mods/powah-rearchitected/files/all?page=1&pageSize=20&version=1.20.1), [Mekanism](https://www.curseforge.com/minecraft/mc-mods/mekanism/files/all?page=1&pageSize=20&version=1.20.1), [Mekanism generators](https://www.curseforge.com/minecraft/mc-mods/mekanism-generators/files/all?page=1&pageSize=20&version=1.20.1).
-
-# Q. My ability doesn't seem to work on 10.1.0 for things like Radiant Black, Speedsters, Mutants Web Shooters, etc. what do I do?
-
-A. For the moment, if you have Herotime, Gravecore and/or NBC Heroes installed, remove them, load up your save with just my addon, then save / quit and re-add any other addon you'd like.
+A. You can use [RF Charger](blocks/rf-charger.md) in the base mod or use various different mods. Some examples are: [Create: Crafts & Additions](https://www.curseforge.com/minecraft/mc-mods/createaddition/files/all?page=1&pageSize=20&version=1.20.1), [Powah](https://www.curseforge.com/minecraft/mc-mods/powah-rearchitected/files/all?page=1&pageSize=20&version=1.20.1), [Mekanism](https://www.curseforge.com/minecraft/mc-mods/mekanism/files/all?page=1&pageSize=20&version=1.20.1), [Mekanism generators](https://www.curseforge.com/minecraft/mc-mods/mekanism-generators/files/all?page=1&pageSize=20&version=1.20.1).
 
 # Q. How do I access the Official Server?
 
-A. Currently, the official server is not released to the public. An announcement will be made when it is.
+A. You can join our [Discord](https://discord.com/invite/BThgxXpBVs) server and acces the Official Server.
 
 # Q. How do I remove my powers?
 
@@ -44,7 +40,7 @@ A. You’ll need to craft an “[Artificial Symbiote](powers/secondary-powers/sy
 
 # Q. How do I remove a [Symbiote](powers/secondary-powers/symbiotes/index.md)?
 
-A. If you craft a “Symbiote Container” and right click it, you can store whatever Symbiote you currently have in the container. Right clicking a filled container will re-implant the Symbiote in you.
+A. If you craft a “[Symbiote Container](items/symbiote-container.md)” and right click it, you can store whatever Symbiote you currently have in the container. Right clicking a filled container will re-implant the Symbiote in you.
 
 # Q. How do I get rid of the Syringe cooldown?
 
@@ -58,11 +54,7 @@ A. After crafting, it goes into the curios/trinkets slot, then you need an [Arc 
 
 A. With an empty offhand, crouch and right click an [empty syringe](items/empty-syringe.md).
 
-# Q. How do I change the color of my [Speedforce](powers/main-powers/speedforce/index.md) trail?
 
-A. "/scoreboard players set @s SpeedsterTrail #"
-
-# Q. How do I change the color of my [Teleportation](powers/main-powers/mutations-x-gene/teleportation.md) skin color?
 
 A. "/scoreboard players set @s X_Gene #" (1 or 50)
 
