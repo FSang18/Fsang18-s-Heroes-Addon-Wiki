@@ -22,9 +22,22 @@ A. Uru Ore can be found in [Mjolnir Crashsite's](structures/mjolnir-crashsite.md
 
 A. You can use [RF Charger](blocks/rf-charger.md) in the base mod or use various different mods. Some examples are: [Create: Crafts & Additions](https://www.curseforge.com/minecraft/mc-mods/createaddition/files/all?page=1&pageSize=20&version=1.20.1), [Powah](https://www.curseforge.com/minecraft/mc-mods/powah-rearchitected/files/all?page=1&pageSize=20&version=1.20.1), [Mekanism](https://www.curseforge.com/minecraft/mc-mods/mekanism/files/all?page=1&pageSize=20&version=1.20.1), [Mekanism generators](https://www.curseforge.com/minecraft/mc-mods/mekanism-generators/files/all?page=1&pageSize=20&version=1.20.1).
 
+# Q. What is the strongest / best power/variant?
+
+A. There’s not one “best” there are pros and cons for every power. In terms of base raw damage output, Worldbreaker Hulk has the most base damage.
+
+# Q. How can i gain Skill Points Experience?
+
+A. You gain them overtime, killing mobs, using abilities. You can find more detailed information in the [Skill Point System](skill-point-system.md) Page.
+
 # Q. How do I access the Official Server?
 
 A. You can join our [Discord](https://discord.com/invite/BThgxXpBVs) server and acces the Official Server.
+
+# Q. "I can't see the crafting recipe of x Iron Man Armor?"
+
+A. Iron Man Suit's are unlocked upon progress. You need to start crafting them from Model 1 up to which suit you want. The recipe unlocks are tied to advancements, you can see your progress there. You can cheat in your way by giving yourself Iron Man advancements.
+
 
 # Q. How do I remove my powers?
 
@@ -42,7 +55,7 @@ A. You’ll need to craft an “[Artificial Symbiote](powers/secondary-powers/sy
 
 A. If you craft a “[Symbiote Container](items/symbiote-container.md)” and right click it, you can store whatever Symbiote you currently have in the container. Right clicking a filled container will re-implant the Symbiote in you.
 
-# Q. How do I get rid of the Syringe cooldown?
+# Q. How do I get rid of the Syringe/Container cooldown?
 
 A. As of version 9.0.0 there is a config for item cooldowns and symbiote cooldowns. Alternatively you can use the command: "/FSang.gamerule item/symbiote true/false" to disable the cooldown, however on launch, your game will always default to whatever your config is set to.
 
@@ -58,6 +71,9 @@ A. With an empty offhand, crouch and right click an [empty syringe](items/empty-
 
 A. "/scoreboard players set @s X_Gene #" (1 or 50)
 
-# Q. Can I increase my age as a [Viltrumite](powers/main-powers/viltrumites/index.md) with commands?
+# Q. Can I keep / increase my age as a [Viltrumite](powers/main-powers/viltrumites/index.md) or as a Asgardian with commands?
 
-A. "/scoreboard players set @s FSang.Viltrumite.Age #"
+A. You can not keep your age on death, theres no config for that.
+
+B. "/FSang.Age set #"
+This command can work with any power that uses an Age-based system to set their age to whatever you replace # with.
