@@ -11,6 +11,8 @@ copyright: >-
 
 extra:
   generator: false
+  version:
+    provider: mike
 
 theme:
   name: material
