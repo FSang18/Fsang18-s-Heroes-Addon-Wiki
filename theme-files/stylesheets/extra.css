@@ -5,6 +5,12 @@
   --y-deep: #8a6500;     /* yellow dark enough to read on white */
 }
 
+/* Make the outlined buttons readable in dark mode */
+[data-md-color-scheme="slate"] .md-typeset .md-button:not(.md-button--primary):not(:hover):not(:focus) {
+  color: #eecd95;
+  border-color: #eecd95;
+}
+
 /* ---------- Dark mode: black + white + yellow ---------- */
 [data-md-color-scheme="slate"] {
   --md-default-bg-color: #0b0b0b;
