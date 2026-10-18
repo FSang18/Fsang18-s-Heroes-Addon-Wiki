@@ -1,0 +1,41 @@
+---
+title: "Mutations (X Gene)"
+---
+
+# Mutations (X Gene)
+
+These mutations are obtained via being exposed to the X-gene. After Crafting the X-Gene item, the user would need to right click it to be given a random Mutation power from the list below. The rate at which a power can be obtained is determined by it's tier in the [Full Powers Tier List](../../full-power-tier-list.md) so lower tier Mutations are more common than the higher tier mutations.
+
+- [Bone Claws](bone-claws/index.md)
+- [Chronokinesis](chronokinesis.md)
+- [Cryokinesis](cryokinesis.md)
+- [Electrokinesis](electrokinesis.md)
+- [En Sabah Nur](total-molecular-control.md)
+- [Energy Manipulation](energy-manipulation.md)
+- [Eyes](eyes.md)
+- [Face Change](face-change.md)
+- [Forgetmenot](forgetmenot.md)
+- [Invisibility](invisibility.md)
+- [Kinetic Energy Conversion](kinetic-energy-conversion.md)
+- [Luck](luck.md)
+- [Lupine](lupine.md)
+- [Magnetism](magnetism.md)
+- [Metal Mimicry](metal-mimicry/index.md)
+- [Mimicry](mimicry.md)
+- [Optical Beam](optical-beam.md)
+- [Phasing](phasing.md)
+- [Plasma Energy Conversion](plasma-energy-conversion.md)
+- [Pyrokinesis](pyrokinesis.md)
+- [Reality Warping](reality-warping.md)
+- [Regenerative Healing](regenerative-healing.md)
+- [Self Detonation](self-detonation.md)
+- [Size Manipulation](size-manipulation.md)
+- [Sonic Sound Manipulation](sonic-sound-manipulation.md)
+- [Speed](speed.md)
+- [Superior Adaptation](superior-adaptation.md)
+- [Triple Face](triple-face.md)
+- [Telekinesis](telekinesis.md)
+- [Telepathy](telepathy.md)
+- [Teleportation](teleportation.md)
+- [Weather Manipulation](weather-manipulation.md)
+- [Winged Flight](winged-flight.md)

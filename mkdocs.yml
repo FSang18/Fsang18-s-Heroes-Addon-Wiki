@@ -1,0 +1,781 @@
+site_name: FSang18's Heroes Addon Wiki
+site_description: The official wiki for FSang18's Heroes Addon - powers, suitsets, items, blocks, structures, commands and more.
+site_url: !ENV [SITE_URL, ""]
+repo_url: !ENV [REPO_URL, ""]
+edit_uri: !ENV [EDIT_URI, ""]
+copyright: FSang18's Heroes Addon Wiki - fan documentation, maintained by Werkiax
+
+theme:
+  name: material
+  logo: uploads/2703a3f0b163b13baac62a9fe5115772/logo_big.png
+  favicon: uploads/2703a3f0b163b13baac62a9fe5115772/logo_big.png
+  palette:
+    - scheme: slate
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/weather-night
+        name: Switch to light mode
+    - scheme: default
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to dark mode
+  features:
+    - navigation.instant
+    - navigation.prune
+    - navigation.indexes
+    - navigation.top
+    - navigation.tracking
+    - search.suggest
+    - search.highlight
+    - toc.follow
+    - content.action.edit
+
+extra_css:
+  - stylesheets/extra.css
+
+plugins:
+  - search
+
+markdown_extensions:
+  - attr_list
+  - md_in_html
+  - tables
+  - admonition
+  - nl2br
+  - toc:
+      permalink: false
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - mdx_truly_sane_lists:
+      nested_indent: 2
+      truly_sane: true
+
+validation:
+  links:
+    not_found: warn
+    absolute_links: ignore
+    unrecognized_links: ignore
+
+nav:
+- Home: index.md
+- Installation:
+  - installation/index.md
+  - Fabric: installation/fabric.md
+  - Forge: installation/forge.md
+- FAQs: faqs.md
+- Commands: commands.md
+- Powers:
+  - powers/index.md
+  - Combat Techniques:
+    - powers/combat-techniques/index.md
+    - Combat Specialist Brute: powers/combat-techniques/combat-specialist-brute.md
+    - Combat Specialist Martial Artist: powers/combat-techniques/combat-specialist-martial-artist.md
+    - Combat Specialist Stealth: powers/combat-techniques/combat-specialist-stealth.md
+  - Full Power Tier List: powers/full-power-tier-list.md
+  - Main Powers:
+    - powers/main-powers/index.md
+    - Amazons:
+      - powers/main-powers/amazon/index.md
+      - Demigod: powers/main-powers/amazon/demigod.md
+      - Warrior: powers/main-powers/amazon/warrior.md
+    - Anti Matter: powers/main-powers/anti-matter.md
+    - Arachnids:
+      - powers/main-powers/arachnids/index.md
+      - Cindy Moon: powers/main-powers/arachnids/cindy-moon.md
+      - Jessica Drew: powers/main-powers/arachnids/jessica-drew.md
+      - Kaine Parker: powers/main-powers/arachnids/kaine-parker.md
+      - Miguel O'Hara: powers/main-powers/arachnids/miguel-ohara.md
+      - Miles Morales: powers/main-powers/arachnids/miles-morales.md
+      - Peter Parker: powers/main-powers/arachnids/peter-parker.md
+    - Artificial Necrotech: powers/main-powers/artificial-necrotech.md
+    - Asgardians:
+      - powers/main-powers/asgardians/index.md
+      - Asgardian (Angel): powers/main-powers/asgardians/asgardian-angel.md
+      - Asgardian (Gatekeeper): powers/main-powers/asgardians/asgardian-gatekeeper.md
+      - Asgardian (Golden): powers/main-powers/asgardians/asgardian-golden.md
+    - Atlanteans:
+      - powers/main-powers/atlanteans/index.md
+      - Ichthyoid: powers/main-powers/atlanteans/ichthyoid.md
+      - Royal: powers/main-powers/atlanteans/royal.md
+      - Siren: powers/main-powers/atlanteans/siren.md
+      - Wright: powers/main-powers/atlanteans/wright.md
+    - Cosmic Radiated Individuals:
+      - powers/main-powers/cosmic-radiated-individuals/index.md
+      - Light Manipulation: powers/main-powers/cosmic-radiated-individuals/light-manipulation.md
+      - Pyrogenesis: powers/main-powers/cosmic-radiated-individuals/pyrogenesis.md
+    - Cursed Users:
+      - powers/main-powers/cursed-users/index.md
+      - Boogie Woogie: powers/main-powers/cursed-users/boogie-woogie.md
+    - Czarnian: powers/main-powers/czarnian.md
+    - Extremis: powers/main-powers/extremis.md
+    - Hell Spawn: powers/main-powers/hell-spawn.md
+    - Hulks:
+      - powers/main-powers/hulks/index.md
+      - Controlled Hulk: powers/main-powers/hulks/hulk-controlled.md
+      - Red Hulk: powers/main-powers/hulks/hulk-red.md
+      - World Breaker Hulk: powers/main-powers/hulks/hulk-world-breaking.md
+    - Kree Hybrid: powers/main-powers/kree-hybrid.md
+    - Kryptonians (Full):
+      - powers/main-powers/kryptonians-full/index.md
+      - Adventures: powers/main-powers/kryptonians-full/adventures.md
+      - CW: powers/main-powers/kryptonians-full/cw.md
+      - DCEU: powers/main-powers/kryptonians-full/dceu.md
+    - Kryptonians (Half):
+      - powers/main-powers/kryptonians-half/index.md
+      - Kryptonian (Young Justice): powers/main-powers/kryptonians-half/kryptonian-young-justice.md
+      - Tactile Telekinesis: powers/main-powers/kryptonians-half/tactile-telekinesis.md
+    - Martians:
+      - powers/main-powers/martians/index.md
+      - Green Martian: powers/main-powers/martians/green-martian.md
+    - Matter Absorption: powers/main-powers/matter-absorption.md
+    - Meta Humans:
+      - powers/main-powers/meta-humans/index.md
+      - Geokinesis: powers/main-powers/meta-humans/geokinesis.md
+    - Mutations (X Gene):
+      - powers/main-powers/mutations-x-gene/index.md
+      - Bone Claws:
+        - powers/main-powers/mutations-x-gene/bone-claws/index.md
+        - Daken: powers/main-powers/mutations-x-gene/bone-claws/daken.md
+        - Laura: powers/main-powers/mutations-x-gene/bone-claws/laura.md
+        - Logan: powers/main-powers/mutations-x-gene/bone-claws/logan.md
+      - Chronokinesis: powers/main-powers/mutations-x-gene/chronokinesis.md
+      - Cryokinesis: powers/main-powers/mutations-x-gene/cryokinesis.md
+      - Electrokinesis: powers/main-powers/mutations-x-gene/electrokinesis.md
+      - Energy Manipulation: powers/main-powers/mutations-x-gene/energy-manipulation.md
+      - Eyes: powers/main-powers/mutations-x-gene/eyes.md
+      - Face Change: powers/main-powers/mutations-x-gene/face-change.md
+      - Forgetmenot: powers/main-powers/mutations-x-gene/forgetmenot.md
+      - Invisibility: powers/main-powers/mutations-x-gene/invisibility.md
+      - Kinetic Energy Conversion: powers/main-powers/mutations-x-gene/kinetic-energy-conversion.md
+      - Luck: powers/main-powers/mutations-x-gene/luck.md
+      - Lupine: powers/main-powers/mutations-x-gene/lupine.md
+      - Magnetism: powers/main-powers/mutations-x-gene/magnetism.md
+      - Metal Mimicry:
+        - powers/main-powers/mutations-x-gene/metal-mimicry/index.md
+        - Organic Diamond: powers/main-powers/mutations-x-gene/metal-mimicry/organic-diamond.md
+        - Organic Steel: powers/main-powers/mutations-x-gene/metal-mimicry/organic-steel.md
+      - Mimicry: powers/main-powers/mutations-x-gene/mimicry.md
+      - Optical Beam: powers/main-powers/mutations-x-gene/optical-beam.md
+      - Phasing: powers/main-powers/mutations-x-gene/phasing.md
+      - Plasma Energy Conversion: powers/main-powers/mutations-x-gene/plasma-energy-conversion.md
+      - Power Negation: powers/main-powers/mutations-x-gene/power-negation.md
+      - Pyrokinesis: powers/main-powers/mutations-x-gene/pyrokinesis.md
+      - Reality Warping: powers/main-powers/mutations-x-gene/reality-warping.md
+      - Regenerative Healing: powers/main-powers/mutations-x-gene/regenerative-healing.md
+      - Self Detonation: powers/main-powers/mutations-x-gene/self-detonation.md
+      - Size Manipulation: powers/main-powers/mutations-x-gene/size-manipulation.md
+      - Sonic Sound Manipulation: powers/main-powers/mutations-x-gene/sonic-sound-manipulation.md
+      - Speed: powers/main-powers/mutations-x-gene/speed.md
+      - Superior Adaptation: powers/main-powers/mutations-x-gene/superior-adaptation.md
+      - Telekinesis: powers/main-powers/mutations-x-gene/telekinesis.md
+      - Telepathy: powers/main-powers/mutations-x-gene/telepathy.md
+      - Teleportation: powers/main-powers/mutations-x-gene/teleportation.md
+      - Total Molecular Control: powers/main-powers/mutations-x-gene/total-molecular-control.md
+      - Triple Face: powers/main-powers/mutations-x-gene/triple-face.md
+      - Weather Manipulation: powers/main-powers/mutations-x-gene/weather-manipulation.md
+      - Winged Flight: powers/main-powers/mutations-x-gene/winged-flight.md
+    - Radiants:
+      - powers/main-powers/radiants/index.md
+      - Radiant - Black: powers/main-powers/radiants/black.md
+    - Radioactive Blindness: powers/main-powers/radioactive-blindness.md
+    - Sand-Control: powers/main-powers/sand-infused-human.md
+    - Sentry:
+      - powers/main-powers/sentry/index.md
+      - Void: powers/main-powers/sentry/void.md
+    - Shazam: powers/main-powers/shazam.md
+    - Speedforce:
+      - powers/main-powers/speedforce/index.md
+      - Negative Speedforce (Leech): powers/main-powers/speedforce/speedforce-leech.md
+      - Speedforce (Avatar): powers/main-powers/speedforce/speedforce-avatar.md
+      - Speedforce (God of Speed): powers/main-powers/speedforce/speedforce-god-of-speed.md
+      - Speedforce (Negative Avatar): powers/main-powers/speedforce/speedforce-negative-avatar.md
+      - Speedforce (Speed): powers/main-powers/speedforce/speedforce-speed.md
+      - Speedforce (Strength): powers/main-powers/speedforce/speedforce-strength.md
+      - Speedforce (Tachyon): powers/main-powers/speedforce/speedforce-tachyon.md
+    - Super Soldiers:
+      - powers/main-powers/super-soldiers/index.md
+      - Classic: powers/main-powers/super-soldiers/classic.md
+      - Goblin: powers/main-powers/super-soldiers/goblin.md
+      - Red Skull: powers/main-powers/super-soldiers/red-skull.md
+      - Winter Soldier: powers/main-powers/super-soldiers/winter-soldier.md
+    - Supes:
+      - powers/main-powers/supes/index.md
+      - Homelander: powers/main-powers/supes/homelander.md
+      - Soldier Boy: powers/main-powers/supes/soldier-boy.md
+      - Translucent: powers/main-powers/supes/translucent.md
+    - Viltrumites:
+      - powers/main-powers/viltrumites/index.md
+      - Brute: powers/main-powers/viltrumites/brute.md
+      - Human Hybrid: powers/main-powers/viltrumites/human-hybrid.md
+      - Scout: powers/main-powers/viltrumites/scout.md
+      - Thraxan Hybrid: powers/main-powers/viltrumites/thraxan-hybrid.md
+      - Warrior: powers/main-powers/viltrumites/warrior-viltrumite.md
+  - Secondary Powers:
+    - powers/secondary-powers/index.md
+    - Cosmic: powers/secondary-powers/cosmic.md
+    - Kaiju:
+      - powers/secondary-powers/kaiju/index.md
+      - No. 8: powers/secondary-powers/kaiju/no-8.md
+    - Phoenix Force: powers/secondary-powers/phoenix-force.md
+    - Scarabs: powers/secondary-powers/scarabs.md
+    - Spirit of Vengance: powers/secondary-powers/spirit-of-vengance.md
+    - Symbiotes:
+      - powers/secondary-powers/symbiotes/index.md
+      - Artificial: powers/secondary-powers/symbiotes/artificial.md
+      - Full Symbiote List:
+        - powers/secondary-powers/symbiotes/full-symbiote-list/index.md
+        - Agony: powers/secondary-powers/symbiotes/full-symbiote-list/agony.md
+        - Aquamarine: powers/secondary-powers/symbiotes/full-symbiote-list/aquamarine.md
+        - Authority: powers/secondary-powers/symbiotes/full-symbiote-list/authority.md
+        - Blackout: powers/secondary-powers/symbiotes/full-symbiote-list/blackout.md
+        - Bloom: powers/secondary-powers/symbiotes/full-symbiote-list/bloom.md
+        - Carnage: powers/secondary-powers/symbiotes/full-symbiote-list/carnage.md
+        - Curse: powers/secondary-powers/symbiotes/full-symbiote-list/curse.md
+        - Death Angel: powers/secondary-powers/symbiotes/full-symbiote-list/death-angel.md
+        - Fang: powers/secondary-powers/symbiotes/full-symbiote-list/fang.md
+        - Grendel: powers/secondary-powers/symbiotes/full-symbiote-list/grendel.md
+        - Host Rider: powers/secondary-powers/symbiotes/full-symbiote-list/host-rider.md
+        - Hybrid: powers/secondary-powers/symbiotes/full-symbiote-list/hybrid.md
+        - Inumis: powers/secondary-powers/symbiotes/full-symbiote-list/inumis.md
+        - Lasher: powers/secondary-powers/symbiotes/full-symbiote-list/lasher.md
+        - Misery: powers/secondary-powers/symbiotes/full-symbiote-list/misery.md
+        - Montechiari: powers/secondary-powers/symbiotes/full-symbiote-list/montechiari.md
+        - Phage: powers/secondary-powers/symbiotes/full-symbiote-list/phage.md
+        - Reaper: powers/secondary-powers/symbiotes/full-symbiote-list/reaper.md
+        - Riot: powers/secondary-powers/symbiotes/full-symbiote-list/riot.md
+        - Scorn: powers/secondary-powers/symbiotes/full-symbiote-list/scorn.md
+        - Scream: powers/secondary-powers/symbiotes/full-symbiote-list/scream.md
+        - Sleeper: powers/secondary-powers/symbiotes/full-symbiote-list/sleeper.md
+        - Sprain: powers/secondary-powers/symbiotes/full-symbiote-list/sprain.md
+        - Strain: powers/secondary-powers/symbiotes/full-symbiote-list/strain.md
+        - Tempest: powers/secondary-powers/symbiotes/full-symbiote-list/tempest.md
+        - Thorn: powers/secondary-powers/symbiotes/full-symbiote-list/thorn.md
+        - Toxin: powers/secondary-powers/symbiotes/full-symbiote-list/toxin.md
+        - Venom: powers/secondary-powers/symbiotes/full-symbiote-list/venom.md
+        - Xenocive: powers/secondary-powers/symbiotes/full-symbiote-list/xenocive.md
+      - Natural: powers/secondary-powers/symbiotes/natural.md
+  - Tertiary Powers:
+    - powers/tertiary-powers/index.md
+    - Hofund: powers/tertiary-powers/hofund.md
+    - Mjolnirs:
+      - powers/tertiary-powers/mjolnirs/index.md
+      - Mjolnir - Comics: powers/tertiary-powers/mjolnirs/mjolnir-comics.md
+      - Mjolnir - Rivals: powers/tertiary-powers/mjolnirs/mjolnir-rivals.md
+    - Neptune's Trident: powers/tertiary-powers/neptunes-trident.md
+    - Stormbreaker: powers/tertiary-powers/stormbreaker.md
+- Karma: karma.md
+- Skill Point System: skill-point-system.md
+- Accessory Support: accessory-support.md
+- Blocks:
+  - blocks/index.md
+  - Ores:
+    - blocks/ores/index.md
+    - Adamantium: blocks/ores/adamantium.md
+    - Kryptonite: blocks/ores/kryptonite.md
+    - Mysterium: blocks/ores/mysterium.md
+    - Nth Metal: blocks/ores/nth-metal.md
+    - Techno Organic Ingot: blocks/ores/techno-organic-ingot.md
+    - Titanium: blocks/ores/titanium.md
+    - Uru: blocks/ores/uru.md
+    - Vibranium: blocks/ores/vibranium.md
+  - RF Charger: blocks/rf-charger.md
+  - Runic Block: blocks/runic-block.md
+  - Scientific Table: blocks/scientific-table.md
+- Items:
+  - items/index.md
+  - Artifacts:
+    - items/artifacts/index.md
+    - Amazonian Artifact: items/artifacts/amazonian-artifact.md
+    - Atlantean Artifact: items/artifacts/atlantean-artifact.md
+    - Fossils:
+      - items/artifacts/fossils/index.md
+      - Czarnian Fossil: items/artifacts/fossils/czarnian.md
+      - Kree Fossil: items/artifacts/fossils/kree-fossil.md
+      - Kryptonian Fossil: items/artifacts/fossils/kryptonian-fossil.md
+      - Martian Fossil: items/artifacts/fossils/martian-fossil.md
+      - Viltrumite Fossil: items/artifacts/fossils/viltrumite-fossil.md
+    - Unaugmented Scarab Base: items/artifacts/unaugmented-scarab-base.md
+  - Assorted Chemicals: items/assorted-chemicals.md
+  - Compound V: items/compound-v.md
+  - Cosmic Particle: items/cosmic-particle.md
+  - Dark Matter Sample: items/dark-matter-sample.md
+  - Empty Syringe: items/empty-syringe.md
+  - Gadgets:
+    - items/gadgets/index.md
+    - Batarangs:
+      - items/gadgets/batarangs/index.md
+      - Explosive: items/gadgets/batarangs/explosive.md
+      - Flame: items/gadgets/batarangs/flame.md
+      - Frost: items/gadgets/batarangs/frost.md
+      - Kryptonite: items/gadgets/batarangs/kryptonite.md
+      - Normal: items/gadgets/batarangs/normal.md
+      - Shock: items/gadgets/batarangs/shock.md
+      - Sonic: items/gadgets/batarangs/sonic.md
+    - Compound Bow: items/gadgets/compound-bow.md
+    - Pumpkin Bombs:
+      - items/gadgets/pumpkin-bombs/index.md
+      - Blades: items/gadgets/pumpkin-bombs/blades.md
+      - Explosive: items/gadgets/pumpkin-bombs/explosive.md
+      - Gas: items/gadgets/pumpkin-bombs/gas.md
+    - Smoke Pellet: items/gadgets/smoke-pellet.md
+    - Sound Gun: items/gadgets/sound-gun.md
+    - Trick Arrows:
+      - items/gadgets/trick-arrows/index.md
+      - Explosive Arrow: items/gadgets/trick-arrows/explosive-arrow.md
+      - Impact Arrow: items/gadgets/trick-arrows/impact-arrow.md
+      - Kryptonite Arrow: items/gadgets/trick-arrows/kryptonite-arrow.md
+      - Smoke Arrow: items/gadgets/trick-arrows/smoke-arrow.md
+    - Utility Gun: items/gadgets/utility-gun.md
+    - Web Shooters:
+      - items/gadgets/web-shooters/index.md
+      - Advanced Web-Shooters: items/gadgets/web-shooters/web-shooters3.md
+      - Prototype Web-Shooters: items/gadgets/web-shooters/web-shooters1.md
+      - Upgraded Web-Shooters: items/gadgets/web-shooters/web-shooters2.md
+  - Galactic Cluster Sample: items/galactic-cluster-sample.md
+  - Gamma Radiation: items/gamma-radiation.md
+  - Idunn Apple: items/idunn-apple.md
+  - Material:
+    - items/material/index.md
+    - Amazonian Clay: items/material/amazonian-clay.md
+    - Atlantean Clay: items/material/atlantean-clay.md
+    - Augmented Human DNA: items/material/augmented-human-dna.md
+    - Cosmic Ingot: items/material/cosmic-ingot.md
+    - Gold Titanium Alloy: items/material/gold-titanium-alloy.md
+    - Human DNA Sample: items/material/human-dna-sample.md
+    - Ruby Quartz: items/material/ruby-quartz.md
+  - Super Soldier Serum: items/super-soldier-serum.md
+  - Symbiote Container: items/symbiote-container.md
+  - Technology:
+    - items/technology/index.md
+    - AI Chips: items/technology/ai-chips.md
+    - Arc Reactors:
+      - items/technology/arc-reactors/index.md
+      - Core: items/technology/arc-reactors/core.md
+      - Model I: items/technology/arc-reactors/model-i.md
+      - Model II: items/technology/arc-reactors/model-ii.md
+      - Model III: items/technology/arc-reactors/model-iii.md
+      - Model IV: items/technology/arc-reactors/model-iv.md
+    - Circuits:
+      - items/technology/circuits/index.md
+      - Adamantium Circuit: items/technology/circuits/adamantium-circuit.md
+      - Diamond Circuit: items/technology/circuits/diamond-circuit.md
+      - Golden Circuit: items/technology/circuits/gold-circuit.md
+      - Iron Circuit: items/technology/circuits/iron-circuit.md
+      - Lead Circuit: items/technology/circuits/lead-circuit.md
+      - Netherite Circuit: items/technology/circuits/netherite-circuit.md
+      - Quartz Circuit: items/technology/circuits/quartz-circuit.md
+      - Titanium Circuit: items/technology/circuits/titanium-circuit.md
+      - Vibranium Circuit: items/technology/circuits/vibranium-circuit.md
+    - Fabrics:
+      - items/technology/fabrics/index.md
+      - Basic Fabric: items/technology/fabrics/basic-fabric.md
+      - Basic Fabric Repair Kit: items/technology/fabrics/basic-fabric-repair-kit.md
+      - Reinforced Fabric: items/technology/fabrics/advanced-fabric.md
+      - Reinforced Fabric Repair Kit: items/technology/fabrics/advanced-fabric-repair-kit.md
+      - Tri Polymer Fabric: items/technology/fabrics/tri-polymer-fabric.md
+      - Tri Polymer Repair Kit: items/technology/fabrics/tri-polymer-repair-kit.md
+    - Falcon Wings:
+      - items/technology/falcon-wings/index.md
+      - Falcon Wings (Base): items/technology/falcon-wings/falcon-wings-base.md
+      - Falcon Wings (Vibranium): items/technology/falcon-wings/falcon-wings-vibranium.md
+    - Glide Module: items/technology/glide-module.md
+    - Inhibitor Devices:
+      - items/technology/inhibitor-devices/index.md
+      - Inhibitor Blocks:
+        - items/technology/inhibitor-devices/inhibitor-blocks/index.md
+        - EMP: items/technology/inhibitor-devices/inhibitor-blocks/tech.md
+        - Genetic: items/technology/inhibitor-devices/inhibitor-blocks/genetic.md
+        - Metaphysical: items/technology/inhibitor-devices/inhibitor-blocks/metaphysical.md
+        - Red Sun: items/technology/inhibitor-devices/inhibitor-blocks/solar.md
+        - Speed: items/technology/inhibitor-devices/inhibitor-blocks/speed.md
+      - Inhibitor Collars:
+        - items/technology/inhibitor-devices/inhibitor-collars/index.md
+        - Base: items/technology/inhibitor-devices/inhibitor-collars/inhibitor-collar1-base.md
+        - Genetic: items/technology/inhibitor-devices/inhibitor-collars/genetic.md
+        - Metaphysical: items/technology/inhibitor-devices/inhibitor-collars/metaphysical.md
+        - Red Sun: items/technology/inhibitor-devices/inhibitor-collars/tred-sun.md
+        - Speed: items/technology/inhibitor-devices/inhibitor-collars/speed.md
+        - Tech: items/technology/inhibitor-devices/inhibitor-collars/tech.md
+      - Inhibitor Cuffs:
+        - items/technology/inhibitor-devices/inhibitor-cuffs/index.md
+        - Genetic Inhibitor Cuff: items/technology/inhibitor-devices/inhibitor-cuffs/genetic-inhibitor-cuff.md
+        - Metaphysical Inhibitor  Cuff: items/technology/inhibitor-devices/inhibitor-cuffs/metaphysical-inhibitor-cuff.md
+        - Solar Inhibitor  Cuff: items/technology/inhibitor-devices/inhibitor-cuffs/solar-inhibitor-cuff.md
+        - Speed Inhibitor Cuff: items/technology/inhibitor-devices/inhibitor-cuffs/speed-inhibitor-cuff.md
+        - Tech Inhibitor Cuff: items/technology/inhibitor-devices/inhibitor-cuffs/tech-inhibitor-cuff.md
+      - Inhibitor Module (Security): items/technology/inhibitor-devices/inhibitor-module-security.md
+      - Keys:
+        - items/technology/inhibitor-devices/keys/index.md
+        - Diamond Key: items/technology/inhibitor-devices/keys/diamond.md
+        - Golden Key: items/technology/inhibitor-devices/keys/golden.md
+        - Iron Key: items/technology/inhibitor-devices/keys/iron.md
+        - Netherite Key: items/technology/inhibitor-devices/keys/netherite.md
+    - Multiversal Extrapolator: items/technology/multiversal-extrapolator.md
+    - Name Changing Device: items/technology/name-changing-device.md
+    - Stark Repair Kits:
+      - items/technology/stark-repair-kits/index.md
+      - Bleeding Edge Stark Repair Kit: items/technology/stark-repair-kits/3-advanced-stark-repair-kit.md
+      - Cutting-Edge Stark Repair Kit: items/technology/stark-repair-kits/4-cutting-edge-stark-repair-kit.md
+      - Modular Stark Repair Kit: items/technology/stark-repair-kits/2-enhanced-stark-repair-kit.md
+      - Stark Repair Kit: items/technology/stark-repair-kits/1-basic-stark-repair-kit.md
+    - Stark Tech:
+      - items/technology/stark-tech/index.md
+      - StarkTech Glasses: items/technology/stark-tech/starktech-glasses.md
+      - StarkTech Watch: items/technology/stark-tech/starktech-watch.md
+    - Tachyon Devices:
+      - items/technology/tachyon-devices/index.md
+      - Advanced Tachyon Device: items/technology/tachyon-devices/advanced-tachyon-device.md
+      - Prototype Tachyon Device: items/technology/tachyon-devices/prototype-tachyon-device.md
+    - Web Cartridge: items/technology/web-cartridge.md
+    - Web Fluid: items/technology/web-fluid.md
+  - Tools:
+    - items/tools/index.md
+    - Adamantium Tools:
+      - items/tools/adamantium-tools/index.md
+      - Adamantium Axe: items/tools/adamantium-tools/adamantium-axe.md
+      - Adamantium Hoe: items/tools/adamantium-tools/adamantium-hoe.md
+      - Adamantium Pickaxe: items/tools/adamantium-tools/adamantium-pickaxe.md
+      - Adamantium Shovel: items/tools/adamantium-tools/adamantium-shovel.md
+      - Adamantium Sword: items/tools/adamantium-tools/adamantium-sword.md
+    - Amazonian Tools:
+      - items/tools/amazonian-tools/index.md
+      - Amazonian Shield: items/tools/amazonian-tools/amazonian-shield.md
+      - Amazonian Sword: items/tools/amazonian-tools/amazonian-sword.md
+    - Kryptonite Tools:
+      - items/tools/kryptonite-tools/index.md
+      - Kryptonite Axe: items/tools/kryptonite-tools/kryptonite-axe.md
+      - Kryptonite Hoe: items/tools/kryptonite-tools/kryptonite-hoe.md
+      - Kryptonite Pickaxe: items/tools/kryptonite-tools/kryptonite-pickaxe.md
+      - Kryptonite Shovel: items/tools/kryptonite-tools/kryptonite-shovel.md
+      - Kryptonite Sword: items/tools/kryptonite-tools/kryptonite-sword.md
+    - Techno-Organic Tools:
+      - items/tools/techno-organic-tools/index.md
+      - Techno-Organic Axe: items/tools/techno-organic-tools/techno-organic-axe.md
+      - Techno-Organic Hoe: items/tools/techno-organic-tools/techno-organic-hoe.md
+      - Techno-Organic Pickaxe: items/tools/techno-organic-tools/techno-organic-pickaxe.md
+      - Techno-Organic Shovel: items/tools/techno-organic-tools/techno-organic-shovel.md
+      - Techno-Organic Sword: items/tools/techno-organic-tools/techno-organic-sword.md
+    - Vibranium Tools:
+      - items/tools/vibranium-tools/index.md
+      - Vibranium Shield: items/tools/vibranium-tools/vibranium-shield.md
+  - X-Gene: items/x-gene.md
+- Suitsets:
+  - suitsets/index.md
+  - Armorsets:
+    - suitsets/armorsets/index.md
+    - A-Train (Show): suitsets/armorsets/a-train-show.md
+    - All Might (Young Age): suitsets/armorsets/all-might-young-age.md
+    - Apocalypse: suitsets/armorsets/apocalypse.md
+    - Aqualad (Young Justice): suitsets/armorsets/aqualad-young-justice.md
+    - Aquaman (Classic): suitsets/armorsets/aquaman-classic.md
+    - Aquaman (Young Justice): suitsets/armorsets/aquaman-young-justice.md
+    - Arkham Knight: suitsets/armorsets/arkham-knight.md
+    - Asgardian (Soldier): suitsets/armorsets/asgardian-soldier.md
+    - Atlantean (Soldier): suitsets/armorsets/atlantean-soldier.md
+    - Atom Eve: suitsets/armorsets/atom-eve.md
+    - Azrael (Arkham Knight): suitsets/armorsets/azrael-arkham-knight.md
+    - Babel: suitsets/armorsets/babel.md
+    - Batgirl (Cassandra Cain): suitsets/armorsets/batgirl-cassandra-cain.md
+    - Batgirl (Stephanie Brown): suitsets/armorsets/batgirl-stephanie-brown.md
+    - Batman (Absolute): suitsets/armorsets/batman-absolute.md
+    - Batman (Batman Who Laughs): suitsets/armorsets/batman-batman-who-laughs.md
+    - Batman (Beyond): suitsets/armorsets/batman-beyond.md
+    - Batman (Classic): suitsets/armorsets/batman-classic.md
+    - Batman (Dark Knight): suitsets/armorsets/batman-dark-knight.md
+    - Batman (Knightfight - Damian Wayne): suitsets/armorsets/batman-knightfight-damian-wayne.md
+    - Batman (Knightfight - Dick Grayson): suitsets/armorsets/batman-knightfight-dick-grayson.md
+    - Batman (Knightfight - Jason Todd): suitsets/armorsets/batman-knightfight-jason-todd.md
+    - Batman (Knightfight - Tim Drake): suitsets/armorsets/batman-knightfight-tim-drake.md
+    - Batman (Kryptonite): suitsets/armorsets/batman-kryptonite.md
+    - Batman (Pre-52): suitsets/armorsets/batman-pre-52.md
+    - Beta Ray Bill: suitsets/armorsets/beta-ray-bill.md
+    - Blue Beetle (Classic): suitsets/armorsets/blue-beetle-classic.md
+    - Blue Beetle (Ted Kord): suitsets/armorsets/blue-beetle-ted-kord.md
+    - Blue Marvel: suitsets/armorsets/blue-marvel.md
+    - Booster Gold: suitsets/armorsets/booster-gold.md
+    - Captain  Marvel (Comics): suitsets/armorsets/captain-marvel-comics.md
+    - Captain America: suitsets/armorsets/captain-america.md
+    - Captain America (Brave New World): suitsets/armorsets/captain-america-brave-new-world.md
+    - Captain America (Sam Wilson): suitsets/armorsets/captain-america-sam-wilson.md
+    - Captain America (Winter Soldier): suitsets/armorsets/captain-america-winter-soldier.md
+    - Captain Marvel (MCU): suitsets/armorsets/captain-marvel-mcu.md
+    - Coalition of Planets (Blue): suitsets/armorsets/coalition-of-planets-blue.md
+    - Coalition of Planets (Red): suitsets/armorsets/coalition-of-planets-red.md
+    - Colossus: suitsets/armorsets/colossus.md
+    - Constantine: suitsets/armorsets/constantine.md
+    - Cyclops: suitsets/armorsets/cyclops.md
+    - Cyclops ('97): suitsets/armorsets/cyclops-97.md
+    - Cyclops (Phoenix Force): suitsets/armorsets/cyclops-phoenix-force.md
+    - Daredevil: suitsets/armorsets/daredevil.md
+    - Daredevil (Born Again - S1): suitsets/armorsets/daredevil-born-again-s1.md
+    - Daredevil (Born Again - S2): suitsets/armorsets/daredevil-born-again-s2.md
+    - Daredevil (Starter): suitsets/armorsets/daredevil-starter.md
+    - Deadpool: suitsets/armorsets/deadpool.md
+    - Deadpool (Ultimate): suitsets/armorsets/deadpool-ultimate.md
+    - Deadpool (Welsh): suitsets/armorsets/deadpool-welsh.md
+    - Deathstroke (Teen Titans): suitsets/armorsets/deathstroke-teen-titans.md
+    - Deku (Zeta): suitsets/armorsets/deku-zeta.md
+    - Dog Welder: suitsets/armorsets/dog-welder.md
+    - Dr. Doom (Classic): suitsets/armorsets/dr-doom-classic.md
+    - Dr. Doom (God Emperor): suitsets/armorsets/dr-doom-god-emperor.md
+    - Elektra: suitsets/armorsets/elektra.md
+    - Falcon: suitsets/armorsets/falcon.md
+    - Fantastic Four: suitsets/armorsets/fantastic-four.md
+    - Fantastic Four (Classic - White): suitsets/armorsets/fantastic-four-classic-white.md
+    - Fantastic Four (Classic): suitsets/armorsets/fantastic-four-classic.md
+    - Fantastic Four (Future Foundation): suitsets/armorsets/fantastic-four-future-foundation.md
+    - Fantastic Four (MCU): suitsets/armorsets/fantastic-four-mcu.md
+    - Flash (Absolute): suitsets/armorsets/flash-absolute.md
+    - Flash (Classic): suitsets/armorsets/flash-classic.md
+    - Flash (Jay Garric - Comics): suitsets/armorsets/flash-jay-garric-comics.md
+    - Flash (Wally West - Rebirth): suitsets/armorsets/flash-wally-west-rebirth.md
+    - Flash (Wally West): suitsets/armorsets/flash-wally-west.md
+    - Flash (Year One - Future Flash): suitsets/armorsets/flash-year-one-future-flash.md
+    - Formal (Red): suitsets/armorsets/formal-red.md
+    - Gambit (Deadpool & Wolverine): suitsets/armorsets/gambit-deadpoolandwolverine.md
+    - Ghost (Thunderbolts): suitsets/armorsets/ghost-thunderbolts.md
+    - Ghost Rider (Robbie Reyes): suitsets/armorsets/ghost-rider-robbie-reyes.md
+    - Ghost Spider: suitsets/armorsets/spiderman-gwen.md
+    - Godspeed (Comics): suitsets/armorsets/godspeed-comics.md
+    - Goku: suitsets/armorsets/goku.md
+    - Green Arrow: suitsets/armorsets/green-arrow.md
+    - Green Goblin: suitsets/armorsets/green-goblin.md
+    - Green Lantern (Hal Jordan): suitsets/armorsets/green-lantern-hal-jordan.md
+    - Green Lantern (Kyle Rayner): suitsets/armorsets/green-lantern-kyle-rayner.md
+    - Homelander: suitsets/armorsets/homelander.md
+    - Iceman (X-Haven): suitsets/armorsets/iceman-x-haven.md
+    - Impulse: suitsets/armorsets/impulse.md
+    - Invincible (Blue Suit): suitsets/armorsets/invincible-blue-suit.md
+    - Invincible (Gogglesvincible): suitsets/armorsets/invincible-gogglesvincible.md
+    - Invincible (Hairincible): suitsets/armorsets/invincible-hairincible.md
+    - Invincible (Homemade): suitsets/armorsets/invincible-homemade.md
+    - Invincible (Hoodvincible): suitsets/armorsets/invincible-hoodvincible.md
+    - Invincible (Lightblueincible): suitsets/armorsets/invincible-lightblueincible.md
+    - Invincible (Maskvincible): suitsets/armorsets/invincible-maskvincible.md
+    - Invincible (Mohawk): suitsets/armorsets/invincible-mohawk.md
+    - Invincible (Nogogglesible): suitsets/armorsets/invincible-nogogglesible.md
+    - Invincible (Nomaskible): suitsets/armorsets/invincible-nomaskible.md
+    - Invincible (Omnivincible): suitsets/armorsets/invincible-omnivincible.md
+    - Invincible (Original): suitsets/armorsets/invincible-original.md
+    - Invincible (Sinister): suitsets/armorsets/invincible-sinister.md
+    - Invincible (Sportvincible): suitsets/armorsets/invincible-sportvincible.md
+    - Invincible (Stripevincible): suitsets/armorsets/invincible-stripevincible.md
+    - Invincible (Terra): suitsets/armorsets/invincible-terra.md
+    - Invisible Woman (Rivals): suitsets/armorsets/invisible-woman-rivals.md
+    - Iron Fist: suitsets/armorsets/iron-fist.md
+    - Iron Fist (Undead): suitsets/armorsets/iron-fist-undead.md
+    - Jean Grey: suitsets/armorsets/jean-grey.md
+    - Jean Grey ('97): suitsets/armorsets/jean-grey-97.md
+    - Jean Grey (Dark Phoenix): suitsets/armorsets/jean-grey-dark-phoenix.md
+    - Jean Grey (Phoenix): suitsets/armorsets/jean-grey-phoenix.md
+    - Jewel: suitsets/armorsets/jewel.md
+    - Kid Omniman (Teen): suitsets/armorsets/kid-omniman-teen.md
+    - Kid Omniman (Young): suitsets/armorsets/kid-omniman-young.md
+    - Killer Frost: suitsets/armorsets/killer-frost.md
+    - Lady Loki (Rivals): suitsets/armorsets/loki-lady-loki-rivals.md
+    - Ladypool: suitsets/armorsets/ladypool.md
+    - LD Corp: suitsets/armorsets/ld-corp.md
+    - Loki (God of Stories): suitsets/armorsets/loki-god-of-stories.md
+    - Loki (Sylvie): suitsets/armorsets/loki-sylvie.md
+    - M.I.N.E. Labs: suitsets/armorsets/mine-labs.md
+    - Magik: suitsets/armorsets/magik.md
+    - Magneto (Black): suitsets/armorsets/magneto-black.md
+    - Magneto (Red): suitsets/armorsets/magneto-red.md
+    - Martian Manhunter (Young Justice): suitsets/armorsets/martian-manhunter-young-justice.md
+    - Mera: suitsets/armorsets/mera.md
+    - Mighty Thor: suitsets/armorsets/mighty-thor.md
+    - Mimic: suitsets/armorsets/mimic.md
+    - Miss Martian (Young Justice): suitsets/armorsets/miss-martian-young-justice.md
+    - Moon Knight (Black, White & Blood): suitsets/armorsets/moon-knight-blackwhiteandblood.md
+    - Mr. Fantastic (Rivals): suitsets/armorsets/mr-fantastic-rivals.md
+    - Ms. Marvel: suitsets/armorsets/ms-marvel.md
+    - Namor (MCU): suitsets/armorsets/namormcu.md
+    - Nightcrawler: suitsets/armorsets/nightcrawler.md
+    - Nightwing: suitsets/armorsets/nightwing.md
+    - Omniman (Original): suitsets/armorsets/omniman-original.md
+    - Owlman: suitsets/armorsets/owlman.md
+    - Professor X (Hellfire Gala): suitsets/armorsets/professor-x-hellfire-gala.md
+    - Punisher: suitsets/armorsets/punisher.md
+    - Raven (Comics): suitsets/armorsets/raven-comics.md
+    - Red Death: suitsets/armorsets/red-death.md
+    - Red Hood (Rebirth): suitsets/armorsets/red-hood-rebirth.md
+    - Red Rush: suitsets/armorsets/red-rush.md
+    - Red X (Teen Titans): suitsets/armorsets/red-x-teen-titans.md
+    - Respawn: suitsets/armorsets/respawn.md
+    - Reverse Flash (Classic): suitsets/armorsets/flash-reverse-classic.md
+    - Reverse Flash (Dark Multiverse): suitsets/armorsets/flash-reverse-dark-multiverse.md
+    - Rexplode: suitsets/armorsets/rexplode.md
+    - Robin (Damian Wayne): suitsets/armorsets/robin-damian-wayne.md
+    - Robin (Tim Drake): suitsets/armorsets/robin-tim-drake.md
+    - Robin (Young Justice): suitsets/armorsets/robin-young-justice.md
+    - S.H.I.E.L.D. Agent: suitsets/armorsets/shield-agent.md
+    - Sabretooth: suitsets/armorsets/sabretooth.md
+    - Savitar (CW): suitsets/armorsets/savitar-cw.md
+    - Scarlet Witch (MCU): suitsets/armorsets/scarlet-witch-mcu.md
+    - Sentry (Classic): suitsets/armorsets/sentry-classic.md
+    - Sentry (Thunderbolts): suitsets/armorsets/sentry-thunderbolts.md
+    - Sentry (Void): suitsets/armorsets/sentry-void.md
+    - She Hulk: suitsets/armorsets/she-hulk.md
+    - She Hulk (Fantastic Four): suitsets/armorsets/she-hulk-fantastic-four.md
+    - Silk (Cindy Moon): suitsets/armorsets/spiderman-silk.md
+    - Soldier Boy: suitsets/armorsets/soldier-boy.md
+    - Spider-Man (2099): suitsets/armorsets/spider-man-2099.md
+    - Spider-Man (Amazing): suitsets/armorsets/spider-man-amazing.md
+    - Spider-Man (Far From Home - Inverted): suitsets/armorsets/spider-man-far-from-home-inverted.md
+    - Spider-Man (Far From Home): suitsets/armorsets/spider-man-far-from-home.md
+    - Spider-Man (Future Foundation - Stealth): suitsets/armorsets/spider-man-future-foundation-stealth.md
+    - Spider-Man (Future Foundation): suitsets/armorsets/spider-man-future-foundation.md
+    - Spider-Man (Hellfire Gala): suitsets/armorsets/spider-man-hellfire-gala.md
+    - Spider-Man (Homecoming): suitsets/armorsets/spider-man-homecoming.md
+    - Spider-Man (Homemade): suitsets/armorsets/spider-man-homemade.md
+    - Spider-Man (Kaine Parker): suitsets/armorsets/spider-man-kaine-parker.md
+    - Spider-Man (Last Stand): suitsets/armorsets/spider-man-last-stand.md
+    - Spider-Man (Miles Morales): suitsets/armorsets/spider-man-miles-morales.md
+    - Spider-Man (PS4): suitsets/armorsets/spider-man-ps4.md
+    - Spider-Man (Raimi): suitsets/armorsets/spider-man-raimi.md
+    - Spider-Man (Scarlet Spider): suitsets/armorsets/spider-man-scarlet-spider.md
+    - Spider-Man (Sensational): suitsets/armorsets/spider-man-sensational.md
+    - Spider-Man (Superior): suitsets/armorsets/spider-man-superior.md
+    - Spider-Woman (Jessica Drew): suitsets/armorsets/spider-woman-jessica-drew.md
+    - Static Shock: suitsets/armorsets/static-shock.md
+    - Storm: suitsets/armorsets/storm.md
+    - Superboy: suitsets/armorsets/superboy.md
+    - Superboy (Battle of the Super Sons): suitsets/armorsets/superboy-battle-of-the-super-sons.md
+    - Superboy (New 52): suitsets/armorsets/superboy-new-52.md
+    - Superboy (Young Justice): suitsets/armorsets/superboy-young-justice.md
+    - Supergirl (DCEU): suitsets/armorsets/supergirl-dceu.md
+    - Supergirl (DCU): suitsets/armorsets/supergirl-dcu.md
+    - Supergirl (Rebirth): suitsets/armorsets/supergirl-rebirth.md
+    - Superman (Absolute): suitsets/armorsets/superman-absolute.md
+    - Superman (Beyond): suitsets/armorsets/superman-beyond.md
+    - Superman (Black): suitsets/armorsets/superman-black.md
+    - Superman (Classic): suitsets/armorsets/superman-classic.md
+    - Superman (DCEU): suitsets/armorsets/superman-dceu.md
+    - Superman (DCU): suitsets/armorsets/superman-dcu.md
+    - Superman (Kingdom Come): suitsets/armorsets/superman-kingdom-come.md
+    - Superman (MAWS): suitsets/armorsets/superman-maws.md
+    - Superman (Shazam): suitsets/armorsets/superman-shazam.md
+    - Superman (World Forger): suitsets/armorsets/superman-world-forger.md
+    - Thanos (MCU): suitsets/armorsets/thanos-mcu.md
+    - Thor (Cosmic): suitsets/armorsets/thor-cosmic.md
+    - Thor (Infinity War): suitsets/armorsets/thor-infinity-war.md
+    - Thor (Modern): suitsets/armorsets/thor-modern.md
+    - Tornado Twins: suitsets/armorsets/flash-tornado-twins.md
+    - U.S. Agent: suitsets/armorsets/us-agent.md
+    - U.S. Agent (MCU): suitsets/armorsets/us-agent-mcu.md
+    - Viltrumite (Captain): suitsets/armorsets/viltrumite-captain.md
+    - Viltrumite (Council): suitsets/armorsets/viltrumite-council.md
+    - Viltrumite (Regent): suitsets/armorsets/viltrumite-regent.md
+    - Viltrumite (Royal Guard): suitsets/armorsets/viltrumite-royal-guard.md
+    - Viltrumite (Soldier): suitsets/armorsets/viltrumite-soldier.md
+    - Vulcan: suitsets/armorsets/vulcan.md
+    - Winter Soldier (MCU): suitsets/armorsets/winter-soldier-mcu.md
+    - Winter Soldier (Rivals): suitsets/armorsets/winter-soldier-rivals.md
+    - Wolverine: suitsets/armorsets/wolverine.md
+    - Wolverine (Brown): suitsets/armorsets/wolverine-brown.md
+    - Wolverine (Classic): suitsets/armorsets/wolverine-classic.md
+    - Wolverine (Rivals): suitsets/armorsets/wolverine-rivals.md
+    - Wolverine (Winter Soldier): suitsets/armorsets/wolverine-winter-soldier.md
+    - Wolverine (X-23 Hellfire Gala): suitsets/armorsets/wolverine-x-23-hellfire-gala.md
+    - Wolverine (X-23): suitsets/armorsets/wolverine-x-23.md
+    - Wonder Woman: suitsets/armorsets/wonder-woman.md
+    - Wonder Woman (Absolute): suitsets/armorsets/wonder-woman-absolute.md
+    - Wonder Woman (Flashpoint): suitsets/armorsets/wonder-woman-flashpoint.md
+    - X-Men: suitsets/armorsets/x-men.md
+    - Zatanna (Brave and the Bold): suitsets/armorsets/zatanna-bandtb.md
+    - Zoom (CW): suitsets/armorsets/flash-zoom-cw.md
+  - Cosmetic:
+    - suitsets/cosmetic/index.md
+    - Capes:
+      - suitsets/cosmetic/capes/index.md
+      - Hellspawn Cape: suitsets/cosmetic/capes/hellspawn-cape.md
+      - Heroic (Short) Cape: suitsets/cosmetic/capes/heroic-short-cape.md
+      - Heroic Cape: suitsets/cosmetic/capes/heroic-cape.md
+      - Rogue (Short) Cape: suitsets/cosmetic/capes/rogue-short-cape.md
+      - Rogue Cape: suitsets/cosmetic/capes/rogue-cape.md
+    - Conquest Gauntlet: suitsets/cosmetic/conquest-gauntlet.md
+    - Jackets:
+      - suitsets/cosmetic/jackets/index.md
+      - Jacket (Bomber): suitsets/cosmetic/jackets/jacket-bomber.md
+      - Jacket (Long): suitsets/cosmetic/jackets/jacket-long.md
+      - Jacket (Short): suitsets/cosmetic/jackets/jacket-short.md
+      - Jacket (Short) - Wolverine Rivals: suitsets/cosmetic/jackets/wolverine-rivals.md
+      - Jacket (Vest): suitsets/cosmetic/jackets/jacket-vest.md
+    - Long Coat (Loki - God of Stories): suitsets/cosmetic/long-coat-loki-god-of-stories.md
+    - Scarfs: suitsets/cosmetic/scarfs.md
+    - Winter Soldier Arms:
+      - suitsets/cosmetic/winter-soldier-arms/index.md
+      - Hydra: suitsets/cosmetic/winter-soldier-arms/hydra.md
+      - Vibranium: suitsets/cosmetic/winter-soldier-arms/vibranium.md
+  - Iron Man Suits:
+    - suitsets/iron-man-suits/index.md
+    - Iron Heart Suits:
+      - suitsets/iron-man-suits/iron-heart-suits/index.md
+      - Model II: suitsets/iron-man-suits/iron-heart-suits/model-2.md
+      - Model III: suitsets/iron-man-suits/iron-heart-suits/model-3.md
+    - Iron Patriot Suits:
+      - suitsets/iron-man-suits/iron-patriot-suits/index.md
+      - Model I: suitsets/iron-man-suits/iron-patriot-suits/model-1.md
+    - Iron Spiders:
+      - suitsets/iron-man-suits/iron-spider-suits/index.md
+      - Model I: suitsets/iron-man-suits/iron-spider-suits/model-i.md
+      - Model I - Miles: suitsets/iron-man-suits/iron-spider-suits/model-i-miles.md
+    - Mark L: suitsets/iron-man-suits/mark-50.md
+    - Model Dragon Slayer: suitsets/iron-man-suits/dragon-slayer.md
+    - Model I: suitsets/iron-man-suits/model-1.md
+    - Model I, MK III: suitsets/iron-man-suits/model-1-mk-3.md
+    - Model II: suitsets/iron-man-suits/model-2.md
+    - Model III: suitsets/iron-man-suits/model-3.md
+    - Model IV: suitsets/iron-man-suits/model-4.md
+    - Model IX: suitsets/iron-man-suits/model-9.md
+    - Model L: suitsets/iron-man-suits/model-50.md
+    - Model LI: suitsets/iron-man-suits/model-51.md
+    - Model LI - DOOM: suitsets/iron-man-suits/model-51-doom.md
+    - Model LIX: suitsets/iron-man-suits/model-59.md
+    - Model LVI: suitsets/iron-man-suits/model-56.md
+    - Model LXIII: suitsets/iron-man-suits/model-63.md
+    - Model LXIV (Hulkbuster): suitsets/iron-man-suits/model-44-hulkbuster.md
+    - Model LXX: suitsets/iron-man-suits/model-70.md
+    - Model LXXI: suitsets/iron-man-suits/model-71.md
+    - Model LXXII: suitsets/iron-man-suits/model-72.md
+    - Model LXXIV - Improvised: suitsets/iron-man-suits/model-74-improvised.md
+    - Model NIL: suitsets/iron-man-suits/model-nil.md
+    - Model THDR: suitsets/iron-man-suits/thdr.md
+    - Model VI: suitsets/iron-man-suits/model-6.md
+    - Model VII: suitsets/iron-man-suits/model-7.md
+    - Model VIII: suitsets/iron-man-suits/model-8.md
+    - Model XIII: suitsets/iron-man-suits/model-13.md
+    - Model XIII (Hulkbuster): suitsets/iron-man-suits/model-13-hulkbuster.md
+    - Model XIV: suitsets/iron-man-suits/model-14.md
+    - Model XLII: suitsets/iron-man-suits/model-42.md
+    - Model XLV: suitsets/iron-man-suits/model-45.md
+    - Model XVI: suitsets/iron-man-suits/model-16.md
+    - Model XXII: suitsets/iron-man-suits/model-22.md
+    - Model XXIX: suitsets/iron-man-suits/model-29.md
+    - Model XXV: suitsets/iron-man-suits/model-25.md
+    - Model XXXVII (Nano Suit): suitsets/iron-man-suits/model-37.md
+    - Rescue Suits:
+      - suitsets/iron-man-suits/iron-rescue-suits/index.md
+      - Model V: suitsets/iron-man-suits/iron-rescue-suits/model-5.md
+    - War Machine Suits:
+      - suitsets/iron-man-suits/war-machine-suits/index.md
+      - Model I: suitsets/iron-man-suits/war-machine-suits/model-1.md
+- Structures:
+  - structures/index.md
+  - Abandoned Prison: structures/abandoned-prison.md
+  - Fallen Kree Ship: structures/fallen-kree-ship.md
+  - Fallen Kryptonian Ship: structures/fallen-kryptonian-ship.md
+  - Fallen Martian Ship: structures/fallen-martian-ship.md
+  - Fallen Viltrumite Ship: structures/fallen-viltrumite-ship.md
+  - Kryptonite Meteor: structures/kryptonian-meteor.md
+  - Mjolnir Crashsite: structures/mjolnir-crashsite.md
+  - Nth Meteor: structures/nth-meteor.md
+  - Vibranium Meteor: structures/vibranium-meteor.md
+- Villagers:
+  - villagers/index.md
+  - Scientist: villagers/scientist.md
+  - Wizard: villagers/wizard.md
