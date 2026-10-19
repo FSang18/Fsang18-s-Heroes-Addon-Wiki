@@ -11,3 +11,5 @@ Here you can find various materials which can be used within the addon.
 * [Cosmic Ingot](cosmic-ingot.md)
 * [Gold-Titanium Ingot](gold-titanium-alloy.md)
 * [Ruby Quartz](ruby-quartz.md)
+* [Human DNA Sample](human-dna-sample.md)
+* [Augmented Human DNA](augmented-human-dna.md)
