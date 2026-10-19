@@ -11,8 +11,8 @@ hide:
 # FSang18's Heroes Addon Wiki
 
 !!! **WARNING** !!! "Unreleased version"
-    
-    “This documentation is for the 26.1.2 build of the mod which is currently unreleased to the public. Please note that until the release of the public version of the 26.1.2 mod, things are subject to change”
+
+  **This documentation is for the 26.1.2 build of the mod which is currently unreleased to the public. Please note that until the release of the public version of the 26.1.2 mod, things are subject to change**
 
 Pages for the 26.1 version will be added here as the mod is ported.
 
