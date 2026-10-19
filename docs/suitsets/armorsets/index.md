@@ -215,6 +215,7 @@ Here you can find all the existing Armor Sets in the addon.
 * [Aqualad (Young Justice)](aqualad-young-justice.md)
 * [Aquaman (Classic)](aquaman-classic.md)
 * [Aquaman (Young Justice)](aquaman-young-justice.md)
+* [Atlentean (Soldier)](atlantean-soldier.md)
 * [Arkham Knight](arkham-knight.md)
 * [Azrael (Arkham Knight)](azrael-arkham-knight.md)
 * [Blue Beetle (Classic)](blue-beetle-classic.md)
