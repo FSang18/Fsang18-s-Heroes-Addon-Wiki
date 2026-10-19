@@ -6,7 +6,7 @@ hide:
 
 <div class="hero" markdown>
 
-![Heroes Addon logo](uploads/2703a3f0b163b13baac62a9fe5115772/logo_big.png){ width="220" }
+![Heroes Addon logo](uploads/2703a3f0b163b13baac62a9fe5115772/logo_big.png){ width="400" }
 
 # FSang18's Heroes Addon Wiki
 
