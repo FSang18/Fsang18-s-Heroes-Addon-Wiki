@@ -8,5 +8,9 @@ Within this category are all of the tech-based gadgets within the addon that can
 
 * [Batarangs](batarangs/index.md)
 * [Smoke Pellets](smoke-pellet.md)
+* [Utility Gun](utility-gun.md)
 * [Sound Gun](sound-gun.md)
 * [Web Shooters](web-shooters/index.md)
+* [Pumpkin Bombs](pumpkin-bombs.md)
+* [Compound Bow](compound-bow.md)
+* [Trick Arrows](trick-arrows.md)
