@@ -11,5 +11,12 @@ Uses:
 * When used on [Viltrumite - Thraxan Hybrid](powers/main-powers/viltrumites/human-hybrid.md) variant it only drains hunger and gives damage afterwards, no slowness and weakness, in the duration of Scourge Virus effect.
 
 Related Information:
-* When under the effect as a Viltrumite you can not hold a Milk Bucket.
-* Scourge Virus has no effect on Non-Viltrumites.
+
+*  When under the effect as a Viltrumite you can not hold a Milk Bucket.
+*  Scourge Virus has no effect on Non-Viltrumites.
+*  Scourge Virus has 4 different variaton for giving the effect
+      * Potion of Scourge Virus
+      * Splash Potion of Scourge Virus
+      * Lingering Potion of Scourge Virus
+      * Arrow of Scourge Virus 
+      * <img width="169" height="38" alt="image" src="https://github.com/user-attachments/assets/9d938712-5e7d-408f-8fc3-6e310b51085f" />
