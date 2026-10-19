@@ -12,6 +12,7 @@ Stats:
 
 Slot 1 (Crouch): "Psionic Abilities" - Open the ability wheel to change what active ability you have for your first slot. Selected abilities are used with non-crouch. The Abilities for the first slots are:
 * "Psionic Strike" - Directly attack a target's mind within 6 blocks. This will deal -4 Psionic damage to the target when hit.
+
 * "Psionic Read" - Use your telepathic reach to reveal the information of Entities around you in a 30 block radius. If you are using Cerebro to enhance your abilities, you will also be able to read any powers targets in range have.
 * "Psionic Sight" - Use your telepathic reach to see through another target's eyes. You will be able to hop up to 3 times into different targets.
 * "Telekinetic Hold" - Telekinetically grab any entity or block within 8 blocks of you. Scrolling while this is enabled will allow you to bring the target closer or further.
@@ -53,9 +54,12 @@ Slot 5 (Crouch): "Cosmic Manipulaiton" - Open the ability wheel to change what a
 * "Cosmic Resonance" - Drain your Reality Energy to grant the Regeneration, Resistance and Strength effects on all Heralds within a 20 block radius. This will also grant the Wither Effect to all non-heralds within a 10 block radius.
 * "Cosmic Energy Surge" - Drain your Reality Energy to slow all targets within a 5 block radius around you, using your Cosmic Energy to deal damage to them over time.
 
-Relevant information
+**Relevant Information**
+
 * This power has 1000 energy
+
 * This power is loosely based on Franklin Richards, a.k.a Powerhouse
+
 * Cerebro gives buffs to certain moves when worn
 * There are 4 abilities that add boosts to you when in the Pocket Dimension
 	* Pocket Dimension: Healing adds an additional 1 heart/ 2 secs
