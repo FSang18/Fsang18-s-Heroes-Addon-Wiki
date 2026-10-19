@@ -53,6 +53,10 @@ All information for the addonpack will be exclusively updated here, as well as t
 -   :material-star-circle: **[Skill Point System](skill-point-system.md)**
 
     How skill points work.
+    
+-   :material-console: **[Commands](commands.md)**
+
+    Every command the addon adds, and how to use it.
 
 </div>
 
