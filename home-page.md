@@ -11,6 +11,7 @@ hide:
 # FSang18's Heroes Addon Wiki
 
 !!! **WARNING** !!! "Unreleased version"
+    
     This documentation covers the 26.1 test version. It is not released yet and things may change.
 
 Pages for the 26.1 version will be added here as the mod is ported.
