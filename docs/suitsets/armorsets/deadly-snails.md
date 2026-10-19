@@ -4,7 +4,7 @@ title: "Deadly Snails"
 
 # Deadly Snails
 
-<img width="366" height="676" alt="deadly" src="https://github.com/user-attachments/assets/7da7b0b6-4663-4cbf-a435-c18447fd7eff" />
+<img width="208" height="390" alt="deadly" src="https://github.com/user-attachments/assets/7da7b0b6-4663-4cbf-a435-c18447fd7eff" />
 
 
 **"Deadly Snails Suit"** is obtained via:
