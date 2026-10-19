@@ -2,7 +2,7 @@ name: Publish wiki
 
 on:
   push:
-    branches: [main]
+    branches: [main, "26.1"]
   workflow_dispatch:
 
 permissions:
@@ -10,7 +10,7 @@ permissions:
 
 concurrency:
   group: pages
-  cancel-in-progress: true
+  cancel-in-progress: false
 
 jobs:
   deploy:
@@ -31,9 +31,16 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
       - name: Publish version 1.20.1
+        if: github.ref_name == 'main'
         run: |
           mike deploy --push 1.20.1
           mike set-default --push 1.20.1
         env:
           SITE_URL: https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/
           EDIT_URI: edit/main/docs/
+      - name: Publish 26.1 (unreleased)
+        if: github.ref_name == '26.1'
+        run: mike deploy --push --title "26.1 (Unreleased)" 26.1
+        env:
+          SITE_URL: https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/
+          EDIT_URI: edit/26.1/docs/
