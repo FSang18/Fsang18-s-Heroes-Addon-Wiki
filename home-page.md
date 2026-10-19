@@ -54,6 +54,10 @@ All information for the addonpack will be exclusively updated here, as well as t
 
     How skill points work.
 
+-   :material-console: **[Commands](commands.md)**
+
+    Every command the addon adds, and how to use it.
+
 </div>
 
 ## Frequently checked pages
