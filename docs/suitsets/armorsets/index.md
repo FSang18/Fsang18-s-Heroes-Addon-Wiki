@@ -249,3 +249,4 @@ Here you can find all the existing Armor Sets in the addon.
 * [Babel](babel.md)
 * [LD Corp](ld-corp.md)
 * [M.I.N.E. Labs](mine-labs.md)
+* [Deadly Snails](deadly-snails.md)
