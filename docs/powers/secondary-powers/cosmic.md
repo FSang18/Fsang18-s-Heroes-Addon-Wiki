@@ -6,7 +6,7 @@ title: "Cosmic"
 
 ![Cosmic](../../uploads/b235c2439fd6a44e5e4d815679765052/image.png){ width="100" height="100" loading=lazy }
 
-The **"Power Cosmic"** is obtained via Right-Clicking a Cosmic Silver, an item that has a rare chance of appearing in End City chests.
+The **"Power Cosmic"** is obtained via Right-Clicking a [Cosmic Silver](../../items/artifacts/cosmic-silver.md), an item that has a rare chance of appearing in End City chests.
 
 **Stats**:
 
@@ -36,4 +36,5 @@ The **"Power Cosmic"** is obtained via Right-Clicking a Cosmic Silver, an item t
 
 * This power can breath in space using the Ad Astra Mod.
 * When you fly with this power you will have a surfing animations.
+* This power can be stored with a [Cosmic Silver (Empty)](../../items/artifacts/cosmic-silver.md)
 * This power forces your skin to silver color.
