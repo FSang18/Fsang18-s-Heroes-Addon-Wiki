@@ -211,20 +211,15 @@
 .md-copyright { width: 100%; text-align: center; }
 .md-copyright a { text-decoration: underline; }
 
-/* Powers: generic lightning-bolt symbol instead of a picture */
-.md-nav--primary > .md-nav__list > .md-nav__item:nth-child(5) {
-  --nav-img: none;
-  --nav-bg: initial;
-  --nav-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M7 2v11h3v9l7-12h-4l4-8z'/%3E%3C/svg%3E");
-}
-/* which icon for which entry (1 = Home, 2 = Installation, ... in menu order) */
+/* which icon for which entry in the 26.1 menu (1 = Home, 2 = Installation, ... in menu order) */
 .md-nav--primary > .md-nav__list > .md-nav__item:nth-child(1) { --nav-img: url("../uploads/2703a3f0b163b13baac62a9fe5115772/logo_big.png"); --nav-bg: transparent; } /* Home - FH logo */
 .md-nav--primary > .md-nav__list > .md-nav__item:nth-child(2) { --nav-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M5 20h14v-2H5m14-9h-4V3H9v6H5l7 7z'/%3E%3C/svg%3E"); } /* Installation */
-.md-nav--primary > .md-nav__list > .md-nav__item:nth-child(4) { --nav-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M20 19V7H4v12zm0-16a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2zm-7 14v-2h5v2zm-3.42-4L5.57 9H8.4l3.3 3.3c.39.39.39 1.03 0 1.42L8.42 17H5.59z'/%3E%3C/svg%3E"); } /* Commands */
-.md-nav--primary > .md-nav__list > .md-nav__item:nth-child(7) { --nav-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M16.23 18 12 15.45 7.77 18l1.12-4.81-3.73-3.23 4.92-.42L12 5l1.92 4.53 4.92.42-3.73 3.23zM12 2C6.47 2 2 6.5 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2'/%3E%3C/svg%3E"); } /* Skill Point System */
-.md-nav--primary > .md-nav__list > .md-nav__item:nth-child(9) { --nav-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M21 16.5c0 .38-.21.71-.53.88l-7.9 4.44c-.16.12-.36.18-.57.18s-.41-.06-.57-.18l-7.9-4.44A.99.99 0 0 1 3 16.5v-9c0-.38.21-.71.53-.88l7.9-4.44c.16-.12.36-.18.57-.18s.41.06.57.18l7.9 4.44c.32.17.53.5.53.88zM12 4.15 6.04 7.5 12 10.85l5.96-3.35zM5 15.91l6 3.38v-6.71L5 9.21zm14 0v-6.7l-6 3.37v6.71z'/%3E%3C/svg%3E"); } /* Blocks */
-.md-nav--primary > .md-nav__list > .md-nav__item:nth-child(10) { --nav-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M5 4h14a3 3 0 0 1 3 3v4h-7v-1H9v1H2V7a3 3 0 0 1 3-3m6 7h2v2h-2zm-9 1h7v1l2 2h2l2-2v-1h7v8H2z'/%3E%3C/svg%3E"); } /* Items */
-.md-nav--primary > .md-nav__list > .md-nav__item:nth-child(11) { --nav-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M16 21H8a1 1 0 0 1-1-1v-7.93l-1.3 1a.996.996 0 0 1-1.41 0l-2.83-2.78a.996.996 0 0 1 0-1.41L7.34 3H9c0 1.1 1.34 2 3 2s3-.9 3-2h1.66l5.88 5.88c.39.39.39 1.02 0 1.41l-2.83 2.83c-.39.38-1.02.38-1.41 0l-1.3-1V20a1 1 0 0 1-1 1'/%3E%3C/svg%3E"); } /* Suitsets */
+.md-nav--primary > .md-nav__list > .md-nav__item:nth-child(3) { --nav-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M20 19V7H4v12zm0-16a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2zm-7 14v-2h5v2zm-3.42-4L5.57 9H8.4l3.3 3.3c.39.39.39 1.03 0 1.42L8.42 17H5.59z'/%3E%3C/svg%3E"); } /* Commands */
+.md-nav--primary > .md-nav__list > .md-nav__item:nth-child(4) { --nav-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M7 2v11h3v9l7-12h-4l4-8z'/%3E%3C/svg%3E"); } /* Powers */
+.md-nav--primary > .md-nav__list > .md-nav__item:nth-child(5) { --nav-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M16.23 18 12 15.45 7.77 18l1.12-4.81-3.73-3.23 4.92-.42L12 5l1.92 4.53 4.92.42-3.73 3.23zM12 2C6.47 2 2 6.5 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2'/%3E%3C/svg%3E"); } /* Skill Point System */
+.md-nav--primary > .md-nav__list > .md-nav__item:nth-child(6) { --nav-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M21 16.5c0 .38-.21.71-.53.88l-7.9 4.44c-.16.12-.36.18-.57.18s-.41-.06-.57-.18l-7.9-4.44A.99.99 0 0 1 3 16.5v-9c0-.38.21-.71.53-.88l7.9-4.44c.16-.12.36-.18.57-.18s.41.06.57.18l7.9 4.44c.32.17.53.5.53.88zM12 4.15 6.04 7.5 12 10.85l5.96-3.35zM5 15.91l6 3.38v-6.71L5 9.21zm14 0v-6.7l-6 3.37v6.71z'/%3E%3C/svg%3E"); } /* Blocks */
+.md-nav--primary > .md-nav__list > .md-nav__item:nth-child(7) { --nav-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M5 4h14a3 3 0 0 1 3 3v4h-7v-1H9v1H2V7a3 3 0 0 1 3-3m6 7h2v2h-2zm-9 1h7v1l2 2h2l2-2v-1h7v8H2z'/%3E%3C/svg%3E"); } /* Items */
+.md-nav--primary > .md-nav__list > .md-nav__item:nth-child(8) { --nav-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M16 21H8a1 1 0 0 1-1-1v-7.93l-1.3 1a.996.996 0 0 1-1.41 0l-2.83-2.78a.996.996 0 0 1 0-1.41L7.34 3H9c0 1.1 1.34 2 3 2s3-.9 3-2h1.66l5.88 5.88c.39.39.39 1.02 0 1.41l-2.83 2.83c-.39.38-1.02.38-1.41 0l-1.3-1V20a1 1 0 0 1-1 1'/%3E%3C/svg%3E"); } /* Suitsets */
 
 /* Hide Material's hidden "table of contents" link that the sidebar code made visible */
 .md-sidebar--primary .md-nav--primary > .md-nav__list > .md-nav__item > label.md-nav__link[for="__toc"] {
