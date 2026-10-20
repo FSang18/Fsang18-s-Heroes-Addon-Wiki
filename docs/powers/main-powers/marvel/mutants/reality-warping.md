@@ -9,7 +9,7 @@ title: "Reality Warping"
 <div class="pc-head" markdown>
 
 <div class="pc-medal" markdown>
-![Reality Warping icon](../../../../reality_warping_icon.png){ .pc-icon }
+![Reality Warping icon](../../../../uploads/reality_warping_icon.png){ .pc-icon }
 </div>
 
 <div class="pc-id">
