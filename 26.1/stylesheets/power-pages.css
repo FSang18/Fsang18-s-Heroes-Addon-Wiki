@@ -165,3 +165,111 @@
 
 /* ---------- Notes list at the bottom of a page ---------- */
 .md-typeset .power-notes { margin-top: 2.2rem; }
+
+/* ===== Power overview card (top of a power page) =====
+   The power's colour is the --pc line just below. Reality Warping is blue.
+   To use the card on another power, copy it into that page and put a colour on its first line,
+   for example:  <div class="power-card" style="--pc: #ff5a5a" markdown>                       */
+.md-typeset .power-card {
+  --pc: #4da3ff;
+  position: relative;
+  margin: 1.2rem 0 1.8rem;
+  padding: 1.25rem 1.35rem 1.2rem;
+  border: 1px solid color-mix(in srgb, var(--pc) 38%, transparent);
+  border-top: 3px solid var(--pc);
+  border-radius: .25rem;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 0% 0%, color-mix(in srgb, var(--pc) 24%, transparent), transparent 55%),
+    repeating-linear-gradient(135deg, color-mix(in srgb, var(--pc) 8%, transparent) 0 1px, transparent 1px 14px),
+    rgba(127, 127, 127, .06);
+}
+[data-md-color-scheme="default"] .md-typeset .power-card { --pc: #1d5fd1; }
+
+/* header: medallion + name */
+.md-typeset .power-card .pc-head {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+}
+.md-typeset .power-card .pc-medal { flex: none; }
+.md-typeset .power-card .pc-medal p { margin: 0; display: flex; }
+.md-typeset .power-card .pc-icon {
+  width: 5.2rem;
+  height: 5.2rem;
+  border-radius: 50%;
+  image-rendering: pixelated;
+  background: #0b1020;
+  box-shadow:
+    0 0 0 2px var(--pc),
+    0 0 1.6rem color-mix(in srgb, var(--pc) 50%, transparent);
+}
+.md-typeset .power-card .pc-id { display: flex; flex-direction: column; gap: .25rem; min-width: 0; }
+.md-typeset .power-card .pc-eyebrow {
+  font-size: .7rem;
+  font-weight: 700;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--pc);
+}
+.md-typeset .power-card .pc-name {
+  font-size: 1.8rem;
+  font-weight: 800;
+  line-height: 1.1;
+  color: var(--md-default-fg-color);
+  text-shadow: 0 0 1.2rem color-mix(in srgb, var(--pc) 45%, transparent);
+}
+
+/* three fact tiles */
+.md-typeset .power-card .pc-facts {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(10.5rem, 1fr));
+  gap: .7rem 1rem;
+  margin: 1.2rem 0 1rem;
+}
+.md-typeset .power-card .pc-facts > div {
+  display: flex;
+  flex-direction: column;
+  gap: .15rem;
+  padding-left: .75rem;
+  border-left: 2px solid color-mix(in srgb, var(--pc) 65%, transparent);
+}
+.md-typeset .power-card .pc-facts span {
+  font-size: .66rem;
+  font-weight: 700;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--md-default-fg-color--light);
+}
+.md-typeset .power-card .pc-facts b { font-size: 1.05rem; font-weight: 700; line-height: 1.3; }
+.md-typeset .power-card .pc-facts small { font-size: .74rem; color: var(--md-default-fg-color--light); line-height: 1.35; }
+
+/* the five slot squares, in the same colours as the slot tabs below */
+.md-typeset .power-card .pc-slots { display: flex; gap: .25rem; padding: .1rem 0; }
+.md-typeset .power-card .pc-slots i {
+  display: grid;
+  place-items: center;
+  width: 1.4rem;
+  height: 1.4rem;
+  border-radius: .2rem;
+  background: var(--accent);
+  color: #111;
+  font-style: normal;
+  font-size: .78rem;
+  font-weight: 800;
+}
+
+/* description */
+.md-typeset .power-card .pc-desc {
+  margin: 0;
+  padding-top: .9rem;
+  border-top: 1px dashed color-mix(in srgb, var(--pc) 40%, transparent);
+  font-size: .9rem;
+  line-height: 1.7;
+}
+
+@media screen and (max-width: 36em) {
+  .md-typeset .power-card .pc-head { gap: .9rem; }
+  .md-typeset .power-card .pc-icon { width: 4.2rem; height: 4.2rem; }
+  .md-typeset .power-card .pc-name { font-size: 1.45rem; }
+}
