@@ -13,4 +13,4 @@ title: "Empty Contract"
 Uses:
 
 * Empty Contract can be used to remove and store [Spirit of Vengance](../powers/secondary-powers/spirit-of-vengance.md) power.
-* Using this contract to remove SoV will turn this item into [Unholy Pact](../artifacts/unholy-pact.md).
+* Using this contract to remove SoV will turn this item into [Unholy Pact](../../items/artifacts/unholy-pact.md).
