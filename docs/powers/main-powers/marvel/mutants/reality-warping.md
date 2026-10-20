@@ -4,6 +4,31 @@ title: "Reality Warping"
 
 # Reality Warping
 
+<div class="power-card" markdown>
+
+<div class="pc-head" markdown>
+
+<div class="pc-medal" markdown>
+![Reality Warping icon](../../../../uploads/reality_warping_icon.png){ .pc-icon }
+</div>
+
+<div class="pc-id">
+<span class="pc-eyebrow">Main Power · Marvel · Mutants</span>
+<span class="pc-name">Reality Warping</span>
+</div>
+
+</div>
+
+<div class="pc-facts">
+<div><span>Obtained from</span><b>X-Gene</b><small>random chance</small></div>
+<div><span>Ability slots</span><b class="pc-slots"><i class="psionic">1</i><i class="energy">2</i><i class="dimensional">3</i><i class="reality">4</i><i class="cosmic">5</i></b><small>Psionic · Energy · Spatial · Reality · Cosmic</small></div>
+<div><span>Signature look</span><b>Blue energy</b><small>beams, projectiles and more</small></div>
+</div>
+
+<p class="pc-desc">Reality Warping is a powerful ability that allows the user to manipulate and reshape reality, drawing on psionic, energy, spatial, reality, and cosmic powers. It grants abilities such as telepathy, telekinesis, energy projection, dimensional travel, matter alteration, and environmental transformation, making it an extremely versatile power with both offensive and defensive capabilities.</p>
+
+</div>
+
 The "Reality Warping" power is obtained via the X-Gene item at random chance.
 
 ## Stats
@@ -13,9 +38,9 @@ The "Reality Warping" power is obtained via the X-Gene item at random chance.
 <div><span>Maximum Healing / Second</span><b>0.7 /s</b></div>
 <div><span>Armor Rating</span><b>4</b></div>
 <div><span>Armor Toughness</span><b>N/A</b></div>
-<div><span>Base Attack Damage</span><b>4</b></div>
-<div><span>Sprint Speed</span><b>1.6 b/s</b></div>
 <div><span>Flight Speed</span><b>6.2 b/s</b></div>
+<div><span>Sprint Speed</span><b>1.6 b/s</b></div>
+<div><span>Base Attack Damage</span><b>4</b></div>
 <div><span>Energy</span><b>1000</b></div>
 </div>
 
@@ -320,7 +345,7 @@ Drain your Reality Energy to slow all targets within a 5 block radius around you
 ## Relevant Information
 
 * This power is loosely based on Franklin Richards, a.k.a. Powerhouse.
-* Cerebro gives buffs to certain moves when worn.
+* Cerebro gives buffs to [telepathic abilities](#psionic) when worn.
 * This power is one of the two powers that can travel other dimensions.
 
 There are 4 abilities that add boosts to you when you are in the Pocket Dimension:
