@@ -6,7 +6,7 @@ title: "Spirit of Vengance"
 
 ![Spirit of Vengance](../../uploads/649463d305a0dc16533551f5fe490883/image.png){ width="100" height="100" loading=lazy }
 
-The **"Spirit of Vengance"** is obtained via Unholy Pact. Killing villagers in the nether has a 5% chance of dropping a Unholy Pact, typing "I accept" while holding the pact grants the power. Accepting the offer will **decrease your Karma by 600.**
+The **"Spirit of Vengance"** is obtained via [Unholy Pact](../../items/artifacts/unholy-pact.md). Killing villagers in the nether has a 5% chance of dropping a Unholy Pact, typing "I accept" while holding the pact grants the power.
 
 **Stats:**
 
@@ -31,7 +31,7 @@ The **"Spirit of Vengance"** is obtained via Unholy Pact. Killing villagers in t
 * After unlocking the **Sin Perception** ability you will passively gain the ability to have all entities within a 15 block radius of you with negative Karma highlighted, even through walls.
 * Once unlocked **The King of Hell** you will get a crown which grants you the ability to no longer be **killed outside of the Nether.** Instead of dying, when your HP is 1 or less, you are immediately sent to the Nether. Additionaly, you will gain a **passive healing factor** whenever you are in the Nether. You can toggle on / off the crown in the ability menu, toggling of the crown means you dont get the benefit from its abilities.
 * With transforming a minecart you will get a **Hellfire Bike** and a massive speed increase, you will create a fire trail wherever you go. The Hellfire bike will stack with your speed increases from other sources.
-* When you got the Unholy Pact if you type "i decline" you can destroy the pact and get a little Karma increase.
+* This power can be stored with a [Empty Contract](../../items/empty-contract.md)
 * You cant wear any helmets while you are transformed.
 * You have the following passives while in Ghost Rider Form;
   * **Fire Damage Immunity**
