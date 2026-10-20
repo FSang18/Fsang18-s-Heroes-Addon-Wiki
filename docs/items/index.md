@@ -24,3 +24,4 @@ Here you can find the information for all of the Items that can be obtained with
 * [Super Soldier Serum](super-soldier-serum.md)
 * [Symbiote Container](symbiote-container.md)
 * [X-Gene](x-gene.md)
+* [Empty Contract](empty-contract.md)
