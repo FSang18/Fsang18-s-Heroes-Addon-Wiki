@@ -21,7 +21,7 @@ title: "Reality Warping"
 
 <div class="pc-facts">
 <div><span>Obtained from</span><b>X-Gene</b><small>Random Chance</small></div>
-<div><span>Ability slots</span><b class="pc-slots"><i class="psionic">1</i><i class="energy">2</i><i class="dimensional">3</i><i class="reality">4</i><i class="cosmic">5</i></b><small>Psionic · Energy · Spatial · Reality · Cosmic</small></div>
+<div><span>Ability slots</span><b class="pc-slots"><i class="psionic">1</i><i class="energy">2</i><i class="spatial">3</i><i class="reality">4</i><i class="cosmic">5</i></b><small>Psionic · Energy · Spatial · Reality · Cosmic</small></div>
 <div><span>Signature look</span><b>Blue energy</b><small>Beams, Projectiles and more</small></div>
 </div>
 
@@ -49,7 +49,7 @@ Reality Warping has five ability slots. Jump to one:
 <div class="slot-nav">
 <a class="psionic" data-slot="1" href="#psionic">Psionic Manipulation</a>
 <a class="energy" data-slot="2" href="#energy">Energy Manipulation</a>
-<a class="dimensional" data-slot="3" href="#dimensional">Dimensional Manipulation</a>
+<a class="spatial" data-slot="3" href="#spatial">Spatial Manipulation</a>
 <a class="reality" data-slot="4" href="#reality">Reality Manipulation</a>
 <a class="cosmic" data-slot="5" href="#cosmic">Cosmic Manipulation</a>
 </div>
@@ -192,9 +192,9 @@ Manipulate the energy inside you by charging it up for 5 seconds, then exploding
 
 </div>
 
-<div class="power-section dimensional" markdown>
+<div class="power-section spatial" markdown>
 
-### Spatial Manipulation { #dimensional data-slot="3" data-mode="Non-Crouch" }
+### Spatial Manipulation { #spatial data-slot="3" data-mode="Non-Crouch" }
 
 <p class="slot-intro">Use your power to manipulate the space around you, and gain mastery over it.</p>
 
