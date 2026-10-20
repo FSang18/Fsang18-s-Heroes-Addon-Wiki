@@ -6,7 +6,7 @@ title: "Phoenix Force"
 
 ![Phoenix Force](../../uploads/15dc2e10499fbc69c80fc8161fdd7334/image.png){ width="100" height="100" loading=lazy }
 
-The **"Phoenix Force"** is obtained via a 1% chance after using a **Totem of Undying** in the End while holding a **Phoenix Force Totem** in the offhand while having a mutant power active. This Secondary power can only be used by [Mutants](../main-powers/mutations-x-gene/index.md), and can be stored within a Phoenix Force Totem.
+The **"Phoenix Force"** is obtained via a 1% chance after using a **Totem of Undying** in the End while holding a **[Phoenix Force Totem](../../items/artifacts/phoenix-force-totem.md)** in the offhand while having a mutant power active. This Secondary power can only be used by [Mutants](../main-powers/mutations-x-gene/index.md), and can be stored within a Phoenix Force Totem.
 
 **Stats**:
 
@@ -35,7 +35,8 @@ The **"Phoenix Force"** is obtained via a 1% chance after using a **Totem of Und
   * The aura / wings particles can be toggled via the ability menu.
 * By unlocking the skill named "**Phoenix Force - Reborn**" you will be able to be brought back to life once per purchase and granted healing when it occurs.
   * This skill cannot be stacked to gain more than 1 extra life at a time, and will need to be repurchased for 12 Phoenix Force Token after each use.
-* If you are not a mutant, this power will automatically be stored in a Phoenix Force Totem.
+* This power can be stored with a [Phoenix Force Totem (Empty)](../../items/artifacts/phoenix-force-totem.md)
+  * If you are not a mutant, this power will automatically be stored in a Phoenix Force Totem.
 * This power grants the following effects to the following mutations (**If there is a mutation not listed below, that means it only receives the default stats and abilities**):
   * [Bone Claws](../main-powers/mutations-x-gene/bone-claws/index.md) - Glowing claws and deals fire damage on hit
   * [Cryokinesis](../main-powers/mutations-x-gene/cryokinesis.md) - Stronger Cryokinetic beam
