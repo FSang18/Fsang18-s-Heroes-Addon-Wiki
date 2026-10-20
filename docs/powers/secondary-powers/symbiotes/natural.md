@@ -45,4 +45,5 @@ The **"Natural Symbiote"** is obtained via finding a rare crashed meteor above g
       * **Armor :+10**
 * The Symbiote Bond Ability allows the Symbiote to protect the host when they are low on health in exchange for some of their food bar.
   * If the food bar is too low, the ability will not automatically activate.
+* This power can be stored within a [Symbiote Container](../../../items/symbiote-container.md)
 * All Symbiotes are available as Natural Symbiotes.
