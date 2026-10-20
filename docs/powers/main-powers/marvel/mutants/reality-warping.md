@@ -56,7 +56,7 @@ Reality Warping has five ability slots. Jump to one:
 
 <div class="power-section psionic" markdown>
 
-### Psionic Manipulation { #psionic data-slot="1" data-mode="Crouch" }
+### Psionic Manipulation { #psionic data-slot="1"  }
 
 <p class="slot-intro">Use your Telephaty or Telekinesis via various methods.</p>
 
@@ -128,7 +128,7 @@ Lift, then launch up to 5 blocks within a 6 block radius of you at your target f
 
 <div class="power-section energy" markdown>
 
-### Energy Manipulation { #energy data-slot="2" data-mode="Crouch" }
+### Energy Manipulation { #energy data-slot="2"  }
 
 <p class="slot-intro">Use your power to manipulate different energies in various ways.</p>
 
@@ -242,7 +242,7 @@ Gain the ability to open a menu to create portals that allow you and others to t
 
 <div class="power-section reality" markdown>
 
-### Reality Manipulation { #reality data-slot="4" data-mode="Crouch" }
+### Reality Manipulation { #reality data-slot="4"  }
 
 <p class="slot-intro">Use your power to shape and manipulate the reality around you.</p>
 
@@ -290,7 +290,7 @@ Transform reality around you in a 12 block radius to that of a random biome. Tho
 
 <div class="power-section cosmic" markdown>
 
-### Cosmic Manipulation { #cosmic data-slot="5" data-mode="Crouch" }
+### Cosmic Manipulation { #cosmic data-slot="5"  }
 
 <p class="slot-intro">Use your power to manipulate the Power Cosmic around you.</p>
 
