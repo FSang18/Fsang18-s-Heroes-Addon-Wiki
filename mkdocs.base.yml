@@ -43,9 +43,7 @@ theme:
 
 extra_css:
   - stylesheets/extra.css
-   extra_css:
-     - stylesheets/extra.css
-     - stylesheets/power-pages.css
+  - stylesheets/power-pages.css
 extra_javascript:
   - javascripts/move-version.js  
 
