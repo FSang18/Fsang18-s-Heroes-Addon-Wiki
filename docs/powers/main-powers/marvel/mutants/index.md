@@ -4,6 +4,6 @@ title: "Mutants"
 
 # Mutants
 
-These mutations are obtained via being exposed to the X-gene. After Crafting the X-Gene item, the user would need to right click it to be given a random Mutation power from the list below.
+Mutants are individuals in the Marvel Universe who possess the X-gene, a genetic trait that grants them extraordinary abilities, often manifesting during adolescence or periods of extreme stress. Their powers vary widely, ranging from enhanced physical abilities and elemental manipulation to telepathy, shapeshifting, and reality warping.
 
 * [Reality Warping](reality-warping.md)
