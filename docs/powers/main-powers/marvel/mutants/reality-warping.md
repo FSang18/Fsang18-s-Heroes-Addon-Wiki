@@ -20,7 +20,7 @@ title: "Reality Warping"
 </div>
 
 <div class="pc-facts">
-<div><span>Obtained from</span><b>X-Gene</b><small>random chance</small></div>
+<div><span>Obtained from</span><b>X-Gene</b><small>Random Chance</small></div>
 <div><span>Ability slots</span><b class="pc-slots"><i class="psionic">1</i><i class="energy">2</i><i class="dimensional">3</i><i class="reality">4</i><i class="cosmic">5</i></b><small>Psionic · Energy · Spatial · Reality · Cosmic</small></div>
 <div><span>Signature look</span><b>Blue energy</b><small>Beams, Projectiles and more</small></div>
 </div>
@@ -33,7 +33,7 @@ title: "Reality Warping"
 
 <div class="spec">
 <div><span>Maximum Health</span><b>28</b></div>
-<div><span>Maximum Healing / Second</span><b>0.7 /s</b></div>
+<div><span>Maximum Healing / Second</span><b>0.7/s</b></div>
 <div><span>Armor Rating</span><b>4</b></div>
 <div><span>Armor Toughness</span><b>N/A</b></div>
 <div><span>Flight Speed</span><b>6.2 b/s</b></div>
@@ -66,9 +66,9 @@ Reality Warping has five ability slots. Jump to one:
 
 #### Psionic Strike
 
-Directly attack a target's mind within 6 blocks. This will deal -4 Psionic damage to the target when hit.
+Directly attack a target's mind within 6 blocks. This will deal 4 Psionic damage to the target when hit.
 
-<div class="chips"><span class="chip">Range <b>6 blocks</b></span><span class="chip">Damage <b>-4 Psionic</b></span></div>
+<div class="chips"><span class="chip">Range <b>6 blocks</b></span><span class="chip">Damage <b>4 Psionic</b></span></div>
 
 </div>
 
@@ -349,10 +349,10 @@ Drain your Reality Energy to slow all targets within a 5 block radius around you
 There are 4 abilities that add boosts to you when you are in the Pocket Dimension:
 
 <div class="spec">
-<div><span>Pocket Dimension: Healing</span><b>+1 heart / 2 secs</b></div>
-<div><span>Pocket Dimension: Health</span><b>+6 hp</b></div>
-<div><span>Pocket Dimension: Energy</span><b>+30 energy / sec</b></div>
-<div><span>Pocket Dimension: Saturation</span><b>+1 saturation / 3 secs</b></div>
+<div><span>Pocket Dimension: Healing</span><b>+2 HP / 2 Secs</b></div>
+<div><span>Pocket Dimension: Health</span><b>+6 HP</b></div>
+<div><span>Pocket Dimension: Energy Gain</span><b>+30 Energy / Sec</b></div>
+<div><span>Pocket Dimension: Saturation</span><b>+1 Saturation / 3 Secs</b></div>
 </div>
 
 </div>
