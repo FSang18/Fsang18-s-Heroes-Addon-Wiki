@@ -33,3 +33,4 @@ The **"Kaiju No. 8"** is obtained via Killing a Kaiju. A kaiju will have a 5% ch
   * Not being transformed can regain the expended energy.
 * After purchasing the "**Kaiju Healing**" ability, when your health reaches 2 or less hearts, and you have at least 4 bars of food left, you will be healed and have your foodbar drained.
 * Before unlocking the "Controlled Berserk Form" ability, you will automatically transform into the berserk mode if you take too much damage for 30 seconds.
+* This powered can be stored in a [Empty Syringe](../../../items/empty-syringe.md)
