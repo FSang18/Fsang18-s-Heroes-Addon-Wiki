@@ -10,5 +10,5 @@ title: "Unholy Pact"
 
 Uses:
 
-*  Typing "I accept" while holding the pact grants the [Spirit of Vengance](powers/secondary-powers/spirit-of-vengance.md). Accepting the offer will decrease your Karma by 600.
+*  Typing "I accept" while holding the pact grants the [Spirit of Vengance](../../powers/secondary-powers/spirit-of-vengance.md). Accepting the offer will decrease your Karma by 600.
 *  Typing "I decline" while holding the pact destroys the pact. Declining the offer will increase your Karma by 40.
