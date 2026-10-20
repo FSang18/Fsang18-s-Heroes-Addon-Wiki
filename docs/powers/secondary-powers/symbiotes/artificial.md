@@ -32,6 +32,7 @@ The "**Artificial Symbiote"** can be created by combining Augmented Human DNA, a
 
 * This secondary power has a "Symbiotic Rage" bar on the side of the ability bar which maxes out at 1,000.
   * This bar can be filled by taking any damage while a host of an Artificial symbiote.
+* This power can be stored within a [Symbiote Container](../../../items/symbiote-container.md)
 * Only the following Symbiotes can be obtained via the Artificial Symbiote item:
   * [Venom](full-symbiote-list/venom.md)
   * [Carnage](full-symbiote-list/carnage.md)
