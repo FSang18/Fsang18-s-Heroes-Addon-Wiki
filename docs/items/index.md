@@ -19,7 +19,7 @@ Here you can find the information for all of the Items that can be obtained with
 * [Cosmic Particle](cosmic-particle.md)
 * [Dark Matter Sample](dark-matter-sample.md)
 * [Gamma Radiation](gamma-radiation.md)
-* [Idunn Aplle](idunn-apple.md)
+* [Idunn Apple](idunn-apple.md)
 * [Scourge Virus](scourge-virus.md)
 * [Super Soldier Serum](super-soldier-serum.md)
 * [Symbiote Container](symbiote-container.md)
