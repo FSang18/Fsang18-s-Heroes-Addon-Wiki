@@ -25,7 +25,7 @@ title: "Reality Warping"
 <div><span>Signature look</span><b>Blue energy</b><small>Beams, Projectiles and more</small></div>
 </div>
 
-<p class="pc-desc">Reality Warping is a powerful ability that allows the user to manipulate and reshape reality, drawing on psionic, energy, spatial, reality, and cosmic powers. It grants abilities such as telepathy, telekinesis, energy projection, dimensional travel, matter alteration, and environmental transformation, making it an extremely versatile power with both offensive and defensive capabilities.</p>
+<p class="pc-desc">Reality Warping is an extraordinary power that allows the user to manipulate and reshape reality, drawing on psionic, energy, spatial, reality, and cosmic powers. It grants abilities such as telepathy, telekinesis, energy projection, dimensional travel, matter alteration, and environmental transformation, making it an extremely versatile power with both offensive and defensive abilities.</p>
 
 </div>
 
