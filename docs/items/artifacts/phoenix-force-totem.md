@@ -13,5 +13,5 @@ title: "Phoenix Force Totem"
 
 Uses:
 
-* This totem can be used to obtain [Phoenix Force](../powers/secondary-powers/phoenix-force.md) power.
+* This totem can be used to obtain [Phoenix Force](../../powers/secondary-powers/phoenix-force.md) power.
 * Right-Clicking a Phoenix Force Totem (Empty) while having Phoenix Force Power, will remove the power and store it inside.
