@@ -62,7 +62,8 @@ Move the sliders to preview a color. The page tells you if it is too close to on
   /* ===== EDIT HERE: one line per power ===== */
   var POWERS = [
     { name: "Reality Warping", hue: 215, sat: 90, lit: 62 },
-    { name: "Peter Parker",    hue: 355, sat: 90, lit: 62 }
+    { name: "Peter Parker",    hue: 355, sat: 90, lit: 62 },
+    { name: "Miles Morales",   hue: 0,   sat: 100, lit: 46 }
   ];
   /* hues closer than this many degrees get a warning */
   var CLOSE = 25;
