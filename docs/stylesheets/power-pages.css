@@ -415,3 +415,36 @@
 .mutation,  .md-typeset .slot-nav a.mutation,  .md-typeset .power-section.mutation  { --accent: #f43f5e; --c: #f43f5e; }
 
 .md-typeset .power-section > h3:not([data-mode])::after { display: none; }
+
+/* ===== Power card theme colour =====
+   Set on the card: style="--hue:215; --sat:90%; --lit:62%"  (sat and lit are optional) */
+.power-card { --pc: hsl(var(--hue, 215) var(--sat, 90%) var(--lit, 62%)); }
+[data-md-color-scheme="default"] .power-card {
+  --pc: hsl(var(--hue, 215) calc(var(--sat, 90%) - 15%) max(28%, calc(var(--lit, 62%) - 22%)));
+}
+
+/* ===== Power Colors reference page ===== */
+.md-typeset .pcol-strip { position: relative; height: 2.2rem; margin: 1.2rem 0 2.4rem; }
+.md-typeset .pcol-strip::before {
+  content: ""; position: absolute; inset: 0; border-radius: .6rem; opacity: .55;
+  background: linear-gradient(90deg, hsl(0 85% 55%), hsl(60 85% 55%), hsl(120 85% 45%), hsl(180 85% 45%), hsl(240 85% 60%), hsl(300 85% 55%), hsl(360 85% 55%));
+}
+.md-typeset .pcol-strip i {
+  position: absolute; top: 50%; left: calc(var(--hue) / 360 * 100%);
+  width: 1.1rem; height: 1.1rem; transform: translate(-50%, -50%); border-radius: 50%;
+  background: var(--pcd); border: 2px solid #fff; box-shadow: 0 0 0 2px rgb(0 0 0 / .45);
+}
+.md-typeset .pcol-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr)); gap: .9rem; }
+.md-typeset .pcol {
+  --pcd: hsl(var(--hue) var(--sat, 90%) var(--lit, 62%));
+  --pcl: hsl(var(--hue) calc(var(--sat, 90%) - 15%) max(28%, calc(var(--lit, 62%) - 22%)));
+  border: 1px solid var(--md-default-fg-color--lightest); border-radius: .7rem; overflow: hidden;
+  background: color-mix(in srgb, var(--md-default-fg-color) 4%, transparent);
+}
+.md-typeset .pcol-swatch { display: grid; grid-template-columns: 1fr 1fr; height: 3.2rem; }
+.md-typeset .pcol-swatch span { display: grid; place-items: center; font-size: .65rem; font-weight: 700; letter-spacing: .05em; color: #111; }
+.md-typeset .pcol-swatch span:first-child { background: var(--pcd); }
+.md-typeset .pcol-swatch span:last-child { background: var(--pcl); color: #fff; }
+.md-typeset .pcol-info { padding: .7rem 1rem .8rem; }
+.md-typeset .pcol-info b { display: block; font-size: 1rem; }
+.md-typeset .pcol-info small { color: var(--md-default-fg-color--light); font-family: var(--md-code-font-family); font-size: .74rem; }
