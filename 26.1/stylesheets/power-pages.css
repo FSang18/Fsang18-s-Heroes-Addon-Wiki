@@ -323,7 +323,7 @@
     0 0 1.1rem color-mix(in srgb, var(--src) 38%, transparent),
     inset 0 0 .9rem color-mix(in srgb, var(--src) 16%, transparent);
 }
-.md-typeset .power-card .src-biological .pc-src-icon { background-image: url("../uploads/biological_icon.png"); }
+.md-typeset .power-card .src-biological .pc-src-icon { background-image: url("../uploads/power-images/sources/biological.png"); }
 .md-typeset .power-card .pc-src-text { display: flex; flex-direction: column; gap: .15rem; min-width: 0; }
 .md-typeset .power-card .pc-source b { color: var(--src); font-size: 1.15rem; }
 [data-md-color-scheme="default"] .md-typeset .power-card .pc-source b {
@@ -491,7 +491,7 @@
 
         <div class="ab-head" markdown>
 
-        ![](../../../../uploads/arachnid-miles-morales/arachnid-dodge.png){ .ab-icon }
+        ![](../../../../uploads/power-images/arachnid-miles-morales/arachnid-dodge.png){ .ab-icon }
 
         #### Arachnid Dodge
 
