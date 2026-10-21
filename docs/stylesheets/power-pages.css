@@ -406,3 +406,12 @@
   }
   .md-typeset .power-card .pc-tier__rank { width: 2.9rem; height: 3.2rem; font-size: 1.6rem; }
 }
+
+/* ===== Arachnid – Peter Parker slot colours ===== */
+.totem,     .md-typeset .slot-nav a.totem,     .md-typeset .power-section.totem     { --accent: #c084fc; --c: #c084fc; }
+.movement,  .md-typeset .slot-nav a.movement,  .md-typeset .power-section.movement  { --accent: #38bdf8; --c: #38bdf8; }
+.physiology,.md-typeset .slot-nav a.physiology,.md-typeset .power-section.physiology{ --accent: #fb923c; --c: #fb923c; }
+.webbing,   .md-typeset .slot-nav a.webbing,   .md-typeset .power-section.webbing   { --accent: #94a3b8; --c: #94a3b8; }
+.mutation,  .md-typeset .slot-nav a.mutation,  .md-typeset .power-section.mutation  { --accent: #f43f5e; --c: #f43f5e; }
+
+.md-typeset .power-section > h3:not([data-mode])::after { display: none; }
