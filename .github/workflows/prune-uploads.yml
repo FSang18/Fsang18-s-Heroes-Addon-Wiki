@@ -1,0 +1,41 @@
+name: Prune unused uploads
+
+# Runs only when tools/prune-request.txt is added or changed on the 26.1 branch.
+# File says "dry-run"  -> lists what would be deleted, deletes nothing.
+# File says "delete"   -> deletes the unused pictures and commits the result.
+on:
+  push:
+    branches: [ "26.1" ]
+    paths: [ "tools/prune-request.txt" ]
+
+permissions:
+  contents: write
+
+jobs:
+  prune:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Read the request
+        id: req
+        run: |
+          mode=$(tr -d '[:space:]' < tools/prune-request.txt | tr 'A-Z' 'a-z')
+          echo "mode=$mode" >> "$GITHUB_OUTPUT"
+          echo "Request: $mode"
+      - name: Dry run
+        if: steps.req.outputs.mode != 'delete'
+        run: python tools/prune_uploads.py | tee -a "$GITHUB_STEP_SUMMARY"
+      - name: Delete unused pictures
+        if: steps.req.outputs.mode == 'delete'
+        run: python tools/prune_uploads.py --apply | tee -a "$GITHUB_STEP_SUMMARY"
+      - name: Commit
+        if: steps.req.outputs.mode == 'delete'
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@users.noreply.github.com"
+          git add -A docs/uploads
+          git commit -m "Remove unused uploads" || echo "Nothing to commit"
+          git push
