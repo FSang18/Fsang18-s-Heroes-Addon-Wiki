@@ -1,5 +1,6 @@
 ---
 title: "Power Colors"
+unlisted: true
 hide:
   - navigation
   - toc
