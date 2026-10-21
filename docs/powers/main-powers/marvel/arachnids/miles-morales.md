@@ -8,7 +8,7 @@ title: "Arachnid – Miles Morales"
 <div class="pc-head" markdown>
 <div class="pc-medal" markdown>
 
-![Arachnid – Miles Morales icon](../../../../uploads/power-pages/arachnid-miles-morales/miles.icon.png){ .pc-icon }
+![Arachnid – Miles Morales icon](../../../../uploads/power-images/arachnid-miles-morales/miles.icon.png){ .pc-icon }
 
 </div>
 <div class="pc-id">
@@ -64,7 +64,7 @@ title: "Arachnid – Miles Morales"
 
 <div class="ab-head" markdown>
 
-![](../../../../uploads/power-pages/arachnid-miles-morales/spider-sense.png){ .ab-icon }
+![](../../../../uploads/power-images/arachnid-miles-morales/spider-sense.png){ .ab-icon }
 
 #### Spider Sense
 
@@ -80,7 +80,7 @@ Detect any danger within 20 blocks of you. Players that deal damage to you also 
 
 <div class="ab-head" markdown>
 
-![](../../../../uploads/power-pages/arachnid-miles-morales/arachnid-dodge.png){ .ab-icon }
+![](../../../../uploads/power-images/arachnid-miles-morales/arachnid-dodge.png){ .ab-icon }
 
 #### Arachnid Dodge
 
@@ -96,7 +96,7 @@ Using your enhanced mobility, dodge in the direction you are moving to avoid inc
 
 <div class="ab-head" markdown>
 
-![](../../../../uploads/power-pages/arachnid-miles-morales/arachnid-mobility.png){ .ab-icon }
+![](../../../../uploads/power-images/arachnid-miles-morales/arachnid-mobility.png){ .ab-icon }
 
 #### Arachnid Mobility
 
@@ -112,7 +112,7 @@ Crouch while sprinting to slide, knocking back entities in your path. You can al
 
 <div class="ab-head" markdown>
 
-![](../../../../uploads/power-pages/arachnid-miles-morales/arachnid-adhesion.png){ .ab-icon }
+![](../../../../uploads/power-images/arachnid-miles-morales/arachnid-adhesion.png){ .ab-icon }
 
 #### Arachnid Adhesion
 
@@ -156,7 +156,7 @@ Using your enhanced strength, and with empty main and off hands, carry the targe
 
 <div class="ab-head" markdown>
 
-![](../../../../uploads/power-pages/arachnid-miles-morales/camouflage.png){ .ab-icon }
+![](../../../../uploads/power-images/arachnid-miles-morales/camouflage.png){ .ab-icon }
 
 #### Camouflage
 
@@ -172,7 +172,7 @@ Fully become invisible to those around you at will. You can stay invisible for 1
 
 <div class="ab-head" markdown>
 
-![](../../../../uploads/power-pages/arachnid-miles-morales/vanishing-dodge.png){ .ab-icon }
+![](../../../../uploads/power-images/arachnid-miles-morales/vanishing-dodge.png){ .ab-icon }
 
 #### Vanishing Dodge
 
@@ -216,7 +216,7 @@ Turn almost completely invisible to those around you whenever your Spider Sense 
 
 <div class="ab-head" markdown>
 
-![](../../../../uploads/power-pages/arachnid-miles-morales/arachnid-guard.png){ .ab-icon }
+![](../../../../uploads/power-images/arachnid-miles-morales/arachnid-guard.png){ .ab-icon }
 
 #### Arachnid Guard
 
@@ -232,7 +232,7 @@ Guard up to 10 damage from the direction you are looking. Having your guard brok
 
 <div class="ab-head" markdown>
 
-![](../../../../uploads/power-pages/arachnid-miles-morales/venom-punch.png){ .ab-icon }
+![](../../../../uploads/power-images/arachnid-miles-morales/venom-punch.png){ .ab-icon }
 
 #### Venom Punch
 
@@ -248,7 +248,7 @@ Concentrate your bioelectric energy into one hand and shock any target you hit w
 
 <div class="ab-head" markdown>
 
-![](../../../../uploads/power-pages/arachnid-miles-morales/venom-leap.png){ .ab-icon }
+![](../../../../uploads/power-images/arachnid-miles-morales/venom-leap.png){ .ab-icon }
 
 #### Venom Leap
 
@@ -292,7 +292,7 @@ Smash your Venom-enabled hands into the ground, knocking all entities around you
 
 <div class="ab-head" markdown>
 
-![](../../../../uploads/power-pages/arachnid-miles-morales/chain-lightning.png){ .ab-icon }
+![](../../../../uploads/power-images/arachnid-miles-morales/chain-lightning.png){ .ab-icon }
 
 #### Chain Lightning
 
@@ -308,7 +308,7 @@ Launch a blast of blue bioelectricity at a target within 5 blocks of you. It the
 
 <div class="ab-head" markdown>
 
-![](../../../../uploads/power-pages/arachnid-miles-morales/reverse-flux.png){ .ab-icon }
+![](../../../../uploads/power-images/arachnid-miles-morales/reverse-flux.png){ .ab-icon }
 
 #### Reverse Flux
 
@@ -324,7 +324,7 @@ Fire off your blue bioelectricity to all entities within a 4 block radius to pul
 
 <div class="ab-head" markdown>
 
-![](../../../../uploads/power-pages/arachnid-miles-morales/bioelectric-blade.png){ .ab-icon }
+![](../../../../uploads/power-images/arachnid-miles-morales/bioelectric-blade.png){ .ab-icon }
 
 #### Bioelectric Blade
 
