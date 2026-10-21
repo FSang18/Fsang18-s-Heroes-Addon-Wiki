@@ -1,6 +1,6 @@
 /* ===== Power pages: stats strip, slot sections, ability cards =====
    Used by pages like Reality Warping. Colours come from the slot's class
-   (psionic, energy, dimensional, reality, cosmic). To add a slot colour,
+   (psionic, energy, spatial, reality, cosmic). To add a slot colour,
    add one more line in the block below. */
 
 .psionic     { --accent: #a78bfa; }
