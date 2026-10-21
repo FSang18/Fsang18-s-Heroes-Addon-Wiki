@@ -4,7 +4,7 @@ title: "Reality Warping"
 
 # Reality Warping
 
-<div class="power-card" markdown>
+<div class="power-card" style="--hue:215" markdown>
 
 <div class="pc-head" markdown>
 
