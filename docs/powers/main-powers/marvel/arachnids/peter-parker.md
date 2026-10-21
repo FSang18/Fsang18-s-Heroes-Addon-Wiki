@@ -4,7 +4,7 @@ title: "Arachnid – Peter Parker"
 
 # Arachnid – Peter Parker
 
-<div class="power-card" markdown>
+<div class="power-card" style="--hue:355" markdown>
 <div class="pc-head" markdown>
 <div class="pc-medal" markdown>
 
