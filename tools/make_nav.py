@@ -4,6 +4,7 @@ Builds the sidebar menu automatically from the files in docs/ and writes mkdocs.
 
  - A page's menu title = "title:" at the top of the file, else its first "# Heading", else its file name.
  - A folder that contains an index.md becomes a clickable section (title taken from that index.md).
+ - Add  unlisted: true  to a page's front matter to keep it out of the menu (it still opens by its link).
  - Menu order = alphabetical (numbers sorted naturally), except the top level, which follows TOP_ORDER below.
 
 So to add a page you only add a .md file. You never edit the menu by hand.
@@ -43,6 +44,20 @@ def page_title(path, fallback):
     h = re.search(r"^#\s+(.+)$", t, re.M)
     return h.group(1).strip() if h else fallback
 
+def is_unlisted(path):
+    """A page with  unlisted: true  in its front matter is left out of the menu (it still opens by link)."""
+    try:
+        t = open(path, encoding="utf-8").read()
+    except Exception:
+        return False
+    m = FM.match(t)
+    if not m:
+        return False
+    try:
+        return bool((yaml.safe_load(m.group(1)) or {}).get("unlisted"))
+    except Exception:
+        return False
+
 def build(folder, prefix=""):
     entries = []
     index = None
@@ -59,6 +74,8 @@ def build(folder, prefix=""):
         elif name.endswith(".md"):
             if name == "index.md":
                 index = prefix + name
+                continue
+            if is_unlisted(full):
                 continue
             title = page_title(full, humanize(name[:-3]))
             entries.append((title, {title: prefix + name}))
