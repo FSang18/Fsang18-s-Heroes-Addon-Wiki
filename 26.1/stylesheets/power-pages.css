@@ -542,3 +542,12 @@
 /* optional per-card medallion background, for icons that are not on dark blue:
    <div class="power-card" style="--medal-bg:#050505" markdown> */
 .md-typeset .power-card .pc-icon { background: var(--medal-bg, #0b1020); }
+
+/* ===== Tier colours (S to F), following the usual tier-list colours but stronger ===== */
+.md-typeset .power-card .pc-tier                 { --t: #ff3b30; } /* S red     */
+.md-typeset .power-card .pc-tier[data-tier="A"] { --t: #ff9500; } /* A orange  */
+.md-typeset .power-card .pc-tier[data-tier="B"] { --t: #ffd60a; } /* B yellow  */
+.md-typeset .power-card .pc-tier[data-tier="C"] { --t: #34d84f; } /* C green   */
+.md-typeset .power-card .pc-tier[data-tier="D"] { --t: #19d3f0; } /* D cyan    */
+.md-typeset .power-card .pc-tier[data-tier="E"] { --t: #4f6bff; } /* E blue    */
+.md-typeset .power-card .pc-tier[data-tier="F"] { --t: #d946ef; } /* F magenta */
