@@ -167,11 +167,17 @@
 .md-typeset .power-notes { margin-top: 2.2rem; }
 
 /* ===== Power overview card (top of a power page) =====
-   The power's colour is the --pc line just below. Reality Warping is blue.
-   To use the card on another power, copy it into that page and put a colour on its first line,
-   for example:  <div class="power-card" style="--pc: #ff5a5a" markdown>                       */
+   THE CARD COLOUR COMES FROM THE PAGE, not from this file. Set it on the card:
+
+     <div class="power-card" style="--hue:215" markdown>
+     <div class="power-card" style="--hue:355; --sat:85%; --lit:60%" markdown>
+
+   --hue is 0-360 (see the Power Colors page). --sat and --lit are optional.
+   If --hue is left out, the card falls back to blue (215).
+   Light mode automatically uses a darker version of the same colour.
+   A card can still be forced to one exact colour with style="--pc: #ff5a5a". */
 .md-typeset .power-card {
-  --pc: #4da3ff;
+  --pc: hsl(var(--hue, 215) var(--sat, 90%) var(--lit, 62%));
   position: relative;
   margin: 1.2rem 0 1.8rem;
   padding: 1.25rem 1.35rem 1.2rem;
@@ -184,7 +190,11 @@
     repeating-linear-gradient(135deg, color-mix(in srgb, var(--pc) 8%, transparent) 0 1px, transparent 1px 14px),
     rgba(127, 127, 127, .06);
 }
-[data-md-color-scheme="default"] .md-typeset .power-card { --pc: #1d5fd1; }
+/* light mode: same hue, darker and a little less saturated so it reads on white.
+   Same selector weight as the rule above on purpose, so it wins in light mode. */
+[data-md-color-scheme="default"] .md-typeset .power-card {
+  --pc: hsl(var(--hue, 215) calc(var(--sat, 90%) - 15%) max(28%, calc(var(--lit, 62%) - 22%)));
+}
 
 /* header: medallion + name */
 .md-typeset .power-card .pc-head {
@@ -415,13 +425,6 @@
 .mutation,  .md-typeset .slot-nav a.mutation,  .md-typeset .power-section.mutation  { --accent: #f43f5e; --c: #f43f5e; }
 
 .md-typeset .power-section > h3:not([data-mode])::after { display: none; }
-
-/* ===== Power card theme colour =====
-   Set on the card: style="--hue:215; --sat:90%; --lit:62%"  (sat and lit are optional) */
-.power-card { --pc: hsl(var(--hue, 215) var(--sat, 90%) var(--lit, 62%)); }
-[data-md-color-scheme="default"] .power-card {
-  --pc: hsl(var(--hue, 215) calc(var(--sat, 90%) - 15%) max(28%, calc(var(--lit, 62%) - 22%)));
-}
 
 /* ===== Power Colors reference page ===== */
 .md-typeset .pcol-strip { position: relative; height: 2.2rem; margin: 1.2rem 0 2.4rem; }
