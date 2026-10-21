@@ -285,7 +285,7 @@
 }
 
 /* ===== Power overview card: source, power type and ranking =====
-   - Source tile:  class="pc-source src-biological"  (colours below; icon file goes in docs/uploads)
+   - Source tile:  class="pc-source src-biological"  (colours below; icon file goes in docs/uploads/power-images/sources)
    - Power type:   <b class="pc-types"><i>Fighter</i><i>Utility</i>...</b>
    - Ranking:      <div class="pc-tier" data-tier="S"> ... (S, A, B, C, D or E)               */
 
