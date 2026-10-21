@@ -477,3 +477,68 @@
   font-weight: 700;
   line-height: 1.5;
 }
+
+
+/* ===== Ability icons: one small picture in front of each ability's name =====
+   HOW IT WORKS
+   1. Make a folder for the power inside docs/uploads, named like the power's icon file
+      (docs/uploads/arachnid-miles-morales.png  ->  docs/uploads/arachnid-miles-morales/ ).
+   2. Upload each ability's icon there. File name = the ability's name, lowercase,
+      spaces turned into hyphens:  "Arachnid Dodge" -> arachnid-dodge.png
+   3. In the page, an ability starts like this (the picture goes in front of the title):
+
+        <div class="ability" markdown>
+
+        <div class="ab-head" markdown>
+
+        ![](../../../../uploads/arachnid-miles-morales/arachnid-dodge.png){ .ab-icon }
+
+        #### Arachnid Dodge
+
+        </div>
+
+        The description...
+
+   A missing picture just leaves an empty frame, so icons can be uploaded one at a time.
+   The frame takes the colour of its section (cat-... / slot colour). */
+.md-typeset .ab-head {
+  display: flex;
+  align-items: center;
+  gap: .75rem;
+  margin: 0 0 .35rem;
+}
+.md-typeset .ab-head p { margin: 0; display: flex; flex: none; }
+.md-typeset .ab-head h4 { margin: 0; }
+.md-typeset .ab-head .ab-icon {
+  box-sizing: border-box;
+  flex: none;
+  width: 3.4rem;
+  height: 3.4rem;
+  padding: .2rem;
+  object-fit: contain;
+  image-rendering: pixelated;
+  border-radius: .55rem;
+  border: 2px solid color-mix(in srgb, var(--accent) 75%, transparent);
+  background: #0d0d10;
+  box-shadow: inset 0 0 .8rem color-mix(in srgb, var(--accent) 20%, transparent);
+}
+/* While an icon has not been uploaded yet, show a calm empty frame instead of the browser's
+   broken-image symbol. (This pseudo-element only ever shows when the picture is missing.) */
+.md-typeset .ab-head .ab-icon { position: relative; }
+.md-typeset .ab-head .ab-icon::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: .4rem;
+  background:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23888' fill-opacity='.45' d='M11 18h2v-2h-2zm1-16A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2m0 18a8 8 0 0 1-8-8 8 8 0 0 1 8-8 8 8 0 0 1 8 8 8 8 0 0 1-8 8m0-14a4 4 0 0 0-4 4h2a2 2 0 0 1 2-2 2 2 0 0 1 2 2c0 2-3 1.75-3 5h2c0-2.25 3-2.5 3-5a4 4 0 0 0-4-4'/%3E%3C/svg%3E")
+      center / 55% no-repeat,
+    #0d0d10;
+}
+
+/* ===== Arachnid – Miles Morales: category colours added ===== */
+.cat-venom, .md-typeset .slot-nav a.cat-venom, .md-typeset .power-section.cat-venom { --accent: #fbbf24; }
+
+/* optional per-card medallion background, for icons that are not on dark blue:
+   <div class="power-card" style="--medal-bg:#050505" markdown> */
+.md-typeset .power-card .pc-icon { background: var(--medal-bg, #0b1020); }
