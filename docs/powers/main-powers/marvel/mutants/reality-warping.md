@@ -34,7 +34,7 @@ title: "Reality Warping"
 <small>Powers that are genetic-based. Reality Warping is unlocked through the X-Gene.</small>
 </div>
 </div>
-<div><span>Power classification</span><b class="pc-types"><i class="c-offense">Offense</i><i class="c-defense">Defense</i><i class="c-manipulation">Manipulation</i><i class="c-psychic">Psychic</i><i class="c-mobility">Mobility</i><i class="c-versatile">Versatile</i><i class="c-utility">Utility</i></b></div>
+<div><span>Power classification</span><b class="pc-types"><i class="c-offense">Offense</i><i class="c-defense">Defense</i><i class="c-manipulation">Manipulation</i><i class="c-area-control">Area Control</i><i class="c-psychic">Psychic</i><i class="c-sensory">Sensory</i><i class="c-mobility">Mobility</i><i class="c-versatile">Versatile</i><i class="c-utility">Utility</i></b></div>
 <div><span>Obtained from</span><b>X-Gene</b><small>Random Chance</small></div>
 <div><span>Ability categories</span><b class="pc-cats"><i class="psionic">Psionic Manipulation</i><i class="energy">Energy Manipulation</i><i class="spatial">Spatial Manipulation</i><i class="reality">Reality Manipulation</i><i class="cosmic">Cosmic Manipulation</i></b></div>
 <div><span>Signature look</span><b>Blue Energy</b><small>Beams, Projectiles and more</small></div>
