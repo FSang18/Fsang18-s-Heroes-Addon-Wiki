@@ -8,4 +8,3 @@ There are many different Suits and accessories available within the addon. These
 
 - [Armorsets](armorsets/index.md)
 - [Cosmetic](cosmetic/index.md)
-- [Iron Man Suits](iron-man-suits/index.md)
