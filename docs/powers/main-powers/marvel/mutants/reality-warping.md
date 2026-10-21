@@ -17,9 +17,24 @@ title: "Reality Warping"
 <span class="pc-name">Reality Warping</span>
 </div>
 
+<div class="pc-tier" data-tier="S" title="Power ranking: S Tier">
+<span class="pc-tier__label">Power ranking</span>
+<b class="pc-tier__rank">S</b>
+<span class="pc-tier__cap">S Tier</span>
+</div>
+
 </div>
 
 <div class="pc-facts">
+<div class="pc-source src-biological">
+<span class="pc-src-icon" role="img" aria-label="DNA helix icon"></span>
+<div class="pc-src-text">
+<span>Source</span>
+<b>Biological</b>
+<small>Powers that are genetic-based. Reality Warping is unlocked through the X-Gene.</small>
+</div>
+</div>
+<div><span>Power type</span><b class="pc-types"><i>Offense</i></i>Defense</i>Manipulation<i>Utility</i><i>Mobility</i></b></div>
 <div><span>Obtained from</span><b>X-Gene</b><small>Random Chance</small></div>
 <div><span>Ability slots</span><b class="pc-slots"><i class="psionic">1</i><i class="energy">2</i><i class="spatial">3</i><i class="reality">4</i><i class="cosmic">5</i></b><small>Psionic · Energy · Spatial · Reality · Cosmic</small></div>
 <div><span>Signature look</span><b>Blue Energy</b><small>Beams, Projectiles and more</small></div>
