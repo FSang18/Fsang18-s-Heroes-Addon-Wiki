@@ -24,7 +24,7 @@ title: "Arachnid – Peter Parker"
 <div class="pc-facts">
 <div class="pc-source src-biological"><span class="pc-src-icon" role="img" aria-label="DNA helix icon"></span><div class="pc-src-text"><span>Source</span><b>Biological</b><small>Genetic-based power, powered by mutated D.N.A.</small></div></div>
 <div><span>Power type</span><b class="pc-types"><i>Fighter</i><i>Mobility</i><i>Sensory</i><i>Controller</i><i>Utility</i></b></div>
-<div><span>Obtained from</span><b>FILL IN</b><small>FILL IN</small></div>
+<div><span>Obtained from</span><b>Arachnid DNA</b><small>Random Chance</small></div>
 <div><span>Ability slots</span><b class="pc-slots"><i class="totem">1</i><i class="movement">2</i><i class="physiology">3</i><i class="webbing">4</i><i class="mutation">5</i></b><small>Spider-Totem · Movement · Physiology · Webbing · Mutation</small></div>
 <div><span>Signature look</span><b>Organic Webbing</b><small>Web lines, shots and more</small></div>
 </div>
