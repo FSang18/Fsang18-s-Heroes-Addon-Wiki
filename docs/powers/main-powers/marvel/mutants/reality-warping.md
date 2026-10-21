@@ -53,8 +53,8 @@ title: "Reality Warping"
 <div><span>Armor Toughness</span><b>N/A</b></div>
 <div><span>Flight Speed</span><b>6.2 b/s</b></div>
 <div><span>Sprint Speed</span><b>1.6 b/s</b></div>
-<div><span>Base Attack Damage</span><b>4</b></div>
 <div><span>Energy</span><b>1000</b></div>
+<div><span>Base Attack Damage</span><b>4</b></div>
 </div>
 
 ## Abilities
