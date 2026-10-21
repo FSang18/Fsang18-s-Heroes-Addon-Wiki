@@ -273,3 +273,136 @@
   .md-typeset .power-card .pc-icon { width: 4.2rem; height: 4.2rem; }
   .md-typeset .power-card .pc-name { font-size: 1.45rem; }
 }
+
+/* ===== Power overview card: source, power type and ranking =====
+   - Source tile:  class="pc-source src-biological"  (colours below; icon file goes in docs/uploads)
+   - Power type:   <b class="pc-types"><i>Fighter</i><i>Utility</i>...</b>
+   - Ranking:      <div class="pc-tier" data-tier="S"> ... (S, A, B, C, D or E)               */
+
+/* the facts grid now has 3 columns; the Source tile is two columns wide */
+.md-typeset .power-card .pc-facts {
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1.2fr);
+  align-items: start;
+}
+.md-typeset .power-card .pc-facts .pc-source { grid-column: span 2; }
+
+/* source categories and their colours */
+.md-typeset .power-card .src-biological   { --src: #4ade80; }
+.md-typeset .power-card .src-technological { --src: #fb923c; }
+.md-typeset .power-card .src-mystical     { --src: #c084fc; }
+.md-typeset .power-card .src-cosmic       { --src: #f472b6; }
+
+.md-typeset .power-card .pc-facts > .pc-source {
+  flex-direction: row;
+  align-items: center;
+  gap: .9rem;
+  border-left-color: color-mix(in srgb, var(--src) 70%, transparent);
+}
+.md-typeset .power-card .pc-src-icon {
+  flex: none;
+  width: 3.7rem;
+  height: 3.7rem;
+  border-radius: .6rem;
+  border: 2px solid var(--src);
+  background-color: #11161d;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 76%;
+  image-rendering: pixelated;
+  box-shadow:
+    0 0 1.1rem color-mix(in srgb, var(--src) 38%, transparent),
+    inset 0 0 .9rem color-mix(in srgb, var(--src) 16%, transparent);
+}
+.md-typeset .power-card .src-biological .pc-src-icon { background-image: url("../uploads/biological_icon.png"); }
+.md-typeset .power-card .pc-src-text { display: flex; flex-direction: column; gap: .15rem; min-width: 0; }
+.md-typeset .power-card .pc-source b { color: var(--src); font-size: 1.15rem; }
+[data-md-color-scheme="default"] .md-typeset .power-card .pc-source b {
+  color: color-mix(in srgb, var(--src) 62%, black);
+}
+
+/* power type pills */
+.md-typeset .power-card .pc-types { display: flex; flex-wrap: wrap; gap: .3rem; padding: .1rem 0; }
+.md-typeset .power-card .pc-types i {
+  padding: .1rem .5rem;
+  border: 1px solid color-mix(in srgb, var(--pc) 70%, transparent);
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--pc) 16%, transparent);
+  font-style: normal;
+  font-size: .74rem;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+/* ranking badge: hexagon with the tier letter, on the right of the header */
+.md-typeset .power-card .pc-head { flex-wrap: wrap; }
+.md-typeset .power-card .pc-id { flex: 1 1 9rem; }
+.md-typeset .power-card .pc-tier {
+  --t: #ffc928;                 /* S */
+  margin-left: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: .3rem;
+}
+.md-typeset .power-card .pc-tier[data-tier="A"] { --t: #ff9f43; }
+.md-typeset .power-card .pc-tier[data-tier="B"] { --t: #4ade80; }
+.md-typeset .power-card .pc-tier[data-tier="C"] { --t: #38bdf8; }
+.md-typeset .power-card .pc-tier[data-tier="D"] { --t: #a78bfa; }
+.md-typeset .power-card .pc-tier[data-tier="E"] { --t: #94a3b8; }
+
+.md-typeset .power-card .pc-tier__label {
+  font-size: .62rem;
+  font-weight: 700;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--md-default-fg-color--light);
+}
+.md-typeset .power-card .pc-tier__rank {
+  position: relative;
+  isolation: isolate;
+  display: grid;
+  place-items: center;
+  width: 4.3rem;
+  height: 4.8rem;
+  font-size: 2.5rem;
+  font-weight: 900;
+  line-height: 1;
+  color: var(--t);
+  text-shadow: 0 0 .8rem color-mix(in srgb, var(--t) 60%, transparent);
+  filter: drop-shadow(0 0 .55rem color-mix(in srgb, var(--t) 50%, transparent));
+}
+.md-typeset .power-card .pc-tier__rank::before,
+.md-typeset .power-card .pc-tier__rank::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+}
+.md-typeset .power-card .pc-tier__rank::before { inset: 0; background: var(--t); }
+.md-typeset .power-card .pc-tier__rank::after  { inset: 3px; background: #15120a; }
+.md-typeset .power-card .pc-tier__cap {
+  font-size: .72rem;
+  font-weight: 800;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: var(--t);
+}
+[data-md-color-scheme="default"] .md-typeset .power-card .pc-tier__cap { color: color-mix(in srgb, var(--t) 60%, black); }
+[data-md-color-scheme="default"] .md-typeset .power-card .pc-tier__rank { color: var(--t); }
+
+/* narrower screens */
+@media screen and (max-width: 60em) {
+  .md-typeset .power-card .pc-facts { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media screen and (max-width: 36em) {
+  .md-typeset .power-card .pc-facts { grid-template-columns: minmax(0, 1fr); }
+  .md-typeset .power-card .pc-facts .pc-source { grid-column: auto; }
+  .md-typeset .power-card .pc-tier {
+    flex-direction: row;
+    width: 100%;
+    margin-left: 0;
+    gap: .8rem;
+    justify-content: flex-start;
+  }
+  .md-typeset .power-card .pc-tier__rank { width: 2.9rem; height: 3.2rem; font-size: 1.6rem; }
+}
