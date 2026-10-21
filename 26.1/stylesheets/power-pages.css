@@ -451,3 +451,29 @@
 .md-typeset .pcol-info { padding: .7rem 1rem .8rem; }
 .md-typeset .pcol-info b { display: block; font-size: 1rem; }
 .md-typeset .pcol-info small { color: var(--md-default-fg-color--light); font-family: var(--md-code-font-family); font-size: .74rem; }
+
+
+/* ===== Pages with categories instead of numbered slots (Arachnid – Miles Morales) =====
+   Leave data-slot off a section heading or a slot-nav link and its number square disappears.
+   Give the section and its link the same class (cat-...) to colour them. */
+.md-typeset .power-section h3:not([data-slot])::before { display: none; }
+.md-typeset .slot-nav a:not([data-slot])::before { display: none; }
+.md-typeset .slot-nav a:not([data-slot]) { padding-left: .8rem; }
+
+.cat-arachnid,     .md-typeset .slot-nav a.cat-arachnid,     .md-typeset .power-section.cat-arachnid     { --accent: #f87171; }
+.cat-stealth,      .md-typeset .slot-nav a.cat-stealth,      .md-typeset .power-section.cat-stealth      { --accent: #a78bfa; }
+.cat-combat,       .md-typeset .slot-nav a.cat-combat,       .md-typeset .power-section.cat-combat       { --accent: #fbbf24; }
+.cat-bioelectricity, .md-typeset .slot-nav a.cat-bioelectricity, .md-typeset .power-section.cat-bioelectricity { --accent: #38bdf8; }
+
+/* category pills in the overview card (replaces the numbered slot squares) */
+.md-typeset .power-card .pc-cats { display: flex; flex-wrap: wrap; gap: .3rem; padding: .1rem 0; }
+.md-typeset .power-card .pc-cats i {
+  padding: .1rem .5rem;
+  border: 1px solid color-mix(in srgb, var(--accent) 70%, transparent);
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--accent) 16%, transparent);
+  font-style: normal;
+  font-size: .74rem;
+  font-weight: 700;
+  line-height: 1.5;
+}
