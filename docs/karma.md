@@ -134,7 +134,7 @@ Killing the following hostile mobs will remove the corresponding Karma when kill
 </tr>
 </table>
 
-Currently (as of v12.4.1), Karma only corresponds with being able to weild the following tertiary powers, Bonus Stats and damage on specific powers:
+Currently (as of v12.4.1), Karma only corresponds with being able to wield the following tertiary powers, Bonus Stats and damage on specific powers:
 
 * [Mjolnir](powers/tertiary-powers/mjolnirs/mjolnir-comics.md)
 * [Stormbreaker](powers/tertiary-powers/stormbreaker.md)
