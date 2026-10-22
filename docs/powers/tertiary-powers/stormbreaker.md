@@ -30,5 +30,5 @@ title: "Stormbreaker"
 
 * This tertiary power uses Uru templates to unlock new abilities.
 * You do not need to be fast-flying to maintain flight with this hammer.
-* Requires a karma level of 600 to weild
-* Crouching then right clicking will allow you to throw your hammer, but as of version 11.6.1 there is no recall feature
+* Requires a karma level of 600 to wield.
+* Crouching then right clicking will allow you to throw your hammer.
