@@ -31,4 +31,4 @@ title: "Hofund"
 **Related Information**:
 
 * This tertiary power uses Uru templates to unlock new abilities.
-* While weilding this sword, you can passively gain minor All-Sight, allowing entities within a 10x10x10 radius to become highlighted
+* While wielding this sword, you can passively gain minor All-Sight, allowing entities within a 10x10x10 radius to become highlighted
