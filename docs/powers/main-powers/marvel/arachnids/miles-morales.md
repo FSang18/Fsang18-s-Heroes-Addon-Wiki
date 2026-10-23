@@ -1,5 +1,6 @@
 ---
 title: "Arachnid – Miles Morales"
+menu_title: "Miles Morales"
 ---
 
 # Miles Morales
