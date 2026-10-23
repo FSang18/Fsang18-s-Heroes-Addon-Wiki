@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{# The copyright / links line goes under the page (after the previous/next buttons) instead of in a full-width bar #}
+{% block container %}
+  <div class="md-content" data-md-component="content">
+    {% if "navigation.path" in features %}
+      {% include "partials/path.html" %}
+    {% endif %}
+    <article class="md-content__inner md-typeset">
+      {% block content %}
+        {% include "partials/content.html" %}
+      {% endblock %}
+    </article>
+    <div class="md-content__inner page-foot-wrap">
+      <div class="md-typeset page-foot">{{ config.copyright }}</div>
+    </div>
+  </div>
+{% endblock %}
+
+{# Remove the full-width footer bar #}
+{% block footer %}{% endblock %}
