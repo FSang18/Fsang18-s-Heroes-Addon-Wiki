@@ -28,7 +28,8 @@ log = logging.getLogger("mkdocs.hooks.page_nav")
 
 def _button(kind, target, page):
     href = html.escape(get_relative_url(target.url, page.url), quote=True)
-    title = html.escape((target.title or "").strip() or "Untitled", quote=True)
+    full = (target.meta or {}).get("title") or target.title
+    title = html.escape(str(full or "").strip() or "Untitled", quote=True)
     if kind == "prev":
         label, arrow, rel = "Previous", "\u2190", "prev"
         inner = '<span class="pn-arrow">%s</span><span class="pn-text"><small>%s</small><b>%s</b></span>'
