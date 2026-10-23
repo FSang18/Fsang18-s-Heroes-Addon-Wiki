@@ -51,6 +51,7 @@ extra_javascript:
 
 hooks:
   - hooks/pill_links.py
+  - hooks/page_nav.py
   
 plugins:
   - search
