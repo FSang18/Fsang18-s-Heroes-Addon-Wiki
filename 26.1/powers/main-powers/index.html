@@ -218,6 +218,8 @@
           
             
               
+                
+              
               <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
@@ -877,7 +879,9 @@
             
             
               
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" hidden>
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
@@ -888,6 +892,36 @@
   
     
   
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#marvel" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Marvel
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dc" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        DC
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -901,6 +935,8 @@
               <article class="md-content__inner md-typeset">
                 
                   
+  
+
 
 
   
@@ -908,11 +944,20 @@
 
 
 <h1 id="main-powers">Main Powers</h1>
-<p>"Main Powers" is a term used to describe powers obtainable that cannot be stacked with each other. Most of these powers can be paired with Secondary Powers but no two main powers can be paired with each other naturally. The main powers within the addon currently are :</p>
-<ul>
-<li><a href="marvel/">Marvel</a></li>
-<li><a href="dc/">DC</a></li>
-</ul>
+<p>"Main Powers" is a term used to describe powers obtainable that cannot be stacked with each other. Most of these powers can be paired with Secondary Powers but no two main powers can be paired with each other naturally.</p>
+<p>Main powers are grouped by the universe they come from. Pick one to see its categories.</p>
+<div class="dir-grid big">
+<div class="dir-card" data-mark="M" style="--hue:355; --sat:90%; --lit:62%">
+<h3 id="marvel"><a href="marvel/">Marvel</a></h3>
+<p>Spider-powered heroes, mutants, gods and cosmic beings from the Marvel universe.</p>
+</div>
+<div class="dir-card" data-mark="DC" style="--hue:215; --sat:90%; --lit:62%">
+<h3 id="dc"><a href="dc/">DC</a></h3>
+<p>Kryptonians, Amazons, speedsters and other heroes from the DC universe.</p>
+</div>
+</div>
+<!-- To add a universe later: copy one of the cards above (from <div class="dir-card" down to its closing </div>),
+     paste it inside the grid, and change the letter, the hue number, the title, the link and the text. -->
 
 
 
@@ -925,6 +970,8 @@
 
 
 
+
+  
 
 
 
