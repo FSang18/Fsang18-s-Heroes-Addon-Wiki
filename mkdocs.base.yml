@@ -35,6 +35,7 @@ theme:
     - navigation.instant
     - navigation.prune
     - navigation.indexes
+    - navigation.footer 
     - navigation.top
     - navigation.tracking
     - search.suggest
