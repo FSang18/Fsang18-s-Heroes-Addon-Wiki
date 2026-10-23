@@ -2,7 +2,8 @@
 """
 Builds the sidebar menu automatically from the files in docs/ and writes mkdocs.yml.
 
- - A page's menu title = "title:" at the top of the file, else its first "# Heading", else its file name.
+ - A page's menu title = "menu_title:" at the top of the file, else "title:", else its first "# Heading", else its file name.
+   (menu_title only changes the sidebar label; the page keeps its full title everywhere else.)
  - A folder that contains an index.md becomes a clickable section (title taken from that index.md).
  - Add  unlisted: true  to a page's front matter to keep it out of the menu (it still opens by its link).
  - Add  nav_first: true  to a page's front matter (or a section's index.md) to list it first in its folder.
@@ -36,7 +37,8 @@ def page_title(path, fallback):
     m = FM.match(t)
     if m:
         try:
-            title = (yaml.safe_load(m.group(1)) or {}).get("title")
+            fm = yaml.safe_load(m.group(1)) or {}
+            title = fm.get("menu_title") or fm.get("title")
             if title:
                 return str(title)
         except Exception:
