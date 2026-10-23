@@ -1,5 +1,6 @@
 ---
 title: "Arachnid – Peter Parker"
+nav_first: true
 ---
 
 # Arachnid – Peter Parker
