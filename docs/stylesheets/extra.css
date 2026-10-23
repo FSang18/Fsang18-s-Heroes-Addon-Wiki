@@ -346,3 +346,91 @@
   -webkit-mask: var(--ic) center / contain no-repeat; mask: var(--ic) center / contain no-repeat;
 }
 
+/* ===== Directory cards: hub pages that link to universes, categories and powers =====
+   Colour of each card comes from three numbers on the card itself:
+   style="--hue:355; --sat:90%; --lit:62%"   (hue 0-360). Leave them out for site yellow.
+   data-mark="M" is the letter shown in the round badge. */
+
+.md-typeset .dir-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 18rem), 1fr));
+  gap: .8rem;
+  margin: .8rem 0 1.6rem;
+}
+
+.md-typeset .dir-card {
+  --accent: hsl(var(--hue, 45) var(--sat, 90%) var(--lit, 62%));
+  --accent-text: var(--accent);
+  position: relative;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-content: center;
+  gap: .25rem 1rem;
+  padding: .9rem 1.05rem;
+  border: 1px solid color-mix(in srgb, var(--accent) 40%, transparent);
+  border-radius: .5rem;
+  background: color-mix(in srgb, var(--accent) 7%, transparent);
+  transition: border-color .15s, background .15s;
+}
+[data-md-color-scheme="default"] .md-typeset .dir-card {
+  --accent: hsl(var(--hue, 45) var(--sat, 90%) calc(var(--lit, 62%) - 8%));
+  --accent-text: hsl(var(--hue, 45) var(--sat, 90%) calc(var(--lit, 62%) - 30%));
+}
+.md-typeset .dir-card:hover {
+  border-color: var(--accent);
+  background: color-mix(in srgb, var(--accent) 13%, transparent);
+}
+.md-typeset .dir-card:focus-within {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+/* round badge with the letter from data-mark */
+.md-typeset .dir-card::before {
+  content: attr(data-mark);
+  grid-row: 1 / span 2;
+  display: grid;
+  place-items: center;
+  width: 3.2rem;
+  height: 3.2rem;
+  border: 2px solid var(--accent);
+  border-radius: 50%;
+  background: color-mix(in srgb, var(--accent) 14%, transparent);
+  color: var(--accent-text);
+  font-size: 1.15rem;
+  font-weight: 800;
+  letter-spacing: -.02em;
+}
+.md-typeset .dir-card:not([data-mark]) { grid-template-columns: 1fr; }
+.md-typeset .dir-card:not([data-mark])::before { display: none; }
+
+.md-typeset .dir-card h3 {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 1.05rem;
+  font-weight: 700;
+  line-height: 1.25;
+}
+.md-typeset .dir-card h3 a { color: var(--accent-text); }
+.md-typeset .dir-card h3::after { content: "\203A"; margin-left: .4rem; opacity: .7; }
+/* the whole card is clickable: the title link stretches over it */
+.md-typeset .dir-card h3 a::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+}
+.md-typeset .dir-card p {
+  margin: 0;
+  font-size: .84rem;
+  line-height: 1.5;
+  color: var(--md-default-fg-color--light);
+}
+
+/* bigger cards for the universe level (class="dir-grid big") */
+.md-typeset .dir-grid.big { grid-template-columns: repeat(auto-fill, minmax(min(100%, 22rem), 1fr)); }
+.md-typeset .dir-grid.big .dir-card { padding: 1.2rem 1.3rem; gap: .35rem 1.2rem; }
+.md-typeset .dir-grid.big .dir-card::before { width: 4rem; height: 4rem; font-size: 1.4rem; }
+.md-typeset .dir-grid.big .dir-card h3 { font-size: 1.3rem; }
+.md-typeset .dir-grid.big .dir-card p { font-size: .9rem; }
