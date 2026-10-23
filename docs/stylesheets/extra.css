@@ -434,3 +434,17 @@
 .md-typeset .dir-grid.big .dir-card::before { width: 4rem; height: 4rem; font-size: 1.4rem; }
 .md-typeset .dir-grid.big .dir-card h3 { font-size: 1.3rem; }
 .md-typeset .dir-grid.big .dir-card p { font-size: .9rem; }
+
+/* ===== Copyright / links line at the bottom of the page content ===== */
+.page-foot-wrap { margin-bottom: 1rem; }
+.md-typeset.page-foot {
+  margin: .6rem 0 .5rem;
+  padding-top: 1.1rem;
+  border-top: 1px dotted var(--md-default-fg-color--lighter);
+  text-align: center;
+  font-size: .72rem;
+  line-height: 1.9;
+  color: var(--md-default-fg-color--light);
+}
+.md-typeset.page-foot a { color: inherit; text-decoration: underline; }
+.md-typeset.page-foot a:hover { color: var(--md-accent-fg-color); }
