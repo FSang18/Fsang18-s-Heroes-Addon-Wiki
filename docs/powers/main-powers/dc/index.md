@@ -1,10 +1,26 @@
 ---
 title: "DC"
+hide:
+  - toc
 ---
 
 # DC
 
-**DC** powers possess a wide range of extraordinary abilities, originating from diverse sources such as alien biology, metahuman genetics, advanced technology, magic, and cosmic forces. Their powers vary greatly, including superhuman strength, enhanced senses, energy manipulation, elemental control, and other unique abilities. Here you can find all the information and list of DC powers.
+DC characters draw their abilities from alien heritage, myth, speed, magic and advanced science. Here you can find all the information about powers from DC.
 
-* [Kryptonians](kryptonians/index.md)
-* [Metahumans](metahumans/index.md)
+<div class="dir-grid" markdown>
+
+<div class="dir-card" data-mark="K" style="--hue:215; --sat:90%; --lit:62%" markdown>
+
+### [Kryptonians](kryptonians/index.md)
+
+Heroes from Krypton, with flight, super strength and heat vision.
+
+
+
+</div>
+
+</div>
+
+<!-- To add a category: copy one of the cards above, paste it inside the grid,
+     and change the letter, the hue number, the title, the link and the text. -->
