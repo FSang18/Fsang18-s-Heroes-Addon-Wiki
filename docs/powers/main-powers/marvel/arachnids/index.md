@@ -9,3 +9,7 @@ Arachnids are individuals who possess spider-like abilities, typically gained th
 * [Peter Parker](peter-parker.md)
 * [Miles Morales](miles-morales.md)
 * [Miguel O'hara](miguel-ohara.md)
+* [Jessica Drew](jessica-drew.md)
+* [Cindy Moon](cindy-moon)
+* [Kaine Parker](kaine-parker)
+
