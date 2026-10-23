@@ -622,10 +622,11 @@
 .md-sidebar__scrollwrap::-webkit-scrollbar-thumb { background: color-mix(in srgb, var(--md-default-fg-color) 28%, transparent); border-radius: 999px; }
 
 /* ===== Bigger sidebar text ===== */
-.md-sidebar--primary .md-nav { font-size: 1.02rem; }
 @media screen and (min-width: 60em) {
+  .md-sidebar--primary { width: 20rem; }
+  .md-sidebar--primary .md-nav { font-size: 1.3rem; line-height: 1.3; }
   .md-sidebar--primary .md-nav--primary > .md-nav__list > .md-nav__item > .md-nav__link,
   .md-sidebar--primary .md-nav--primary > .md-nav__list > .md-nav__item > .md-nav__container > .md-nav__link {
-    font-size: clamp(1.02rem, calc(var(--row) * .45), 1.22rem) !important;
+    font-size: clamp(1.3rem, calc(var(--row) * .55), 1.55rem) !important;
   }
 }
