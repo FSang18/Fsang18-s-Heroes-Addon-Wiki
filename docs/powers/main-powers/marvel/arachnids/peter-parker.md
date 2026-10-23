@@ -1,9 +1,10 @@
 ---
 title: "Arachnid – Peter Parker"
+menu_title: "Peter Parker"
 nav_first: true
 ---
 
-# Arachnid – Peter Parker
+# Peter Parker
 
 <div class="power-card" style="--hue:355" markdown>
 <div class="pc-head" markdown>
