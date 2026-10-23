@@ -16,6 +16,7 @@ extra:
 
 theme:
   name: material
+  custom_dir: overrides
   logo: uploads/2703a3f0b163b13baac62a9fe5115772/logo_big.png
   favicon: uploads/2703a3f0b163b13baac62a9fe5115772/logo_big.png
   palette:
