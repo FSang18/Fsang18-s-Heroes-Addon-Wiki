@@ -783,3 +783,6 @@ nav:
 extra:
   version:
     provider: mike
+
+hooks:
+  - hooks/pill_links.py
