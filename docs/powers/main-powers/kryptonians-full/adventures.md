@@ -44,7 +44,7 @@ The **"Kryptonian - Adventures"** is obtained via using Kryptonian (Adventures) 
   * **Fire Damage Immunity**
   * **Lava Damage Immunity**
   * **Explosion Damage Immunity**
-  * **Projectile Immunity**
+  * **Arrow Immunity**
   * **TACZ Bullet Immunity Compatibility**
 * Max Solar Energy: **900,000**
 * Coming into proximity with any Kryptonite tools / blocks or items can cause the user to rapidly have their solar energy drained. All outputs (Heat vision and Freeze Breath) are reset to 1 and gain slowness. While in kryptonite poisoning you will **lose** all of your **armor, toughness and attack damage** bonus from this power. You cant use your powers in your 3rd ability wheel while you are effected. If the user is out of solar energy, and they still have the Kryptonite Poisoning effect, they will begin the lose hunger rapidly until the effect wears off.
