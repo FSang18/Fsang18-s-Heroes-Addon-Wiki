@@ -46,7 +46,7 @@ The **"Kryptonian - DCEU"** is obtained via using Kryptonian (DCEU) DNA. This ca
   * **Fire Damage Immunity**
   * **Lava Damage Immunity**
   * **Explosion Damage Immunity**
-  * **Projectile Immunity**
+  * **Arrow Immunity**
   * **TACZ Bullet Immunity Compatibility**
 * **Max Solar Energy: 800,000**
 * Coming into proximity with any Kryptonite tools / blocks or items can cause the user to rapidly have their solar energy drained. All outputs (Heat vision and Freeze Breath) are reset to 1 and gain slowness. While in kryptonite poisoning you will **lose** all of your **armor, toughness and attack damage** bonus from this power. If the user is out of solar energy, and they still have the Kryptonite Poisoning effect, they will begin the lose hunger rapidly until the effect wears off.
