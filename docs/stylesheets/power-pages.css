@@ -551,3 +551,75 @@
 .md-typeset .power-card .pc-tier[data-tier="D"] { --t: #19d3f0; } /* D cyan    */
 .md-typeset .power-card .pc-tier[data-tier="E"] { --t: #4f6bff; } /* E blue    */
 .md-typeset .power-card .pc-tier[data-tier="F"] { --t: #d946ef; } /* F magenta */
+
+/* ===== Clickable classification pills =====
+   The hook (hooks/pill_links.py) wraps each pill in:
+     <a class="pc-link c-fighter" href="...#fighter" data-tip="definition"><i class="c-fighter">Fighter</i></a>
+   Paste this block at the very bottom of power-pages.css.                                  */
+
+/* the tooltip is positioned against the row of pills, so it never runs off a narrow screen */
+.md-typeset .power-card .pc-types { position: relative; }
+
+.md-typeset .power-card .pc-types .pc-link {
+  position: static;
+  display: inline-flex;
+  border-radius: 999px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* hovered / focused pill: a little brighter */
+.md-typeset .power-card .pc-types .pc-link:hover i[class^="c-"],
+.md-typeset .power-card .pc-types .pc-link:focus-visible i[class^="c-"] {
+  background: color-mix(in srgb, var(--k) 32%, transparent);
+  border-color: var(--k);
+}
+.md-typeset .power-card .pc-types .pc-link:focus-visible {
+  outline: 2px solid var(--md-accent-fg-color);
+  outline-offset: 2px;
+}
+
+/* the tooltip itself */
+.md-typeset .power-card .pc-types .pc-link::after {
+  content: attr(data-tip);
+  position: absolute;
+  z-index: 40;
+  top: calc(100% + .45rem);
+  left: 0;
+  width: max(100%, 15rem);
+  max-width: calc(100vw - 2.5rem);
+  padding: .55rem .75rem;
+  border: 1px solid var(--k);
+  border-radius: .5rem;
+  background: var(--md-default-bg-color);
+  color: var(--md-default-fg-color);
+  box-shadow: 0 .5rem 1.4rem rgba(0, 0, 0, .45);
+  font-size: .76rem;
+  font-weight: 500;
+  line-height: 1.45;
+  letter-spacing: 0;
+  text-align: left;
+  white-space: normal;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-.2rem);
+  pointer-events: none;
+  transition: opacity .12s ease, transform .12s ease, visibility .12s;
+}
+.md-typeset .power-card .pc-types .pc-link:hover::after,
+.md-typeset .power-card .pc-types .pc-link:focus-visible::after {
+  opacity: 1;
+  visibility: visible;
+  transform: none;
+}
+
+/* the card clips its content; let the tooltip out while a pill is hovered or focused */
+.md-typeset .power-card:has(.pc-link:hover, .pc-link:focus-visible) { overflow: visible; }
+
+/* Power Classifications page: the card you landed on stands out */
+.md-typeset .cls:has(h4:target) {
+  border-color: var(--k);
+  box-shadow:
+    0 0 0 2px color-mix(in srgb, var(--k) 55%, transparent),
+    0 0 1.4rem color-mix(in srgb, var(--k) 30%, transparent);
+}
