@@ -58,5 +58,5 @@ The **"Green Martian"** power is obtained via using Czarnian DNA. This can be cr
 * This power **cannot** use any [Secondary Powers](../../secondary-powers/index.md).
 * This power **cannot** use any [Arc Reactor](../../../items/technology/arc-reactors/index.md) higher than the [Model I Reactor](../../../items/technology/arc-reactors/model-i.md).
 * This power can breath in space using the Ad Astra Mod.
-* If within 5 blocks of any fire / soulfire / lit campfire / lit soul campfire, you will be given slowness, and weakness until you leave the vacinity.
+* If within 5 blocks of any fire / soulfire / lit campfire / lit soul campfire, you will be given slowness, and weakness until you leave the vicinity.
 * This power is _loosely_ based off of [J'onn J'onzz, a.k.a Martian Manhunter](https://dc.fandom.com/wiki/J%27onn_J%27onzz_\(New_Earth\)).
