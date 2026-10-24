@@ -812,6 +812,7 @@
   height: 4.2rem;
   border-radius: 50%;
   object-fit: cover;
+  image-rendering: pixelated;
   background: var(--medal-bg, #0b1020);
   box-shadow: 0 0 0 3px color-mix(in srgb, var(--pc) 80%, #000), 0 0 1rem color-mix(in srgb, var(--pc) 45%, transparent);
 }
