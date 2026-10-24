@@ -621,12 +621,98 @@
 .md-sidebar__scrollwrap::-webkit-scrollbar { width: 6px; }
 .md-sidebar__scrollwrap::-webkit-scrollbar-thumb { background: color-mix(in srgb, var(--md-default-fg-color) 28%, transparent); border-radius: 999px; }
 
-/* ===== Bigger sidebar text ===== */
+/* ===== Fancier sidebar =====
+   Each top-level entry gets its own colour (the same colours as the home page cards).
+   The colours are positional, like the icons: 2 = Installation ... 9 = Systems.
+   If you add or reorder top-level pages, change the numbers here too. */
+.md-nav--primary > .md-nav__list > .md-nav__item:nth-child(2) { --nc: #34d399; }  /* Installation */
+.md-nav--primary > .md-nav__list > .md-nav__item:nth-child(3) { --nc: #94a3b8; }  /* Commands */
+.md-nav--primary > .md-nav__list > .md-nav__item:nth-child(4) { --nc: #ffc928; }  /* Powers */
+.md-nav--primary > .md-nav__list > .md-nav__item:nth-child(5) { --nc: #c084fc; }  /* Skill Point System */
+.md-nav--primary > .md-nav__list > .md-nav__item:nth-child(6) { --nc: #38bdf8; }  /* Blocks */
+.md-nav--primary > .md-nav__list > .md-nav__item:nth-child(7) { --nc: #34d399; }  /* Items */
+.md-nav--primary > .md-nav__list > .md-nav__item:nth-child(8) { --nc: #fb923c; }  /* Suitsets */
+.md-nav--primary > .md-nav__list > .md-nav__item:nth-child(9) { --nc: #f472b6; }  /* Systems */
+.md-nav--primary > .md-nav__list > .md-nav__item { --nc: var(--nc-own, #ffc928); }
+
+/* the icon takes the entry's colour (Home keeps its picture) */
+.md-nav--primary > .md-nav__list > .md-nav__item:not(:nth-child(1)) { --nav-bg: var(--nc); }
+[data-md-color-scheme="default"] .md-nav--primary > .md-nav__list > .md-nav__item:not(:nth-child(1)) {
+  --nav-bg: color-mix(in srgb, var(--nc) 62%, #000);
+}
+
+/* hover and current section: tinted pill with a coloured bar on the left */
+.md-nav--primary > .md-nav__list > .md-nav__item > a.md-nav__link,
+.md-nav--primary > .md-nav__list > .md-nav__item > .md-nav__container > a.md-nav__link {
+  position: relative;
+  transition: background .15s ease, transform .15s ease;
+}
+.md-nav--primary > .md-nav__list > .md-nav__item > a.md-nav__link:hover,
+.md-nav--primary > .md-nav__list > .md-nav__item > .md-nav__container > a.md-nav__link:hover {
+  background: color-mix(in srgb, var(--nc) 16%, transparent);
+  color: var(--md-default-fg-color);
+  transform: translateX(2px);
+}
+.md-nav--primary > .md-nav__list > .md-nav__item--active > a.md-nav__link,
+.md-nav--primary > .md-nav__list > .md-nav__item--active > .md-nav__container > a.md-nav__link {
+  background: linear-gradient(90deg, color-mix(in srgb, var(--nc) 22%, transparent), color-mix(in srgb, var(--nc) 5%, transparent));
+  box-shadow: inset 3px 0 0 var(--nc);
+  color: var(--md-default-fg-color);
+}
+[data-md-color-scheme="default"] .md-nav--primary > .md-nav__list > .md-nav__item > a.md-nav__link:hover,
+[data-md-color-scheme="default"] .md-nav--primary > .md-nav__list > .md-nav__item > .md-nav__container > a.md-nav__link:hover {
+  background: color-mix(in srgb, var(--nc) 22%, transparent);
+  color: #111;
+}
+
+/* sub-pages: a guide line under the icon, and a pill on the page you are reading */
 @media screen and (min-width: 60em) {
-  .md-sidebar--primary { width: 20rem; }
-  .md-sidebar--primary .md-nav { font-size: 1.3rem; line-height: 1.3; }
+  .md-sidebar--primary .md-nav--primary > .md-nav__list > .md-nav__item > .md-nav > .md-nav__list {
+    --ico: clamp(1.2rem, calc(var(--row) * .55), 1.7rem);
+    margin-left: calc(.6rem + var(--ico) / 2) !important;
+    padding-left: calc(var(--ico) / 2 + .55rem + .4rem) !important;
+    border-left: 1px solid color-mix(in srgb, var(--nc) 38%, transparent);
+  }
+}
+.md-sidebar--primary .md-nav .md-nav a.md-nav__link {
+  border-radius: .45rem;
+  transition: background .15s ease, color .15s ease, padding .15s ease;
+}
+.md-sidebar--primary .md-nav .md-nav a.md-nav__link:hover {
+  background: color-mix(in srgb, var(--nc, #ffc928) 12%, transparent);
+  padding-left: .55rem;
+}
+.md-sidebar--primary .md-nav .md-nav a.md-nav__link--active {
+  background: color-mix(in srgb, var(--nc, #ffc928) 18%, transparent);
+  font-weight: 700;
+  padding-left: .55rem;
+}
+
+/* menu title at the top: small label with a divider */
+.md-sidebar--primary .md-nav--primary > .md-nav__title {
+  font-size: .68rem;
+  font-weight: 700;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--md-default-fg-color--light);
+  padding-bottom: .85rem;
+  margin-bottom: .35rem;
+  border-bottom: 1px solid var(--md-default-fg-color--lightest);
+  box-shadow: none;
+}
+
+/* slim rounded scrollbar */
+.md-sidebar__scrollwrap { scrollbar-width: thin; scrollbar-color: color-mix(in srgb, var(--md-default-fg-color) 28%, transparent) transparent; }
+.md-sidebar__scrollwrap::-webkit-scrollbar { width: 6px; }
+.md-sidebar__scrollwrap::-webkit-scrollbar-thumb { background: color-mix(in srgb, var(--md-default-fg-color) 28%, transparent); border-radius: 999px; }
+
+/* ===== Sidebar size ===== */
+@media screen and (min-width: 60em) {
+  .md-sidebar--primary { width: 19rem; }
+  .md-sidebar--primary .md-nav { font-size: 1.15rem; line-height: 1.3; }
   .md-sidebar--primary .md-nav--primary > .md-nav__list > .md-nav__item > .md-nav__link,
   .md-sidebar--primary .md-nav--primary > .md-nav__list > .md-nav__item > .md-nav__container > .md-nav__link {
-    font-size: clamp(1.3rem, calc(var(--row) * .55), 1.55rem) !important;
+    font-size: 1.3rem !important; padding-top: 1rem !important; padding-bottom: 1rem !important; margin-top: .3rem !important;
   }
+  .md-sidebar--primary .md-nav .md-nav a.md-nav__link { padding-top: .75rem; padding-bottom: .75rem; margin-top: .2rem; }
 }
