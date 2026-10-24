@@ -6,5 +6,4 @@ title: "Suitsets"
 
 There are many different Suits and accessories available within the addon. These can be found under their respective pages:
 
-- [Armorsets](armorsets/index.md)
-- [Cosmetic](cosmetic/index.md)
+Pages coming soon
