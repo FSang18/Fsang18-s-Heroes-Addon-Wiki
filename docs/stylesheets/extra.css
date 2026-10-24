@@ -772,3 +772,141 @@
 .md-typeset a.pcard-plain { --pc: var(--md-default-fg-color--light); border-style: dashed; }
 .md-typeset .pcard-plain .pcard-name { color: var(--md-default-fg-color); padding-right: 0; }
 .md-typeset .pcard-soon { font-size: .75rem; color: var(--md-default-fg-color--light); }
+
+/* ===== Power cards on hub pages =====
+   Made by hooks/power_cards.py from the line  <!-- power-cards -->  on a hub page. */
+.md-typeset .pcards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 19rem), 1fr));
+  gap: 1rem;
+  margin: 1.4rem 0 1.8rem;
+}
+.md-typeset a.pcard {
+  --pc: hsl(var(--hue, 215) var(--sat, 90%) var(--lit, 62%));
+  --t: #ff3b30;
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 1.1rem;
+  border: 1px solid color-mix(in srgb, var(--pc) 45%, transparent);
+  border-radius: .9rem;
+  overflow: hidden;
+  color: var(--md-default-fg-color);
+  background:
+    radial-gradient(circle at 0% 0%, color-mix(in srgb, var(--pc) 22%, transparent), transparent 60%),
+    rgba(127, 127, 127, .06);
+  transition: transform .18s ease, border-color .18s ease, box-shadow .18s ease;
+}
+[data-md-color-scheme="default"] .md-typeset a.pcard {
+  --pc: hsl(var(--hue, 215) calc(var(--sat, 90%) - 15%) max(28%, calc(var(--lit, 62%) - 22%)));
+}
+.md-typeset a.pcard:hover {
+  transform: translateY(-3px);
+  border-color: var(--pc);
+  box-shadow: 0 .6rem 1.4rem -.6rem color-mix(in srgb, var(--pc) 70%, transparent);
+}
+.md-typeset .pcard-icon {
+  flex: none;
+  width: 4.2rem;
+  height: 4.2rem;
+  border-radius: 50%;
+  object-fit: cover;
+  background: var(--medal-bg, #0b1020);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--pc) 80%, #000), 0 0 1rem color-mix(in srgb, var(--pc) 45%, transparent);
+}
+.md-typeset .pcard-body { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: .5rem; }
+.md-typeset .pcard-name { font-size: 1.05rem; line-height: 1.2; color: var(--pc); padding-right: 2.6rem; }
+.md-typeset .pcard-types { display: flex; flex-wrap: wrap; gap: .3rem; font-weight: 400; }
+.md-typeset .pcard-types i[class^="c-"] {
+  display: inline-flex; align-items: center; gap: .3rem;
+  font-style: normal; font-weight: 700; font-size: .66rem;
+  padding: .08rem .5rem .08rem .38rem;
+  border: 1px solid color-mix(in srgb, var(--k) 55%, transparent);
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--k) 14%, transparent);
+  color: color-mix(in srgb, var(--k) 60%, var(--md-default-fg-color));
+}
+.md-typeset .pcard-types i[class^="c-"]::before {
+  content: ""; width: 1em; height: 1em; background-color: var(--k);
+  -webkit-mask: var(--ic) center / contain no-repeat; mask: var(--ic) center / contain no-repeat;
+}
+.md-typeset .pcard-tier {
+  position: absolute;
+  top: .7rem;
+  right: .8rem;
+  width: 2.3rem;
+  height: 2.55rem;
+  display: grid;
+  place-items: center;
+  background: var(--t);
+  clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+  color: #15120a;
+  font-size: 1.15rem;
+}
+.md-typeset .pcard-tier b { line-height: 1; }
+.md-typeset .pcard-tier[data-tier="A"] { --t: #ff9500; }
+.md-typeset .pcard-tier[data-tier="B"] { --t: #ffd60a; }
+.md-typeset .pcard-tier[data-tier="C"] { --t: #34d84f; }
+.md-typeset .pcard-tier[data-tier="D"] { --t: #19d3f0; }
+.md-typeset .pcard-tier[data-tier="E"] { --t: #4f6bff; color: #fff; }
+.md-typeset .pcard-tier[data-tier="F"] { --t: #d946ef; }
+.md-typeset a.pcard-plain { --pc: var(--md-default-fg-color--light); border-style: dashed; }
+.md-typeset .pcard-plain .pcard-name { color: var(--md-default-fg-color); padding-right: 0; }
+.md-typeset .pcard-soon { font-size: .75rem; color: var(--md-default-fg-color--light); }
+
+/* ===== Kryptonian – Absolute: ability categories and the Immunities panel ===== */
+.ksenses, .md-typeset .slot-nav a.ksenses, .md-typeset .power-section.ksenses { --accent: #2dd4bf; --c: #2dd4bf; }
+.ksolar,  .md-typeset .slot-nav a.ksolar,  .md-typeset .power-section.ksolar  { --accent: #fbbf24; --c: #fbbf24; }
+
+/* Immunities: one panel per protection level, a ring with the percentage and the damage types as tags.
+   To add a damage type, add <span>Name</span> inside the right panel on the power page. */
+.md-typeset .immunities { display: grid; gap: .9rem; margin: 1rem 0 1.8rem; }
+.md-typeset .imm-tier {
+  --ic: #4ade80;
+  display: flex;
+  align-items: center;
+  gap: 1.1rem;
+  padding: 1rem 1.2rem;
+  border: 1px solid color-mix(in srgb, var(--ic) 40%, transparent);
+  border-left: 4px solid var(--ic);
+  border-radius: .8rem;
+  background:
+    radial-gradient(circle at 0% 50%, color-mix(in srgb, var(--ic) 16%, transparent), transparent 55%),
+    rgba(127, 127, 127, .06);
+}
+.md-typeset .imm-tier[style*="--p:80"] { --ic: #38bdf8; }
+.md-typeset .imm-tier[style*="--p:50"] { --ic: #fbbf24; }
+[data-md-color-scheme="default"] .md-typeset .imm-tier { --ic: #16a34a; }
+[data-md-color-scheme="default"] .md-typeset .imm-tier[style*="--p:80"] { --ic: #0284c7; }
+[data-md-color-scheme="default"] .md-typeset .imm-tier[style*="--p:50"] { --ic: #d97706; }
+.md-typeset .imm-ring {
+  flex: none;
+  display: grid;
+  place-items: center;
+  width: 4.6rem;
+  height: 4.6rem;
+  border-radius: 50%;
+  background:
+    radial-gradient(closest-side, var(--md-default-bg-color) 78%, transparent 80%),
+    conic-gradient(var(--ic) calc(var(--p) * 1%), color-mix(in srgb, var(--ic) 18%, transparent) 0);
+  box-shadow: 0 0 1rem color-mix(in srgb, var(--ic) 30%, transparent);
+}
+.md-typeset .imm-ring b { font-size: 1.05rem; color: var(--ic); }
+.md-typeset .imm-body { flex: 1; min-width: 0; }
+.md-typeset .imm-label { display: block; font-size: 1.05rem; color: var(--ic); line-height: 1.2; }
+.md-typeset .imm-body small { display: block; color: var(--md-default-fg-color--light); margin-bottom: .55rem; }
+.md-typeset .imm-chips { display: flex; flex-wrap: wrap; gap: .35rem; }
+.md-typeset .imm-chips span {
+  padding: .12rem .65rem;
+  border-radius: 999px;
+  border: 1px solid color-mix(in srgb, var(--ic) 45%, transparent);
+  background: color-mix(in srgb, var(--ic) 12%, transparent);
+  font-family: var(--md-code-font-family, monospace);
+  font-size: .78rem;
+  font-weight: 600;
+}
+.md-typeset .imm-body .imm-chips span small { display: inline; margin: 0; font-size: 1em; opacity: .55; font-weight: 400; }
+@media (max-width: 30em) {
+  .md-typeset .imm-tier { flex-direction: column; align-items: flex-start; }
+}
