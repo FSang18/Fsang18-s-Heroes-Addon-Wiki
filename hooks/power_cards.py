@@ -1,81 +1,116 @@
-/* ===== Power cards on hub pages =====
-   Made by hooks/power_cards.py from the line  <!-- power-cards -->  on a hub page. */
-.md-typeset .pcards {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(min(100%, 19rem), 1fr));
-  gap: 1rem;
-  margin: 1.4rem 0 1.8rem;
-}
-.md-typeset a.pcard {
-  --pc: hsl(var(--hue, 215) var(--sat, 90%) var(--lit, 62%));
-  --t: #ff3b30;
-  position: relative;
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  padding: 1rem 1.1rem;
-  border: 1px solid color-mix(in srgb, var(--pc) 45%, transparent);
-  border-radius: .9rem;
-  overflow: hidden;
-  color: var(--md-default-fg-color);
-  background:
-    radial-gradient(circle at 0% 0%, color-mix(in srgb, var(--pc) 22%, transparent), transparent 60%),
-    rgba(127, 127, 127, .06);
-  transition: transform .18s ease, border-color .18s ease, box-shadow .18s ease;
-}
-[data-md-color-scheme="default"] .md-typeset a.pcard {
-  --pc: hsl(var(--hue, 215) calc(var(--sat, 90%) - 15%) max(28%, calc(var(--lit, 62%) - 22%)));
-}
-.md-typeset a.pcard:hover {
-  transform: translateY(-3px);
-  border-color: var(--pc);
-  box-shadow: 0 .6rem 1.4rem -.6rem color-mix(in srgb, var(--pc) 70%, transparent);
-}
-.md-typeset .pcard-icon {
-  flex: none;
-  width: 4.2rem;
-  height: 4.2rem;
-  border-radius: 50%;
-  object-fit: cover;
-  background: var(--medal-bg, #0b1020);
-  box-shadow: 0 0 0 3px color-mix(in srgb, var(--pc) 80%, #000), 0 0 1rem color-mix(in srgb, var(--pc) 45%, transparent);
-}
-.md-typeset .pcard-body { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: .5rem; }
-.md-typeset .pcard-name { font-size: 1.05rem; line-height: 1.2; color: var(--pc); padding-right: 2.6rem; }
-.md-typeset .pcard-types { display: flex; flex-wrap: wrap; gap: .3rem; font-weight: 400; }
-.md-typeset .pcard-types i[class^="c-"] {
-  display: inline-flex; align-items: center; gap: .3rem;
-  font-style: normal; font-weight: 700; font-size: .66rem;
-  padding: .08rem .5rem .08rem .38rem;
-  border: 1px solid color-mix(in srgb, var(--k) 55%, transparent);
-  border-radius: 999px;
-  background: color-mix(in srgb, var(--k) 14%, transparent);
-  color: color-mix(in srgb, var(--k) 60%, var(--md-default-fg-color));
-}
-.md-typeset .pcard-types i[class^="c-"]::before {
-  content: ""; width: 1em; height: 1em; background-color: var(--k);
-  -webkit-mask: var(--ic) center / contain no-repeat; mask: var(--ic) center / contain no-repeat;
-}
-.md-typeset .pcard-tier {
-  position: absolute;
-  top: .7rem;
-  right: .8rem;
-  width: 2.3rem;
-  height: 2.55rem;
-  display: grid;
-  place-items: center;
-  background: var(--t);
-  clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
-  color: #15120a;
-  font-size: 1.15rem;
-}
-.md-typeset .pcard-tier b { line-height: 1; }
-.md-typeset .pcard-tier[data-tier="A"] { --t: #ff9500; }
-.md-typeset .pcard-tier[data-tier="B"] { --t: #ffd60a; }
-.md-typeset .pcard-tier[data-tier="C"] { --t: #34d84f; }
-.md-typeset .pcard-tier[data-tier="D"] { --t: #19d3f0; }
-.md-typeset .pcard-tier[data-tier="E"] { --t: #4f6bff; color: #fff; }
-.md-typeset .pcard-tier[data-tier="F"] { --t: #d946ef; }
-.md-typeset a.pcard-plain { --pc: var(--md-default-fg-color--light); border-style: dashed; }
-.md-typeset .pcard-plain .pcard-name { color: var(--md-default-fg-color); padding-right: 0; }
-.md-typeset .pcard-soon { font-size: .75rem; color: var(--md-default-fg-color--light); }
+"""
+Power cards on hub pages (runs while the site is built).
+
+What it does
+------------
+Put this one line on a hub page (for example Arachnids), where the bullet list was:
+
+    <!-- power-cards -->
+
+and the page shows one card for every power page in the same folder:
+round icon, name, tier badge and classification pills, in that power's colour.
+Everything is read from the power's own page, so editing a power page updates its
+card by itself. A page that is not a finished power card yet (just a placeholder)
+still gets a plain card with its name, so nothing disappears from the hub.
+
+Safety
+------
+* No page is rewritten on disk; the cards exist only in the built site.
+* If anything goes wrong on a hub page, it logs a warning and leaves the marker out.
+  It never fails the build.
+"""
+import html
+import logging
+import os
+import posixpath
+import re
+
+import yaml
+
+log = logging.getLogger("mkdocs.hooks.power_cards")
+
+MARKER = "<!-- power-cards -->"
+FRONT = re.compile(r"\A---\r?\n(.*?)\r?\n---\r?\n", re.S)
+PILL = re.compile(r'<i\b[^>]*\bclass="c-([a-z0-9-]+)"[^>]*>(.*?)</i>', re.S)
+BOX = re.compile(r'<b\b[^>]*\bclass="[^"]*\bpc-types\b[^"]*"[^>]*>(.*?)</b>', re.S)
+
+
+def _read(path):
+    text = open(path, encoding="utf-8").read()
+    meta = {}
+    m = FRONT.match(text)
+    if m:
+        try:
+            meta = yaml.safe_load(m.group(1)) or {}
+        except Exception:
+            meta = {}
+        text = text[m.end():]
+    return meta, text
+
+
+def _info(path):
+    meta, text = _read(path)
+    title = str(meta.get("menu_title") or meta.get("title") or os.path.basename(path)[:-3].replace("-", " ").title())
+    card = re.search(r'<div class="power-card"([^>]*)>', text)
+    if not card:
+        return {"name": title, "power": False}
+    style = re.search(r'style="([^"]*)"', card.group(1))
+    name = re.search(r'<span class="pc-name">(.*?)</span>', text, re.S)
+    tier = re.search(r'data-tier="([SABCDEF])"', text)
+    icon = re.search(r'!\[[^\]]*\]\(([^)]+)\)\s*\{[^}]*\.pc-icon[^}]*\}', text)
+    box = BOX.search(text)
+    return {
+        "power": True,
+        "name": html.unescape(name.group(1).strip()) if name else title,
+        "style": style.group(1) if style else "",
+        "tier": tier.group(1) if tier else "",
+        "icon": icon.group(1).strip() if icon else "",
+        "pills": PILL.findall(box.group(1)) if box else [],
+    }
+
+
+def _cards(page, config):
+    docs = config["docs_dir"]
+    here = posixpath.dirname(page.file.src_path.replace("\\", "/"))
+    base = os.path.join(docs, here)
+    root = "../" * len([p for p in page.url.split("/") if p])
+    items = []
+    for name in sorted(os.listdir(base)):
+        full = os.path.join(base, name)
+        if not name.endswith(".md") or name == "index.md" or not os.path.isfile(full):
+            continue
+        meta, _ = _read(full)
+        if meta.get("unlisted"):
+            continue
+        p = _info(full)
+        href = name[:-3] + "/"
+        rank = (0 if meta.get("nav_first") else 1 if p["power"] else 2)
+        if not p["power"]:
+            items.append((rank, name, f'<a class="pcard pcard-plain" href="{href}"><span class="pcard-body">'
+                       f'<b class="pcard-name">{html.escape(p["name"])}</b>'
+                       f'<span class="pcard-soon">Page coming soon</span></span></a>'))
+            continue
+        icon = ""
+        if p["icon"]:
+            target = posixpath.normpath(posixpath.join(here, p["icon"]))
+            icon = f'<img class="pcard-icon" src="{root}{target}" alt="">'
+        else:
+            icon = '<span class="pcard-icon"></span>'
+        pills = "".join(f'<i class="c-{s}">{l}</i>' for s, l in p["pills"])
+        tier = (f'<span class="pcard-tier" data-tier="{p["tier"]}" title="Power ranking: {p["tier"]} Tier">'
+                f'<b>{p["tier"]}</b></span>') if p["tier"] else ""
+        items.append((rank, name, f'<a class="pcard" href="{href}" style="{html.escape(p["style"], quote=True)}">{icon}'
+                   f'<span class="pcard-body"><b class="pcard-name">{html.escape(p["name"])}</b>'
+                   f'<b class="pcard-types">{pills}</b></span>{tier}</a>'))
+    out = [h for _, _, h in sorted(items)]
+    return '<div class="pcards">' + "".join(out) + "</div>\n" if out else ""
+
+
+def on_page_markdown(markdown, page, config, files):
+    if MARKER not in markdown:
+        return markdown
+    try:
+        return markdown.replace(MARKER, _cards(page, config))
+    except Exception as exc:
+        log.warning("power_cards: skipped %s (%s)", page.file.src_path, exc)
+        return markdown.replace(MARKER, "")
