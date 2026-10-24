@@ -204,6 +204,17 @@ Drain your Solar energy to fire off blasts of heat from your eyes. Scrolling whi
 </div>
 </div>
 
+## Weaknesses
+
+<div class="power-notes" markdown>
+
+!!! danger "Kryptonite"
+    If this power is near or hit by kryptonite, it will contract kryptonite poison, starting from level I and growing to level V from continuous contact. This rapidly drains your Solar energy. Once your Solar energy is drained, your hunger will start to deplete and you will begin taking damage. Kryptonite crystals will also grow over your body.
+
+    <div class="chips"><span class="chip">Poison <b>Level I to V</b></span><span class="chip">Drains <b>Solar energy</b></span><span class="chip">Then <b>Hunger and damage</b></span></div>
+
+</div>
+
 ## Relevant Information
 
 <div class="power-notes" markdown>
@@ -219,8 +230,5 @@ With full Solar energy you get these stat increases:
 <div><span>Solar: Armor Toughness</span><b>+8.6</b></div>
 <div><span>Solar: Base Attack Damage</span><b>+12.6</b></div>
 </div>
-
-!!! danger "Kryptonite"
-    If this power is near or hit by kryptonite, it will contract kryptonite poison, starting from level I and growing to level V from continuous contact. This rapidly drains your Solar energy. Once your Solar energy is drained, your hunger will start to deplete and you will begin taking damage. Kryptonite crystals will also grow over your body.
 
 </div>
