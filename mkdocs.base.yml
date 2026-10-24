@@ -53,6 +53,7 @@ hooks:
   - hooks/pill_links.py
   - hooks/page_nav.py
   - hooks/short_toc.py
+  - hooks/power_cards.py
   
 plugins:
   - search
