@@ -10,13 +10,21 @@ DC characters draw their abilities from alien heritage, myth, speed, magic and a
 
 <div class="dir-grid" markdown>
 
-<div class="dir-card" data-mark="K" style="--hue:215; --sat:90%; --lit:62%" markdown>
+<div class="dir-card" data-mark="K" style="--hue:135; --sat:90%; --lit:62%" markdown>
 
 ### [Kryptonians](kryptonians/index.md)
 
 Heroes from Krypton, with flight, super strength and heat vision.
 
 
+
+</div>
+
+<div class="dir-card" data-mark="M" style="--hue:35; --sat:90%; --lit:60%" markdown>
+
+### [Metahumans](metahumans/index.md)
+
+Humans with extraordinary abilities from metagene activation, mutations or unusual energies.
 
 </div>
 
