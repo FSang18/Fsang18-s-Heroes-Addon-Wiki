@@ -14,7 +14,7 @@ Marvel characters possess a wide range of extraordinary abilities, often gained 
 
 ### [Arachnids](arachnids/index.md)
 
-Arachnid heroes with wall-crawling, enhanced senses and web-based abilities.
+Spider-powered heroes with wall-crawling, enhanced senses and web-based abilities.
 
 </div>
 
@@ -26,7 +26,7 @@ Powers granted by the X-Gene, from telepathy and telekinesis to reality warping.
 
 </div>
 
-<div class="dir-card" data-mark="I" style="--hue:270; --sat:85%; --lit:64%" markdown>
+<div class="dir-card" data-mark="I" style="--hue:185; --sat:75%; --lit:60%" markdown>
 
 ### [Inhumans](inhumans/index.md)
 
