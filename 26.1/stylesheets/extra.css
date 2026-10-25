@@ -1018,3 +1018,14 @@
 [data-md-color-scheme="default"] .md-typeset .blk-mode { --pc: hsl(35 80% 38%); }
 .md-typeset .blk-mode b { color: var(--pc); font-size: 1.05rem; }
 .md-typeset .blk-mode span { font-size: .85rem; color: var(--md-default-fg-color--light); }
+
+/* cards on the Blocks page that show the picture of the block instead of a letter */
+.md-typeset .dir-card.has-img::before {
+  content: "";
+  width: 4.4rem;
+  height: 4.4rem;
+  border: 0;
+  border-radius: .5rem;
+  background: var(--img) center / contain no-repeat;
+  filter: drop-shadow(0 .3rem .45rem rgba(0, 0, 0, .4));
+}
