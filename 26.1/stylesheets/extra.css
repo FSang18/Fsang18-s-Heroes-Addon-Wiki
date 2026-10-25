@@ -947,3 +947,74 @@
 @media (max-width: 30em) {
   .md-typeset .imm-tier { flex-direction: column; align-items: flex-start; }
 }
+
+/* ===== Block pages (DNA Recoding Chamber and its parts) ===== */
+.md-typeset .blk-hero {
+  --pc: hsl(var(--hue, 215) var(--sat, 85%) var(--lit, 62%));
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+  margin: 1.2rem 0 1.8rem;
+  padding: 1.3rem 1.5rem;
+  border: 1px solid color-mix(in srgb, var(--pc) 40%, transparent);
+  border-top: 3px solid var(--pc);
+  border-radius: .5rem;
+  background:
+    radial-gradient(circle at 0% 0%, color-mix(in srgb, var(--pc) 22%, transparent), transparent 55%),
+    rgba(127, 127, 127, .06);
+}
+[data-md-color-scheme="default"] .md-typeset .blk-hero {
+  --pc: hsl(var(--hue, 215) calc(var(--sat, 85%) - 15%) max(28%, calc(var(--lit, 62%) - 22%)));
+}
+.md-typeset .blk-img { flex: none; width: 10rem; display: grid; place-items: center; }
+.md-typeset .blk-img img { max-width: 100%; max-height: 13rem; filter: drop-shadow(0 .5rem .8rem rgba(0, 0, 0, .45)); }
+.md-typeset .blk-info { flex: 1; min-width: 0; }
+.md-typeset .blk-eyebrow { display: block; font-size: .7rem; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--pc); }
+.md-typeset .blk-name { display: block; font-size: 1.7rem; font-weight: 800; line-height: 1.15; margin: .15rem 0 .5rem; }
+.md-typeset .blk-info p { margin: 0 0 .9rem; }
+.md-typeset .blk-facts { display: flex; flex-wrap: wrap; gap: .5rem; }
+.md-typeset .blk-facts div {
+  display: flex; flex-direction: column;
+  padding: .35rem .8rem;
+  border: 1px solid color-mix(in srgb, var(--pc) 35%, transparent);
+  border-radius: .5rem;
+  background: color-mix(in srgb, var(--pc) 10%, transparent);
+}
+.md-typeset .blk-facts span { font-size: .65rem; letter-spacing: .1em; text-transform: uppercase; color: var(--md-default-fg-color--light); }
+.md-typeset .blk-facts b { font-size: .9rem; }
+
+.md-typeset .blk-recipe { display: flex; align-items: center; gap: 1.6rem; flex-wrap: wrap; margin: .8rem 0 1.6rem; }
+.md-typeset .blk-recipe-img { image-rendering: pixelated; width: 21rem; max-width: 100%; border-radius: .4rem; box-shadow: 0 .3rem 1rem rgba(0, 0, 0, .35); }
+.md-typeset .blk-recipe ul { margin: 0; list-style: none; padding: 0; display: grid; gap: .35rem; }
+.md-typeset .blk-recipe li { margin: 0; padding: .25rem .8rem; border-radius: 999px; border: 1px solid var(--md-default-fg-color--lightest); background: rgba(127, 127, 127, .08); }
+
+.md-typeset .blk-parts { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 12rem), 1fr)); gap: 1rem; margin: 1rem 0 1.8rem; }
+.md-typeset a.blk-part {
+  --pc: hsl(var(--hue, 215) 85% 62%);
+  display: flex; flex-direction: column; align-items: center; gap: .3rem; text-align: center;
+  padding: 1rem .8rem;
+  border: 1px solid color-mix(in srgb, var(--pc) 45%, transparent);
+  border-radius: .8rem;
+  color: var(--md-default-fg-color);
+  background: radial-gradient(circle at 50% 0%, color-mix(in srgb, var(--pc) 20%, transparent), transparent 70%), rgba(127, 127, 127, .06);
+  transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
+}
+.md-typeset a.blk-part:hover { transform: translateY(-3px); border-color: var(--pc); box-shadow: 0 .6rem 1.4rem -.6rem color-mix(in srgb, var(--pc) 70%, transparent); }
+.md-typeset .blk-part img { height: 6rem; width: auto; max-width: 100%; object-fit: contain; filter: drop-shadow(0 .3rem .5rem rgba(0, 0, 0, .4)); }
+.md-typeset .blk-part b { color: var(--pc); }
+.md-typeset .blk-part span { font-size: .8rem; color: var(--md-default-fg-color--light); }
+@media (max-width: 40em) { .md-typeset .blk-hero { flex-direction: column; text-align: center; } .md-typeset .blk-facts { justify-content: center; } }
+
+.md-typeset .blk-modes { display: grid; grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr)); gap: .8rem; margin: .8rem 0 1.6rem; }
+.md-typeset .blk-mode {
+  --pc: hsl(40 85% 62%);
+  display: flex; flex-direction: column; gap: .25rem;
+  padding: .9rem 1rem;
+  border: 1px solid color-mix(in srgb, var(--pc) 40%, transparent);
+  border-left: 4px solid var(--pc);
+  border-radius: .6rem;
+  background: color-mix(in srgb, var(--pc) 8%, transparent);
+}
+[data-md-color-scheme="default"] .md-typeset .blk-mode { --pc: hsl(35 80% 38%); }
+.md-typeset .blk-mode b { color: var(--pc); font-size: 1.05rem; }
+.md-typeset .blk-mode span { font-size: .85rem; color: var(--md-default-fg-color--light); }
