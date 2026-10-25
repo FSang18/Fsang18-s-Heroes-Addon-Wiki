@@ -7,10 +7,10 @@ title: "DNA Recoding Chamber"
 <div class="blk-hero" style="--hue:190" markdown>
 <div class="blk-img"><img src="../../uploads/power-images/blocks/dna_recoding_chamber.png" alt="DNA Recoding Chamber"></div>
 <div class="blk-info">
-<span class="blk-eyebrow">Multiblock structure</span>
+<span class="blk-eyebrow">Multiblock Structure</span>
 <span class="blk-name">DNA Recoding Chamber</span>
 <p>A multiblock structure made from three different blocks, used to equip and unequip powers.</p>
-<div class="blk-facts"><div><span>Type</span><b>Multiblock</b></div><div><span>Parts</span><b>3 blocks</b></div><div><span>Size</span><b>2 wide, 2 high</b></div></div>
+<div class="blk-facts"><div><span>Type</span><b>Multiblock</b></div><div><span>Parts</span><b>3 Blocks</b></div><div><span>Size</span><b>2 Wide, 2 High</b></div></div>
 </div>
 </div>
 
@@ -22,17 +22,38 @@ title: "DNA Recoding Chamber"
 <a class="blk-part" href="../chamber/" style="--hue:195"><img src="../../uploads/power-images/blocks/chamber.png" alt=""><b>Chamber</b><span>The glass pod</span></a>
 </div>
 
-## Building it
+## Building It
 
 1. Craft a [Power Block](power-block.md), a [DNA Transfer Station](dna-transfer-station.md) and a [Chamber](chamber.md).
 2. Place the Power Block down.
 3. Place the DNA Transfer Station on top of the Power Block.
 4. Place the Chamber right next to them, so the two columns stand side by side.
 
-## Equipping and removing powers
+## Equipping and Removing Powers
 
-1. Put the vial of the power into the plus square of the [DNA Transfer Station](dna-transfer-station.md). To remove a power, use an empty vial instead.
-2. Enter the [Chamber](chamber.md) and close the door of the machine.
+1. Put the vial of the power into the plus square of the DNA Transfer Station. To remove a power, use an empty vial instead.
+2. Enter the Chamber and close the door of the machine.
 3. Hit Start when ready.
 
-The [Power Block](power-block.md) holds the power the machine runs on, up to 100,000. The DNA Transfer Station shows your equipped power and a green bar for the power stored in the multiblock.
+The Power Block holds the power the machine runs on, up to 100,000.
+
+## DNA Transfer Station
+
+This is where you insert the vials, be it empty or full. It also shows:
+
+- The power you currently have equipped.
+- A green bar that shows the power stored in the multiblock.
+
+### Access Modes
+
+The DNA Transfer Station has 3 access modes:
+
+<div class="blk-modes">
+<div class="blk-mode"><b>Public</b><span>Everyone can use it.</span></div>
+<div class="blk-mode"><b>Private</b><span>Only the user of the multiblock can use it.</span></div>
+<div class="blk-mode"><b>User</b><span>Only the player whose name is typed in the section below the access bar can use it.</span></div>
+</div>
+
+## Chamber
+
+This part of the multiblock is where you enter for powers to be either equipped or taken out.
