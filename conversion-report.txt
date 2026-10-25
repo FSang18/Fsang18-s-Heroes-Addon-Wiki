@@ -1,7 +1,0 @@
-Pages converted: 644
-Template pages moved to /templates: 8
-Links that pointed at pages that do not exist (text kept, link removed): 3
-
-  in home/Blocks/Ores/Vibranium  ->  home/Items/Technology/Arc-Reactor/Nano-Housing-Unit-\(Mark-50\)
-  in home/Items/Technology/Inhibitor-Devices/Keys/Diamond  ->  home/Items/Technology/Inhibitor-Collars/Tier-II-Key
-  in home/Items/Technology/Stark-Repair-Kits/2-Enhanced-Stark-Repair-Kit  ->  home/Items/Technology/Circuits/Golden-Circuit
