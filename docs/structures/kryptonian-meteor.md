@@ -18,4 +18,4 @@ Purpose:
 
 Additional Information:
 
-* With cheats enabled, you can use the "/locate structure fsang:kryptonian_meteor" command to find the nearest location to you.
+* With cheats enabled, you can use the "/locate structure fsang:kryptonite_meteor" command to find the nearest location to you.
