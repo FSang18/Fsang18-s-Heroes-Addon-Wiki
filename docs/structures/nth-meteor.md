@@ -20,3 +20,7 @@ The **"Nth Meteor"** structure can be found in the following biomes:
 Purpose:
 
 * These meteors are the only source of [Nth Metal](../blocks/ores/nth-metal.md), and also contain [Titanium Ore](../blocks/ores/titanium.md).
+
+Additional Information
+
+* With cheats enabled, you can use the "/locate structure fsang:nth_meteor" command to find the nearest nth meteor location to you.
