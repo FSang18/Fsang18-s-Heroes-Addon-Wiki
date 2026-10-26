@@ -34,4 +34,4 @@ Purpose:
 
 Additional Information:
 
-* With cheats enabled, you can use the "/locate structure fsang:kree_ship" command to find the nearest location to you.
+* With cheats enabled, you can use the "/locate structure fsang:fallen_ship" command to find the nearest fallen ship location to you.
