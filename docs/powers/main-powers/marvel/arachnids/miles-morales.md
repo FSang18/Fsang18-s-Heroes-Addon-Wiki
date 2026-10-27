@@ -129,7 +129,7 @@ By enhancing the inter-atomic attractive forces between your skin and a surface,
 
 <div class="ab-head" markdown>
 
-![](../../../../uploads/arachnid-miles-morales/arachnid-carry.png){ .ab-icon }
+![](../../../../uploads/power-images/arachnid-miles-morales/arachnid-carry.png){ .ab-icon }
 
 #### Arachnid Carry
 
@@ -189,7 +189,7 @@ After using the Dodge ability, become invisible for 3 seconds.
 
 <div class="ab-head" markdown>
 
-![](../../../../uploads/arachnid-miles-morales/fight-or-flight.png){ .ab-icon }
+![](../../../../uploads/power-images/arachnid-miles-morales/fight-or-flight.png){ .ab-icon }
 
 #### Fight or Flight
 
@@ -265,7 +265,7 @@ Using an explosion of Venom energy, leap in the direction you are looking, shock
 
 <div class="ab-head" markdown>
 
-![](../../../../uploads/arachnid-miles-morales/venom-smash.png){ .ab-icon }
+![](../../../../uploads/power-images/arachnid-miles-morales/venom-smash.png){ .ab-icon }
 
 #### Venom Smash
 
@@ -341,7 +341,7 @@ Focus your bioelectricity to form a blade of lightning in your hand. While enabl
 
 <div class="ab-head" markdown>
 
-![](../../../../uploads/power/pages/arachnid-miles-morales/galvanized.png){ .ab-icon }
+![](../../../../uploads/power-images/arachnid-miles-morales/galvanized.png){ .ab-icon }
 
 #### Galvanized
 
