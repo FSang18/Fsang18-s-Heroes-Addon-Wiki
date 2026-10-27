@@ -718,10 +718,9 @@
   --pg: hsl(var(--hue, 45) calc(var(--sat, 100%) - 15%) max(28%, calc(var(--lit, 58%) - 22%)));
   --y-deep: var(--pg);
 }
-.md-content {
-  background:
-    linear-gradient(180deg, color-mix(in srgb, var(--pg) 14%, transparent), transparent 45%),
-    repeating-linear-gradient(0deg, transparent 0 31px, color-mix(in srgb, var(--pg) 6%, transparent) 31px 32px);
+/* the soft colour glow is only on power pages (the hook adds the class "power-page") */
+.md-content.power-page {
+  background: linear-gradient(180deg, color-mix(in srgb, var(--pg) 14%, transparent), transparent 45%);
   background-attachment: fixed;
 }
 
