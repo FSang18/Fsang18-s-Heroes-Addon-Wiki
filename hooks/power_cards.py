@@ -114,3 +114,27 @@ def on_page_markdown(markdown, page, config, files):
     except Exception as exc:
         log.warning("power_cards: skipped %s (%s)", page.file.src_path, exc)
         return markdown.replace(MARKER, "")
+
+
+# ---------------------------------------------------------------------------
+# Page colour: a power page passes the colour of its power card to the whole page
+# (headings, lines, stat numbers, the soft glow in the background).
+# Pages without a power card keep the normal yellow.
+# ---------------------------------------------------------------------------
+_CARD_STYLE = re.compile(r'<div class="power-card" style="([^"]*)"')
+
+
+def on_post_page(output, page, config):
+    try:
+        m = _CARD_STYLE.search(output)
+        if not m:
+            return output
+        parts = [f"--{k}:{v}" for k, v in re.findall(r'--(hue|sat|lit)\s*:\s*([^;"]+)', m.group(1))]
+        if not parts:
+            return output
+        style = ";".join(parts)
+        return output.replace('<div class="md-content" data-md-component="content">',
+                              f'<div class="md-content" data-md-component="content" style="{style}">', 1)
+    except Exception as exc:  # never fail the build over a colour
+        log.warning("power_cards: page colour skipped for %s (%s)", page.file.src_path, exc)
+        return output
