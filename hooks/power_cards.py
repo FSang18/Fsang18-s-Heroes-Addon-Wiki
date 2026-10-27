@@ -134,7 +134,7 @@ def on_post_page(output, page, config):
             return output
         style = ";".join(parts)
         return output.replace('<div class="md-content" data-md-component="content">',
-                              f'<div class="md-content" data-md-component="content" style="{style}">', 1)
+                              f'<div class="md-content power-page" data-md-component="content" style="{style}">', 1)
     except Exception as exc:  # never fail the build over a colour
         log.warning("power_cards: page colour skipped for %s (%s)", page.file.src_path, exc)
         return output
