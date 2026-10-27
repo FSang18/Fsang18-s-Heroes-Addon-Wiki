@@ -205,13 +205,10 @@
 .md-typeset .power-card .pc-medal { flex: none; }
 .md-typeset .power-card .pc-medal p { margin: 0; display: flex; }
 .md-typeset .power-card .pc-icon {
-  width: 5.2rem;
-  height: 5.2rem;
-  border-radius: 50%;
+  width: 6rem;
+  height: 6rem;
   image-rendering: pixelated;
-  box-shadow:
-    0 0 0 2px var(--pc),
-    0 0 1.6rem color-mix(in srgb, var(--pc) 50%, transparent);
+  filter: drop-shadow(0 0 .9rem color-mix(in srgb, var(--pc) 55%, transparent));
 }
 .md-typeset .power-card .pc-id { display: flex; flex-direction: column; gap: .25rem; min-width: 0; }
 .md-typeset .power-card .pc-eyebrow {
@@ -263,7 +260,7 @@
 
 @media screen and (max-width: 36em) {
   .md-typeset .power-card .pc-head { gap: .9rem; }
-  .md-typeset .power-card .pc-icon { width: 4.2rem; height: 4.2rem; }
+  .md-typeset .power-card .pc-icon { width: 4.8rem; height: 4.8rem; }
   .md-typeset .power-card .pc-name { font-size: 1.45rem; }
 }
 
@@ -516,7 +513,7 @@
 
 /* optional per-card medallion background, for icons that are not on dark blue:
    <div class="power-card" style="--medal-bg:#050505" markdown> */
-.md-typeset .power-card .pc-icon { background: var(--medal-bg, #0b1020); }
+
 
 /* ===== Tier colours (S to F), following the usual tier-list colours but stronger ===== */
 .md-typeset .power-card .pc-tier                 { --t: #ff3b30; } /* S red     */
@@ -673,3 +670,42 @@
 @media screen and (max-width: 36em) {
   .md-typeset .page-nav .pn { flex-basis: 100%; max-width: none; }
 }
+
+/* ===== Relevant Information: table-style card (rows with dividers) ===== */
+.md-typeset .power-notes > ul,
+.md-typeset .power-notes > .spec {
+  list-style: none;
+  margin: .9rem 0 1.2rem;
+  padding: 0;
+  border: 1px solid rgba(127, 127, 127, .28);
+  border-radius: .9rem;
+  overflow: hidden;
+  background: rgba(127, 127, 127, .06);
+  box-shadow: 0 .4rem 1.2rem rgba(0, 0, 0, .18);
+}
+.md-typeset .power-notes > ul::before,
+.md-typeset .power-notes > .spec::before {
+  display: block;
+  padding: .7rem 1.1rem;
+  font-size: .8rem;
+  font-weight: 600;
+  color: var(--md-default-fg-color--light);
+  background: rgba(127, 127, 127, .1);
+}
+.md-typeset .power-notes > ul::before { content: "Information"; }
+.md-typeset .power-notes > .spec::before { content: "Stat Bonuses"; }
+.md-typeset .power-notes > ul > li {
+  list-style: none;
+  margin: 0;
+  padding: .85rem 1.1rem;
+  border-top: 1px solid rgba(127, 127, 127, .22);
+}
+.md-typeset .power-notes > ul > li::marker { content: none; }
+.md-typeset .power-notes > .spec { display: block; background: rgba(127, 127, 127, .06); gap: 0; }
+.md-typeset .power-notes > .spec > div {
+  background: transparent;
+  padding: .85rem 1.1rem;
+  border-top: 1px solid rgba(127, 127, 127, .22);
+}
+.md-typeset .power-notes > .spec span { font-size: .95rem; color: var(--md-default-fg-color); }
+.md-typeset .power-notes > p { margin: 1rem 0 .2rem; }
