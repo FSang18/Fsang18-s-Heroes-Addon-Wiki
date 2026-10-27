@@ -186,8 +186,7 @@
   border-radius: .25rem;
   overflow: hidden;
   background:
-    radial-gradient(circle at 0% 0%, color-mix(in srgb, var(--pc) 24%, transparent), transparent 55%),
-    repeating-linear-gradient(135deg, color-mix(in srgb, var(--pc) 8%, transparent) 0 1px, transparent 1px 14px),
+    linear-gradient(180deg, color-mix(in srgb, var(--pc) 22%, transparent), transparent 70%),
     rgba(127, 127, 127, .06);
 }
 /* light mode: same hue, darker and a little less saturated so it reads on white.
