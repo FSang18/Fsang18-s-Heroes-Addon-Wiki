@@ -915,8 +915,8 @@
 .md-typeset .craft .cs.e { background: transparent; border-style: dashed; box-shadow: none; opacity: .5; }
 .md-typeset .craft .cs img { display: block; width: 80px; height: 80px; margin: 0; object-fit: contain; }
 .md-typeset .craft-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 6px; }
-.md-typeset .craft-list li { display: flex; align-items: center; gap: .6rem; margin: 0; padding: 5px 16px 5px 6px; border: 1px solid rgba(127, 127, 127, .28); background: rgba(127, 127, 127, .08); clip-path: polygon(0 0, 100% 0, calc(100% - 8px) 100%, 0 100%); }
-.md-typeset .craft-list li i { display: grid; place-items: center; width: 34px; height: 34px; background: rgba(0, 0, 0, .3); }
+.md-typeset .craft-list li { display: flex; align-items: center; gap: .6rem; margin: 0; padding: 5px 14px 5px 6px; border: 1px solid rgba(127, 127, 127, .28); background: rgba(127, 127, 127, .08); border-radius: 8px; }
+.md-typeset .craft-list li i { display: grid; place-items: center; width: 34px; height: 34px; background: rgba(0, 0, 0, .3); border-radius: 6px; }
 .md-typeset .craft-list li i img { display: block; width: 30px; height: 30px; margin: 0; object-fit: contain; }
 .md-typeset .craft-list b { color: var(--y); }
 [data-md-color-scheme="default"] .md-typeset .craft-list b { color: var(--y-deep); }
