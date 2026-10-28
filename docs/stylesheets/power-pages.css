@@ -730,8 +730,6 @@
   text-transform: uppercase;
   letter-spacing: .06em;
   border-bottom: 0;
-  padding-left: 1rem;
-  border-left: 6px solid var(--pg);
 }
 .md-content .md-typeset h2 {
   display: flex;
@@ -752,38 +750,31 @@
 }
 .md-content .md-typeset .power-section h3 { text-transform: uppercase; letter-spacing: .08em; font-size: 1.05rem; }
 
-/* boxes: square, with a cut corner */
+/* boxes: soft rounded corners */
 .md-content .md-typeset .power-card {
-  border-radius: 0;
+  border-radius: .8rem;
   border: 1px solid color-mix(in srgb, var(--pc) 50%, transparent);
-  border-top: 0;
-  clip-path: polygon(0 0, calc(100% - 28px) 0, 100% 28px, 100% 100%, 28px 100%, 0 calc(100% - 28px));
   background: linear-gradient(135deg, color-mix(in srgb, var(--pc) 28%, var(--md-default-bg-color)), var(--md-default-bg-color) 70%);
 }
 .md-content .md-typeset .spec,
 .md-content .md-typeset .power-notes > ul,
 .md-content .md-typeset .power-notes > .spec {
-  border-radius: 0;
-  border-left: 4px solid var(--pg);
+  border-radius: .6rem;
 }
 .md-content .md-typeset .ability {
-  border: 0;
-  border-left: 4px solid var(--accent, var(--pg));
-  border-radius: 0;
+  border: 1px solid color-mix(in srgb, var(--accent, var(--pg)) 30%, transparent);
+  border-radius: .6rem;
   background: linear-gradient(90deg, color-mix(in srgb, var(--accent, var(--pg)) 12%, transparent), rgba(127, 127, 127, .05));
-  clip-path: polygon(0 0, 100% 0, 100% calc(100% - 14px), calc(100% - 14px) 100%, 0 100%);
 }
 .md-content .md-typeset .slot-nav a {
-  border-radius: 0;
-  clip-path: polygon(10px 0, 100% 0, calc(100% - 10px) 100%, 0 100%);
+  border-radius: .5rem;
   padding-inline: 1.2rem;
 }
 .md-content .md-typeset a.pcard,
 .md-content .md-typeset .dir-card {
-  border-radius: 0;
-  clip-path: polygon(0 0, calc(100% - 18px) 0, 100% 18px, 100% 100%, 18px 100%, 0 calc(100% - 18px));
+  border-radius: .9rem;
 }
-.md-content .md-typeset .admonition { border-radius: 0; }
+.md-content .md-typeset .admonition { border-radius: .6rem; }
 
 @media screen and (max-width: 36em) {
   .md-content .md-typeset h1 { font-size: 1.6rem; }
