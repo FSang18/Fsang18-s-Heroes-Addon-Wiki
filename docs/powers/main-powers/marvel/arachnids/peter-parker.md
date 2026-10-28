@@ -26,7 +26,7 @@ nav_first: true
 <div class="pc-facts">
 <div class="pc-source src-biological"><span class="pc-src-icon" role="img" aria-label="DNA helix icon"></span><div class="pc-src-text"><span>Source</span><b>Biological</b><small>Genetic-based power, powered by mutated D.N.A.</small></div></div>
 <div><span>Power classification</span><b class="pc-types"><i class="c-fighter">Fighter</i><i class="c-mobility">Mobility</i><i class="c-sensory">Sensory</i><i class="c-crowd-control">Crowd Control</i></b></div>
-<div><span>Obtained from</span><b>Arachnid Serum</b></div>
+<div><span>Obtained from</span><b>Arachnid Poisoning</b><small>Random Chance</small></div>
 <div><span>Ability categories</span><b class="pc-cats"><i class="totem">Spider-Totem</i><i class="movement">Arachnid Movement</i><i class="physiology">Arachnid Physiology</i><i class="webbing">Organic Webbing</i><i class="mutation">Arachnid Mutation</i></b></div>
 <div><span>Signature look</span><b>Organic Webbing</b><small>Web lines, shots and more</small></div>
 </div>
