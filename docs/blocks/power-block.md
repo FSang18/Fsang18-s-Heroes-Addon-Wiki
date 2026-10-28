@@ -17,6 +17,8 @@ title: "Power Block"
 ## Crafting
 
 <div class="craft">
+<div class="craft-col">
+<span class="craft-label">Recipe</span>
 <div class="craft-grid">
 <span class="cs" title="Iron Ingot"><img src="../../uploads/power-images/minecraft/iron-ingot.png" alt="Iron Ingot"></span>
 <span class="cs" title="Iron Ingot"><img src="../../uploads/power-images/minecraft/iron-ingot.png" alt="Iron Ingot"></span>
@@ -28,7 +30,11 @@ title: "Power Block"
 <span class="cs" title="Iron Ingot"><img src="../../uploads/power-images/minecraft/iron-ingot.png" alt="Iron Ingot"></span>
 <span class="cs" title="Iron Ingot"><img src="../../uploads/power-images/minecraft/iron-ingot.png" alt="Iron Ingot"></span>
 </div>
+</div>
+<div class="craft-col">
+<span class="craft-label">Ingredients</span>
 <ul class="craft-list"><li><i><img src="../../uploads/power-images/minecraft/iron-ingot.png" alt=""></i><span><b>6</b>× Iron Ingot</span></li><li><i><img src="../../uploads/power-images/minecraft/redstone-dust.png" alt=""></i><span><b>2</b>× Redstone Dust</span></li><li><i><img src="../../uploads/power-images/minecraft/redstone-block.png" alt=""></i><span><b>1</b>× Redstone Block</span></li></ul>
+</div>
 </div>
 
 
