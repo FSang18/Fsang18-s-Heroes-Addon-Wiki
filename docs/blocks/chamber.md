@@ -18,17 +18,15 @@ title: "Chamber"
 
 <div class="craft">
 <div class="craft-grid">
-<span class="cs" title="Iron Ingot"><img src="../../uploads/power-images/items/iron-ingot.png" alt="Iron Ingot"></span>
-<span class="cs" title="Glass"><img src="../../uploads/power-images/items/glass.png" alt="Glass"></span>
-<span class="cs" title="Iron Ingot"><img src="../../uploads/power-images/items/iron-ingot.png" alt="Iron Ingot"></span>
-<span class="cs" title="Iron Ingot"><img src="../../uploads/power-images/items/iron-ingot.png" alt="Iron Ingot"></span>
-<span class="cs" title="Glass"><img src="../../uploads/power-images/items/glass.png" alt="Glass"></span>
-<span class="cs" title="Iron Ingot"><img src="../../uploads/power-images/items/iron-ingot.png" alt="Iron Ingot"></span>
-<span class="cs" title="Iron Ingot"><img src="../../uploads/power-images/items/iron-ingot.png" alt="Iron Ingot"></span>
-<span class="cs" title="Iron Ingot"><img src="../../uploads/power-images/items/iron-ingot.png" alt="Iron Ingot"></span>
-<span class="cs" title="Iron Ingot"><img src="../../uploads/power-images/items/iron-ingot.png" alt="Iron Ingot"></span>
+<span class="cs" title="Iron Ingot"><img src="../../uploads/power-images/minecraft/iron-ingot.png" alt="Iron Ingot"></span>
+<span class="cs" title="Glass"><img src="../../uploads/power-images/minecraft/glass.png" alt="Glass"></span>
+<span class="cs" title="Iron Ingot"><img src="../../uploads/power-images/minecraft/iron-ingot.png" alt="Iron Ingot"></span>
+<span class="cs" title="Iron Ingot"><img src="../../uploads/power-images/minecraft/iron-ingot.png" alt="Iron Ingot"></span>
+<span class="cs" title="Glass"><img src="../../uploads/power-images/minecraft/glass.png" alt="Glass"></span>
+<span class="cs" title="Iron Ingot"><img src="../../uploads/power-images/minecraft/iron-ingot.png" alt="Iron Ingot"></span>
+<span class="cs" title="Iron Ingot"><img src="../../uploads/power-images/minecraft/iron-ingot.png" alt="Iron Ingot"></span>
+<span class="cs" title="Iron Ingot"><img src="../../uploads/power-images/minecraft/iron-ingot.png" alt="Iron Ingot"></span>
+<span class="cs" title="Iron Ingot"><img src="../../uploads/power-images/minecraft/iron-ingot.png" alt="Iron Ingot"></span>
 </div>
-<span class="craft-arrow"></span>
-<div class="craft-out"><span class="cs out"><img src="../../uploads/power-images/blocks/chamber.png" alt="Chamber"></span></div>
-<ul class="craft-list"><li><i><img src="../../uploads/power-images/items/iron-ingot.png" alt=""></i><span><b>7</b>× Iron Ingot</span></li><li><i><img src="../../uploads/power-images/items/glass.png" alt=""></i><span><b>2</b>× Glass</span></li></ul>
+<ul class="craft-list"><li><i><img src="../../uploads/power-images/minecraft/iron-ingot.png" alt=""></i><span><b>7</b>× Iron Ingot</span></li><li><i><img src="../../uploads/power-images/minecraft/glass.png" alt=""></i><span><b>2</b>× Glass</span></li></ul>
 </div>
