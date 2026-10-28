@@ -17,6 +17,8 @@ title: "DNA Transfer Station"
 ## Crafting
 
 <div class="craft">
+<div class="craft-col">
+<span class="craft-label">Recipe</span>
 <div class="craft-grid">
 <span class="cs" title="Iron Ingot"><img src="../../uploads/power-images/minecraft/iron-ingot.png" alt="Iron Ingot"></span>
 <span class="cs" title="Iron Ingot"><img src="../../uploads/power-images/minecraft/iron-ingot.png" alt="Iron Ingot"></span>
@@ -28,5 +30,9 @@ title: "DNA Transfer Station"
 <span class="cs" title="Redstone Dust"><img src="../../uploads/power-images/minecraft/redstone-dust.png" alt="Redstone Dust"></span>
 <span class="cs" title="Iron Ingot"><img src="../../uploads/power-images/minecraft/iron-ingot.png" alt="Iron Ingot"></span>
 </div>
+</div>
+<div class="craft-col">
+<span class="craft-label">Ingredients</span>
 <ul class="craft-list"><li><i><img src="../../uploads/power-images/minecraft/iron-ingot.png" alt=""></i><span><b>5</b>× Iron Ingot</span></li><li><i><img src="../../uploads/power-images/minecraft/glass-pane.png" alt=""></i><span><b>2</b>× Glass Pane</span></li><li><i><img src="../../uploads/power-images/minecraft/redstone-lamp.png" alt=""></i><span><b>1</b>× Redstone Lamp</span></li><li><i><img src="../../uploads/power-images/minecraft/redstone-dust.png" alt=""></i><span><b>1</b>× Redstone Dust</span></li></ul>
+</div>
 </div>
