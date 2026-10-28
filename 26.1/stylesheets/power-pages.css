@@ -788,3 +788,22 @@
 @media screen and (max-width: 36em) {
   .md-content .md-typeset h1 { font-size: 1.6rem; }
 }
+
+/* ===== Power card: compact layout for powers with many classifications / categories =====
+   Row 1: Source | Obtained from | Signature look
+   Row 2: Power classification (full width, pills wrap in a row)
+   Row 3: Ability categories   (full width, pills wrap in a row)                                */
+.md-typeset .power-card .pc-facts { grid-template-columns: minmax(0, 1.9fr) minmax(0, 1fr) minmax(0, 1.1fr); }
+.md-typeset .power-card .pc-facts > .pc-source { grid-column: auto; order: 1; }
+.md-typeset .power-card .pc-facts > div:nth-child(3) { order: 2; }
+.md-typeset .power-card .pc-facts > div:nth-child(5) { order: 3; }
+.md-typeset .power-card .pc-facts > div:nth-child(2) { order: 4; grid-column: 1 / -1; }
+.md-typeset .power-card .pc-facts > div:nth-child(4) { order: 5; grid-column: 1 / -1; }
+@media screen and (max-width: 60em) {
+  .md-typeset .power-card .pc-facts { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .md-typeset .power-card .pc-facts > .pc-source { grid-column: 1 / -1; }
+}
+@media screen and (max-width: 36em) {
+  .md-typeset .power-card .pc-facts { grid-template-columns: minmax(0, 1fr); }
+  .md-typeset .power-card .pc-facts > div:nth-child(n) { grid-column: auto; }
+}
