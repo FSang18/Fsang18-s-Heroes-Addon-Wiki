@@ -16,7 +16,19 @@ title: "DNA Transfer Station"
 
 ## Crafting
 
-<div class="blk-recipe">
-<img class="blk-recipe-img" src="../../uploads/power-images/blocks/dna_transfer_station_recipe.png" alt="DNA Transfer Station crafting recipe">
-<ul><li><b>5</b> Iron Ingots</li><li><b>2</b> Glass</li><li><b>1</b> Redstone Lamp</li><li><b>1</b> Redstone Dust</li></ul>
+<div class="craft">
+<div class="craft-grid">
+<span class="cs" title="Iron Ingot"><img src="../../uploads/power-images/items/iron-ingot.png" alt="Iron Ingot"></span>
+<span class="cs" title="Iron Ingot"><img src="../../uploads/power-images/items/iron-ingot.png" alt="Iron Ingot"></span>
+<span class="cs" title="Iron Ingot"><img src="../../uploads/power-images/items/iron-ingot.png" alt="Iron Ingot"></span>
+<span class="cs" title="Glass Pane"><img src="../../uploads/power-images/items/glass-pane.png" alt="Glass Pane"></span>
+<span class="cs" title="Redstone Lamp"><img src="../../uploads/power-images/items/redstone-lamp.png" alt="Redstone Lamp"></span>
+<span class="cs" title="Glass Pane"><img src="../../uploads/power-images/items/glass-pane.png" alt="Glass Pane"></span>
+<span class="cs" title="Iron Ingot"><img src="../../uploads/power-images/items/iron-ingot.png" alt="Iron Ingot"></span>
+<span class="cs" title="Redstone Dust"><img src="../../uploads/power-images/items/redstone-dust.png" alt="Redstone Dust"></span>
+<span class="cs" title="Iron Ingot"><img src="../../uploads/power-images/items/iron-ingot.png" alt="Iron Ingot"></span>
+</div>
+<span class="craft-arrow"></span>
+<div class="craft-out"><span class="cs out"><img src="../../uploads/power-images/blocks/dna_transfer_station.png" alt="DNA Transfer Station"></span></div>
+<ul class="craft-list"><li><i><img src="../../uploads/power-images/items/iron-ingot.png" alt=""></i><span><b>5</b>× Iron Ingot</span></li><li><i><img src="../../uploads/power-images/items/glass-pane.png" alt=""></i><span><b>2</b>× Glass Pane</span></li><li><i><img src="../../uploads/power-images/items/redstone-lamp.png" alt=""></i><span><b>1</b>× Redstone Lamp</span></li><li><i><img src="../../uploads/power-images/items/redstone-dust.png" alt=""></i><span><b>1</b>× Redstone Dust</span></li></ul>
 </div>
