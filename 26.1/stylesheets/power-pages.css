@@ -630,12 +630,12 @@
   transform: translateY(-2px);
 }
 
-/* Next sits on the right, with the arrow after the text */
+/* Next sits on the right, with the arrow after the text (text aligned left like Previous) */
 .md-typeset .page-nav .pn-next {
   margin-left: auto;
   flex-direction: row;
   justify-content: space-between;
-  text-align: right;
+  text-align: left;
 }
 .md-typeset .page-nav .pn-prev { text-align: left; }
 
