@@ -16,9 +16,21 @@ title: "Power Block"
 
 ## Crafting
 
-<div class="blk-recipe">
-<img class="blk-recipe-img" src="../../uploads/power-images/blocks/power_block_recipe.png" alt="Power Block crafting recipe">
-<ul><li><b>6</b> Iron Ingots</li><li><b>2</b> Redstone Dust</li><li><b>1</b> Redstone Block</li></ul>
+<div class="craft">
+<div class="craft-grid">
+<span class="cs" title="Iron Ingot"><img src="../../uploads/power-images/items/iron-ingot.png" alt="Iron Ingot"></span>
+<span class="cs" title="Iron Ingot"><img src="../../uploads/power-images/items/iron-ingot.png" alt="Iron Ingot"></span>
+<span class="cs" title="Iron Ingot"><img src="../../uploads/power-images/items/iron-ingot.png" alt="Iron Ingot"></span>
+<span class="cs" title="Redstone Dust"><img src="../../uploads/power-images/items/redstone-dust.png" alt="Redstone Dust"></span>
+<span class="cs" title="Redstone Block"><img src="../../uploads/power-images/items/redstone-block.png" alt="Redstone Block"></span>
+<span class="cs" title="Redstone Dust"><img src="../../uploads/power-images/items/redstone-dust.png" alt="Redstone Dust"></span>
+<span class="cs" title="Iron Ingot"><img src="../../uploads/power-images/items/iron-ingot.png" alt="Iron Ingot"></span>
+<span class="cs" title="Iron Ingot"><img src="../../uploads/power-images/items/iron-ingot.png" alt="Iron Ingot"></span>
+<span class="cs" title="Iron Ingot"><img src="../../uploads/power-images/items/iron-ingot.png" alt="Iron Ingot"></span>
+</div>
+<span class="craft-arrow"></span>
+<div class="craft-out"><span class="cs out"><img src="../../uploads/power-images/blocks/power_block.png" alt="Power Block"></span></div>
+<ul class="craft-list"><li><i><img src="../../uploads/power-images/items/iron-ingot.png" alt=""></i><span><b>6</b>× Iron Ingot</span></li><li><i><img src="../../uploads/power-images/items/redstone-dust.png" alt=""></i><span><b>2</b>× Redstone Dust</span></li><li><i><img src="../../uploads/power-images/items/redstone-block.png" alt=""></i><span><b>1</b>× Redstone Block</span></li></ul>
 </div>
 
 
