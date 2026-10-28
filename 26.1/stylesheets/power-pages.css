@@ -833,7 +833,7 @@
 .md-typeset .pcard-icon { transition: transform .25s ease, filter .25s ease; }
 .md-typeset a.pcard:hover .pcard-icon {
   transform: scale(1.12) rotate(-3deg);
-  filter: drop-shadow(0 0 1.1rem var(--pc));
+  filter: drop-shadow(0 0 1.1rem color-mix(in srgb, var(--pc) 100%, transparent));
 }
 .md-typeset a.pcard:hover .pcard-name { text-shadow: 0 0 .9rem color-mix(in srgb, var(--pc) 70%, transparent); }
 
