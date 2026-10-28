@@ -17,6 +17,8 @@ title: "Chamber"
 ## Crafting
 
 <div class="craft">
+<div class="craft-col">
+<span class="craft-label">Recipe</span>
 <div class="craft-grid">
 <span class="cs" title="Iron Ingot"><img src="../../uploads/power-images/minecraft/iron-ingot.png" alt="Iron Ingot"></span>
 <span class="cs" title="Glass"><img src="../../uploads/power-images/minecraft/glass.png" alt="Glass"></span>
@@ -28,5 +30,9 @@ title: "Chamber"
 <span class="cs" title="Iron Ingot"><img src="../../uploads/power-images/minecraft/iron-ingot.png" alt="Iron Ingot"></span>
 <span class="cs" title="Iron Ingot"><img src="../../uploads/power-images/minecraft/iron-ingot.png" alt="Iron Ingot"></span>
 </div>
+</div>
+<div class="craft-col">
+<span class="craft-label">Ingredients</span>
 <ul class="craft-list"><li><i><img src="../../uploads/power-images/minecraft/iron-ingot.png" alt=""></i><span><b>7</b>× Iron Ingot</span></li><li><i><img src="../../uploads/power-images/minecraft/glass.png" alt=""></i><span><b>2</b>× Glass</span></li></ul>
+</div>
 </div>
