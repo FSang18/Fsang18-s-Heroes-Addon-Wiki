@@ -49,3 +49,4 @@ Types written like `Float / Value` mean either a plain number or a [value](../re
 - [Guides](../guides/index.md) explain the bigger systems step by step.
 - [Abilities](../reference/abilities.md) and [Conditions](../reference/conditions.md) are the pages most packs use.
 - [Content](../content/index.md) lists the items, blocks, effects and commands Argon adds.
+- [Feature Flags](feature-flags.md) explains the optional features a world or data pack has to switch on.

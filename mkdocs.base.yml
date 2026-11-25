@@ -15,8 +15,8 @@ extra:
 
 theme:
   name: material
-  logo: uploads/2703a3f0b163b13baac62a9fe5115772/logo_big.png
-  favicon: uploads/2703a3f0b163b13baac62a9fe5115772/logo_big.png
+  logo: uploads/argon/argon.png
+  favicon: uploads/argon/argon.png
   palette:
     - scheme: slate
       primary: custom
