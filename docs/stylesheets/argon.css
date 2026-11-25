@@ -1,0 +1,71 @@
+.md-nav--primary > .md-nav__list > .md-nav__item:nth-child(n+2) { --nav-icon: none; --nav-img: none; --nav-bg: var(--y); }
+.md-nav--primary > .md-nav__list > .md-nav__item:nth-child(2) { --nav-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M8 5v14l11-7z'/%3E%3C/svg%3E"); }
+.md-nav--primary > .md-nav__list > .md-nav__item:nth-child(3) { --nav-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M18 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2M6 4h5v8l-2.5-1.5L6 12z'/%3E%3C/svg%3E"); }
+.md-nav--primary > .md-nav__list > .md-nav__item:nth-child(4) { --nav-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M8 3a2 2 0 0 0-2 2v4a2 2 0 0 1-2 2H3v2h1a2 2 0 0 1 2 2v4a2 2 0 0 0 2 2h2v-2H8v-5a2 2 0 0 0-2-2 2 2 0 0 0 2-2V5h2V3m8 0a2 2 0 0 1 2 2v4a2 2 0 0 0 2 2h1v2h-1a2 2 0 0 0-2 2v4a2 2 0 0 1-2 2h-2v-2h2v-5a2 2 0 0 1 2-2 2 2 0 0 1-2-2V5h-2V3z'/%3E%3C/svg%3E"); }
+.md-nav--primary > .md-nav__list > .md-nav__item:nth-child(5) { --nav-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M21 16.5c0 .38-.21.71-.53.88l-7.9 4.44c-.16.12-.36.18-.57.18s-.41-.06-.57-.18l-7.9-4.44A.99.99 0 0 1 3 16.5v-9c0-.38.21-.71.53-.88l7.9-4.44c.16-.12.36-.18.57-.18s.41.06.57.18l7.9 4.44c.32.17.53.5.53.88zM12 4.15 6.04 7.5 12 10.85l5.96-3.35zM5 15.91l6 3.38v-6.71L5 9.21zm14 0v-6.7l-6 3.37v6.71z'/%3E%3C/svg%3E"); }
+
+.hc-getting-started .home-ico { --ic: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22%3E%3Cpath d=%22M8 5v14l11-7z%22/%3E%3C/svg%3E"); }
+.hc-guides .home-ico, .hc-guide .home-ico { --ic: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22%3E%3Cpath d=%22M18 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2M6 4h5v8l-2.5-1.5L6 12z%22/%3E%3C/svg%3E"); }
+.hc-reference .home-ico { --ic: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22%3E%3Cpath d=%22M8 3a2 2 0 0 0-2 2v4a2 2 0 0 1-2 2H3v2h1a2 2 0 0 1 2 2v4a2 2 0 0 0 2 2h2v-2H8v-5a2 2 0 0 0-2-2 2 2 0 0 0 2-2V5h2V3m8 0a2 2 0 0 1 2 2v4a2 2 0 0 0 2 2h1v2h-1a2 2 0 0 0-2 2v4a2 2 0 0 1-2 2h-2v-2h2v-5a2 2 0 0 1 2-2 2 2 0 0 1-2-2V5h-2V3z%22/%3E%3C/svg%3E"); }
+.hc-content .home-ico { --ic: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22%3E%3Cpath d=%22M21 16.5c0 .38-.21.71-.53.88l-7.9 4.44c-.16.12-.36.18-.57.18s-.41-.06-.57-.18l-7.9-4.44A.99.99 0 0 1 3 16.5v-9c0-.38.21-.71.53-.88l7.9-4.44c.16-.12.36-.18.57-.18s.41.06.57.18l7.9 4.44c.32.17.53.5.53.88zM12 4.15 6.04 7.5 12 10.85l5.96-3.35zM5 15.91l6 3.38v-6.71L5 9.21zm14 0v-6.7l-6 3.37v6.71z%22/%3E%3C/svg%3E"); }
+
+.argon-intro { font-size: .95rem; color: var(--md-default-fg-color--light); max-width: 46rem; }
+.argon-count {
+  display: inline-block; margin: .1rem 0 1.2rem; padding: .1rem .7rem; border-radius: 999px;
+  font-size: .72rem; font-weight: 800; letter-spacing: .06em; text-transform: uppercase;
+  border: 1px solid color-mix(in srgb, var(--y, #ffc928) 55%, transparent);
+  background: color-mix(in srgb, var(--y, #ffc928) 14%, transparent);
+  color: var(--md-default-fg-color);
+}
+
+.md-typeset h3 { margin-top: 2rem; scroll-margin-top: 4.5rem; }
+.md-typeset .argon-meta { display: flex; align-items: center; gap: .55rem; margin: .1rem 0 .7rem; }
+.argon-meta-label {
+  font-weight: 800; text-transform: uppercase; letter-spacing: .09em; font-size: .66rem;
+  color: var(--y, #ffc928);
+}
+.md-typeset code.argon-id {
+  cursor: pointer; padding: .12rem .55rem; border-radius: .4rem;
+  border: 1px solid color-mix(in srgb, var(--y, #ffc928) 45%, transparent);
+  transition: background .12s ease;
+}
+.md-typeset code.argon-id:hover { background: color-mix(in srgb, var(--y, #ffc928) 18%, transparent); }
+.md-typeset code.argon-id.copied::after { content: " copied"; color: var(--y, #ffc928); font-size: .68rem; font-weight: 700; }
+.argon-desc { margin: 0 0 1rem; line-height: 1.6; max-width: 52rem; }
+.argon-returns { margin: -.4rem 0 1rem; font-size: .85rem; }
+
+.argon-table-wrap {
+  overflow-x: auto; margin: .6rem 0 .4rem;
+  border: 1px solid color-mix(in srgb, var(--md-default-fg-color) 16%, transparent);
+  border-radius: .7rem;
+}
+table.argon-fields { width: 100%; border-collapse: collapse; font-size: .76rem; line-height: 1.5; }
+table.argon-fields th {
+  text-align: left; padding: .6rem .75rem; white-space: nowrap;
+  background: color-mix(in srgb, var(--y, #ffc928) 14%, transparent);
+  border-bottom: 2px solid var(--y, #ffc928);
+  font-weight: 800; letter-spacing: .03em;
+}
+table.argon-fields td {
+  padding: .55rem .75rem; vertical-align: top;
+  border-bottom: 1px solid color-mix(in srgb, var(--md-default-fg-color) 11%, transparent);
+}
+table.argon-fields tr:last-child td { border-bottom: 0; }
+table.argon-fields tbody tr:hover td { background: color-mix(in srgb, var(--y, #ffc928) 7%, transparent); }
+table.argon-fields td:first-child { white-space: nowrap; }
+table.argon-fields td:nth-child(3) { min-width: 16rem; }
+table.argon-fields td.argon-center { text-align: center; }
+table.argon-fields td.argon-fallback { font-family: var(--md-code-font-family, monospace); font-size: .72rem; color: var(--md-default-fg-color--light); }
+table.argon-fields code { font-size: .72rem; }
+table.argon-fields ul { margin: .35rem 0 0 1rem; padding: 0; }
+table.argon-fields abbr { text-decoration: underline dotted; cursor: help; }
+.argon-yes { color: #34d399; font-weight: 900; }
+.argon-no { color: #f87171; font-weight: 900; }
+.argon-nested { margin: 1.1rem 0 .1rem; font-size: .82rem; font-weight: 700; }
+
+.md-typeset .tabbed-set { margin: 1rem 0; }
+.md-typeset .tabbed-labels > label { font-weight: 700; }
+.md-typeset hr { margin: 1.6rem 0 0; border-color: color-mix(in srgb, var(--md-default-fg-color) 14%, transparent); }
+
+[data-md-color-scheme="default"] table.argon-fields th { background: color-mix(in srgb, var(--y, #ffc928) 30%, transparent); }
+[data-md-color-scheme="default"] .argon-meta-label { color: var(--y-deep, #8a6500); }

@@ -18,8 +18,7 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DOCS = os.path.join(ROOT, "docs")
 
 # order of the top-level menu entries (anything not listed goes after these, alphabetically)
-TOP_ORDER = ["Installation", "FAQs", "Commands", "Powers", "Karma", "Skill Point System",
-             "Accessory Support", "Blocks", "Items", "Suitsets", "Structures", "Villagers"]
+TOP_ORDER = ["Getting Started", "Guides", "Reference", "Content"]
 
 FM = re.compile(r"\A---\r?\n(.*?)\r?\n---\r?\n", re.S)
 
