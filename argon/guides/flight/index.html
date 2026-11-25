@@ -1,0 +1,1536 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Documentation for Argon, the Palladium library behind FSang18's Heroes - abilities, conditions, values, actions, effects and systems.">
+      
+      
+      
+        <link rel="canonical" href="https://FSang18.github.io/Fsang18-s-Heroes-Addon-Wiki/argon/guides/flight/">
+      
+      
+        <link rel="prev" href="../">
+      
+      
+        <link rel="next" href="../gravity/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../uploads/2703a3f0b163b13baac62a9fe5115772/logo_big.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Controlled Flight - FSang18's Heroes Addon Wiki - Argon</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+      <link rel="stylesheet" href="../../stylesheets/power-pages.css">
+    
+      <link rel="stylesheet" href="../../stylesheets/argon.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="custom">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#controlled-flight" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <div data-md-color-scheme="default" data-md-component="outdated" hidden>
+        
+      </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="FSang18&#39;s Heroes Addon Wiki - Argon" class="md-header__button md-logo" aria-label="FSang18's Heroes Addon Wiki - Argon" data-md-component="logo">
+      
+  <img src="../../uploads/2703a3f0b163b13baac62a9fe5115772/logo_big.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            FSang18's Heroes Addon Wiki - Argon
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Controlled Flight
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="custom"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="FSang18&#39;s Heroes Addon Wiki - Argon" class="md-nav__button md-logo" aria-label="FSang18's Heroes Addon Wiki - Argon" data-md-component="logo">
+      
+  <img src="../../uploads/2703a3f0b163b13baac62a9fe5115772/logo_big.png" alt="logo">
+
+    </a>
+    FSang18's Heroes Addon Wiki - Argon
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../getting-started/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Getting Started
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Guides
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Guides
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Controlled Flight
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Controlled Flight
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#using-it" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Using it
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#profiles" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Profiles
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#movement" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Movement
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#orientation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Orientation
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#camera" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Camera
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#barrel-roll" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Barrel roll
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#collisions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Collisions
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gravity-following" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Gravity following
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#landing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Landing
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#diving" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Diving
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gliding" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Gliding
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#animation-states" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Animation states
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gravity/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Directional Gravity
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dna-transfer/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    DNA Transfer Station
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../path-vision/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Path Vision
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tech-table/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tech Table
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../throwable-item/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Throwable Item
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../wall-crawling/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Wall Crawling
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../reference/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Reference
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../content/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Content
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#using-it" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Using it
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#profiles" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Profiles
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#movement" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Movement
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#orientation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Orientation
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#camera" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Camera
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#barrel-roll" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Barrel roll
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#collisions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Collisions
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gravity-following" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Gravity following
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#landing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Landing
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#diving" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Diving
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gliding" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Gliding
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#animation-states" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Animation states
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="controlled-flight">Controlled Flight</h1>
+<p><code>argon:controlled_flight</code> is a Palladium flight type with momentum, banking and a body that leans into its direction of travel. It is opt-in: <code>palladium:flight</code> and <code>argon:forced_flight</code> are untouched.</p>
+<p>Only the movement feel is new. Flying is still toggled, landed and started the way it is for <code>palladium:flight</code>, and the permitted speed still comes from <code>speed</code> and <code>sprint_speed</code>. That means <code>argon:flight_speed</code>, the flight speed dial and flight slowness all keep working, and the acceleration settings only decide how quickly the player reaches that speed.</p>
+<h2 id="using-it">Using it</h2>
+<p>Use it as the <code>flight_type</code> of a <code>palladium:flight</code> ability:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="p">{</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">    </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"argon:controlled_flight"</span><span class="p">,</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">    </span><span class="nt">"profile"</span><span class="p">:</span><span class="w"> </span><span class="s2">"natural"</span><span class="p">,</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">    </span><span class="nt">"speed"</span><span class="p">:</span><span class="w"> </span><span class="mf">1.5</span><span class="p">,</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">    </span><span class="nt">"sprint_speed"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">        </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"argon:flight_speed"</span><span class="p">,</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">        </span><span class="nt">"ability"</span><span class="p">:</span><span class="w"> </span><span class="s2">"fsang:dc/kryptonian/absolute#kryptonian_absolute_flight_speed_adjuster"</span><span class="p">,</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">        </span><span class="nt">"base"</span><span class="p">:</span><span class="w"> </span><span class="mf">1.5</span>
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="w">    </span><span class="p">},</span>
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="w">    </span><span class="nt">"propelled_sound"</span><span class="p">:</span><span class="w"> </span><span class="s2">"palladium:player.flight.propelled"</span>
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="p">}</span>
+</code></pre></div>
+<h2 id="profiles">Profiles</h2>
+<p>A profile sets the default for every setting below, and any setting can still be given on its own.</p>
+<table>
+<thead>
+<tr>
+<th>Profile</th>
+<th>Feel</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>controlled</code></td>
+<td>Balanced. Smooth acceleration, moderate momentum, settles into a hover. The default.</td>
+</tr>
+<tr>
+<td><code>propelled</code></td>
+<td>Heavier momentum and slower corrections. Sinks while no direction is held.</td>
+</tr>
+<tr>
+<td><code>natural</code></td>
+<td>Quick to turn and stop, no gravity. For flight without propulsion.</td>
+</tr>
+<tr>
+<td><code>gliding</code></td>
+<td>Keeps its heading, gravity always pulls and fades as speed rises, and height and speed trade for each other (see Gliding).</td>
+</tr>
+</tbody>
+</table>
+<h2 id="movement">Movement</h2>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>flight_acceleration</code></td>
+<td>Fraction of the gap to top speed closed per tick when speeding up.</td>
+</tr>
+<tr>
+<td><code>flight_deceleration</code></td>
+<td>Fraction closed per tick when slowing while a direction is held. Also bleeds speed during sharp reversals.</td>
+</tr>
+<tr>
+<td><code>flight_response_curve</code></td>
+<td>1 is constant. Above 1 starts slower and pushes harder near top speed.</td>
+</tr>
+<tr>
+<td><code>momentum_retention</code></td>
+<td>How much turning is held back at speed. 0 turns as sharply at speed as when slow.</td>
+</tr>
+<tr>
+<td><code>turn_responsiveness</code></td>
+<td>Degrees the heading can turn per tick at low speed.</td>
+</tr>
+<tr>
+<td><code>air_braking_strength</code></td>
+<td>Fraction of speed lost per tick when no direction is held.</td>
+</tr>
+<tr>
+<td><code>gravity_influence</code></td>
+<td>Pull of gravity while no direction is held (always for gliding).</td>
+</tr>
+<tr>
+<td><code>hover_stabilization</code></td>
+<td>Extra speed removed per tick when almost stopped.</td>
+</tr>
+<tr>
+<td><code>hover_velocity_threshold</code></td>
+<td>Speed under which hover stabilization starts (it applies up to three times this).</td>
+</tr>
+</tbody>
+</table>
+<p>Speed never rises above the permitted top speed because of turning: changes of direction rotate the velocity, and speed only moves toward the target. Speed above it, such as from Charged Takeoff, decays at <code>flight_deceleration</code>.</p>
+<h2 id="orientation">Orientation</h2>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>enable_body_rotation</code></td>
+<td>Leans the whole rendered body, with armor, layers and cape, into the direction of travel.</td>
+</tr>
+<tr>
+<td><code>lean_start_speed</code>, <code>lean_full_speed</code></td>
+<td>Fractions of top speed where the lean starts and where the body is fully aligned.</td>
+</tr>
+<tr>
+<td><code>orientation_responsiveness</code></td>
+<td>How fast the body follows the direction of travel.</td>
+</tr>
+<tr>
+<td><code>enable_flight_banking</code>, <code>max_bank_angle</code></td>
+<td>Roll into turns, up to this angle.</td>
+</tr>
+<tr>
+<td><code>bank_responsiveness</code>, <code>bank_recovery_speed</code></td>
+<td>How fast the bank builds and returns to level.</td>
+</tr>
+<tr>
+<td><code>bank_speed_influence</code></td>
+<td>How much the bank scales with speed.</td>
+</tr>
+</tbody>
+</table>
+<p>The lean is a pitch about the body's own right axis, and nothing else. The body keeps facing the way it normally does, then tips forward or back by the angle of the direction of travel measured in that frame (0 is upright, 90 is horizontal and facing forward, 180 is head down), eased in with speed. The angle is kept continuous, so it carries on past vertical through a loop without flipping, and the body is never turned about any other axis to get there. Bank and barrel roll are then added as a roll about the body's own forward axis (the chest axis when upright, the head axis when leaning), so rolls always spin around the body whichever way it is pointing.</p>
+<p>The orientation is a world orientation. While gravity is turning, the model is not carried by the gravity animation: the animated turn is taken out and the final orientation put in, so the body stays where it is in the world while the camera swings. It uses the entity's own look yaw frame and never changes gravity or the hitbox.</p>
+<p>The animation handler also fills Palladium's flight Molang queries: <code>palladium.flight_roll</code> is the bank, and <code>palladium.flight_pitch</code> is the forward lean in degrees (negative when leaning back). An animation should not rotate the <code>body</code> bone itself any more, but can use <code>flight_pitch</code> to counter-rotate the head, as the Absolute animation does.</p>
+<h2 id="camera">Camera</h2>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>camera_roll_mode</code></td>
+<td><code>none</code>, <code>partial</code> (default) or <code>full</code>: how much of the bank the camera rolls by.</td>
+</tr>
+<tr>
+<td><code>camera_bank_multiplier</code></td>
+<td>The share of the bank used in <code>partial</code> mode.</td>
+</tr>
+<tr>
+<td><code>enable_speed_fov</code>, <code>speed_fov_multiplier</code></td>
+<td>Widen the field of view with flight speed. Off by default.</td>
+</tr>
+<tr>
+<td><code>enable_third_person_framing</code>, <code>third_person_framing_offset</code></td>
+<td>Frame the body in third person, with the character at or a little below the middle of the screen. On by default, offset 0.25.</td>
+</tr>
+</tbody>
+</table>
+<p>First person is not attached to the body: only the camera bank applies.</p>
+<p>In third person the camera frames the body while flying (<code>enable_third_person_framing</code>, on by default). Normally the camera aims at the eyes, so when the body leans or the eye height drops while sprint-flying the character slides off the middle of the screen. The camera now aims at the middle of the body, plus <code>third_person_framing_offset</code> blocks (0.25 by default, which sits the character a little below the middle), eased in and out with the start and end of flight. It follows the player's own up direction, so it works while gravity is turned.</p>
+<h2 id="barrel-roll">Barrel roll</h2>
+<p>Off by default. With <code>enable_barrel_roll</code>, double-tapping left or right while flying rolls the body once around the direction of travel. There is no new key. The roll is a visual rotation shared with other players, and it pushes the player a little to the side.</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>enable_barrel_roll</code></td>
+<td>Turns the double-tap on.</td>
+</tr>
+<tr>
+<td><code>barrel_roll_duration</code></td>
+<td>Ticks the roll takes (14).</td>
+</tr>
+<tr>
+<td><code>barrel_roll_lateral_strength</code></td>
+<td>A sideways push as a fraction of top speed (0.3). Forward speed is kept.</td>
+</tr>
+<tr>
+<td><code>barrel_roll_cooldown</code></td>
+<td>Ticks before another roll (30).</td>
+</tr>
+<tr>
+<td><code>barrel_roll_camera_influence</code></td>
+<td>How much of the roll the camera follows. 0 keeps the view steady (default), 1 rolls with the body.</td>
+</tr>
+<tr>
+<td><code>barrel_roll_min_speed</code></td>
+<td>Fraction of top speed needed to start a roll (0.2).</td>
+</tr>
+</tbody>
+</table>
+<p>The roll is a model rotation added to the bank, so it follows the same axis as banking and never changes gravity.</p>
+<h2 id="collisions">Collisions</h2>
+<p>Off by default. With <code>enable_flight_collision</code>, hitting a block or flying into an entity at speed hurts.</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>enable_flight_collision</code></td>
+<td>Turns collisions on.</td>
+</tr>
+<tr>
+<td><code>flight_impact_speed</code></td>
+<td>The impact speed in blocks per tick below which nothing happens (0.45).</td>
+</tr>
+<tr>
+<td><code>flight_block_collision_damage</code></td>
+<td>Multiplier on block impact damage, worked out from the speed of the impact the way elytra damage is.</td>
+</tr>
+<tr>
+<td><code>flight_entity_collision_damage</code></td>
+<td>Multiplier on the damage to a flown-into entity.</td>
+</tr>
+<tr>
+<td><code>flight_entity_knockback</code></td>
+<td>How hard that entity is pushed away.</td>
+</tr>
+<tr>
+<td><code>flight_collision_stop</code></td>
+<td>Whether an impact stops the player's speed.</td>
+</tr>
+</tbody>
+</table>
+<p>The flying client spots the impact from the speed it lost against the block, or the speed it closed on an entity. The server checks that the player is flying with this type, caps the reported speed to about 2.5 times the top speed, applies a short cooldown and works out the damage itself. Blocks use the vanilla fly-into-wall damage and entities take a player attack. Minecraft already sweeps a moving player against block shapes, so fast flight does not pass through walls.</p>
+<h2 id="gravity-following">Gravity following</h2>
+<p>Off by default. With <code>enable_gravity_following</code>, gravity follows the direction the player is flying and looking, the way it follows a surface for Wall Crawling, so loops and vertical flight have no pitch limit. It uses Argon's directional gravity (see <code>GRAVITY.md</code>): while flying, the flight adds its own gravity source and the camera and model turn with it.</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>enable_gravity_following</code></td>
+<td>Turns it on.</td>
+</tr>
+<tr>
+<td><code>gravity_wrap_pitch</code></td>
+<td>How far up or down the player has to look, in degrees (30 to 80), before gravity turns. Default 55.</td>
+</tr>
+<tr>
+<td><code>gravity_turn_ticks</code></td>
+<td>How many ticks the camera and model take to turn. Default 8.</td>
+</tr>
+</tbody>
+</table>
+<p>Flying is always aimed by the look direction: the forward key goes where the player is looking, whatever way gravity is turned, unlike Wall Crawling where movement follows the surface.</p>
+<p>Once the player looks past <code>gravity_wrap_pitch</code> while pushing forward or moving at least a tenth of top speed, gravity turns 90 degrees about their right side: looking up makes the direction they are facing the new gravity, looking down makes the opposite. After a turn the view sits well inside the new horizon, so turns do not repeat, and keeping on round a loop turns gravity down, forward, up, back and down again. Looking back the other way undoes the last turn, so gravity updates as you fly with no key to press. Nothing turns during the first half second of flight, and merely hovering and looking around never turns it. Each turn keeps the view direction, converts the speed and keeps the player's eye where it is, so the view does not jump and the body swings around the head. Setting <code>gravity_turn_ticks</code> to 0 makes the turn instant.</p>
+<p>Gravity only has the six axis directions, so with a heading that is not along an axis the turn uses the nearest one. A turn is skipped if the rotated hitbox would not fit.</p>
+<p>Gravity goes back to normal, with the same animated turn, when flight ends. The flight source has a lower priority than Wall Crawling's, and the server removes it if the player is no longer flying with this type.</p>
+<p>While gravity is bent, speed, input and view angles are all in the player's own frame, as the gravity framework does for everything else. The look direction the game reports is the world one, so the flight turns it into the player's frame before using it. The ground check for landing looks along the player's own down, and other players' lean is worked out in their own frame.</p>
+<h2 id="landing">Landing</h2>
+<p>Controlled flight lands by itself when the player is dropping towards the ground, the way <code>palladium:flight</code> does, but the touchdown is now controlled. Landing starts when the player is dropping more than they are travelling sideways, within a few blocks of a surface (along their own down when gravity is turned), and not faster than <code>landing_speed_threshold</code>.</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>enable_superhero_landing</code></td>
+<td>Turns the automatic landing on (default).</td>
+</tr>
+<tr>
+<td><code>landing_speed_threshold</code></td>
+<td>The downward speed in blocks per tick up to which a landing is controlled. Default 1.</td>
+</tr>
+<tr>
+<td><code>landing_recovery_duration</code></td>
+<td>Ticks on the ground before flight stops. Moving cancels it early. Default 15.</td>
+</tr>
+<tr>
+<td><code>landing_damage_reduction</code></td>
+<td>How much of a hard landing's damage is prevented (0 to 1). Default 0.5.</td>
+</tr>
+</tbody>
+</table>
+<p>During a landing the descent is slowed in proportion to how far the surface is, down to a soft touchdown, sideways speed bleeds off and the body stands upright. The flight phase is 5 while landing (and 4 while descending), so an animation controller can use <code>palladium.flight_phase()</code> for a landing pose.</p>
+<p>A controlled landing deals no damage. Diving faster than the threshold does not brake, and touching the ground then is a hard landing: the flying client reports the speed it hit at, the server caps it and deals fall damage, reduced by <code>landing_damage_reduction</code>. It is ordinary fall damage, so Palladium's fall protection abilities still reduce it, and nothing makes the flight immune.</p>
+<h2 id="diving">Diving</h2>
+<p>Off by default. With <code>enable_diving</code>, looking steeply down while pushing forward is a dive. There is no key: it follows the look direction.</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>enable_diving</code></td>
+<td>Turns diving on.</td>
+</tr>
+<tr>
+<td><code>dive_pitch</code></td>
+<td>How far down the player has to look, in degrees (30 to 85). A dive builds up from here and is full at 85. Default 45.</td>
+</tr>
+<tr>
+<td><code>dive_acceleration_multiplier</code></td>
+<td>The top speed of a full dive as a multiple of the normal top speed (1 to 4). Default 1.6.</td>
+</tr>
+<tr>
+<td><code>dive_speed_retention</code></td>
+<td>How much of the extra dive speed carries on afterwards. 0 loses it at the normal deceleration, 1 at <code>dive_momentum_decay</code>. Default 0.8.</td>
+</tr>
+<tr>
+<td><code>dive_momentum_decay</code></td>
+<td>The fraction of the extra speed lost each tick at full retention. Default 0.015.</td>
+</tr>
+<tr>
+<td><code>dive_pullout_responsiveness</code></td>
+<td>How much easier it is to turn while above top speed, so pulling out does not need a huge circle (1 to 4). Default 1.8.</td>
+</tr>
+</tbody>
+</table>
+<p>The permitted speed never changes: it still comes from <code>speed</code>, <code>sprint_speed</code> and the speed level. A dive only lets the player go faster than that for a while, up to the dive speed, and the extra always fades, so it can't build without limit. The body already follows the direction of travel, so a dive shows as head down with no extra setting.</p>
+<h2 id="gliding">Gliding</h2>
+<p>For the <code>gliding</code> profile, speed and height trade for each other: <code>glide_energy_exchange</code> (0 to 0.3, default 0.05) adds speed when the player drops and takes it away when they climb, capped at top speed (or the dive speed when diving is on). <code>glide_lift_speed</code> (0.05 to 1, default 0.6) is the fraction of top speed at which gravity is fully cancelled; slower than that the player sinks, so a glider that stops pushing slowly drops.</p>
+<h2 id="animation-states">Animation states</h2>
+<p>The handler works out a state for every flying player on each client, so animation controllers can pose each one from the same Molang queries:</p>
+<table>
+<thead>
+<tr>
+<th>Query</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>argon.flight_state()</code></td>
+<td>0 none, 1 hover, 2 accelerating, 3 cruising, 4 turning, 5 diving, 6 braking, 7 rolling, 8 landing</td>
+</tr>
+<tr>
+<td><code>argon.flight_dive()</code></td>
+<td>0 to 1, how deep into a dive</td>
+</tr>
+<tr>
+<td><code>argon.flight_rolling()</code></td>
+<td>1 while a barrel roll is happening</td>
+</tr>
+<tr>
+<td><code>argon.flight_roll_progress()</code></td>
+<td>0 to 1 through a barrel roll</td>
+</tr>
+</tbody>
+</table>
+<p>These sit alongside Palladium's own queries: <code>palladium.flight_phase()</code>, <code>flight_speed_forward</code>, <code>flight_speed_sideways</code>, <code>flight_yaw_delta</code>, <code>flight_roll</code> (the bank), <code>flight_pitch</code> (the lean) and <code>flight_propulsion_scale</code>. Nothing needs animations: the body leans, banks and rolls without any.</p>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      This wiki covers Argon, the library used by the Heroes Addon 26.1 Test version (unreleased) for Minecraft 26.1<br> <a href="https://www.curseforge.com/minecraft/mc-mods/fsang18s-heropack">CurseForge</a> · <a href="https://modrinth.com/datapack/fsang18s-heropack">Modrinth</a> · <a href="https://discord.com/invite/BThgxXpBVs">Discord</a>
+    </div>
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.instant", "navigation.prune", "navigation.indexes", "navigation.top", "navigation.tracking", "search.suggest", "search.highlight", "toc.follow", "content.code.copy", "content.tabs.link"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="../../javascripts/move-version.js"></script>
+      
+        <script src="../../javascripts/copy-id.js"></script>
+      
+    
+  </body>
+</html>

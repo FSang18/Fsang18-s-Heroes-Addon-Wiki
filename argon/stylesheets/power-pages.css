@@ -1,0 +1,850 @@
+/* ===== Power pages: stats strip, slot sections, ability cards =====
+   Used by pages like Reality Warping. Colours come from the slot's class
+   (psionic, energy, spatial, reality, cosmic). To add a slot colour,
+   add one more line in the block below. */
+
+.psionic     { --accent: #a78bfa; }
+.energy      { --accent: #ffc928; }
+.spatial     { --accent: #38bdf8; }
+.reality     { --accent: #4ade80; }
+.cosmic      { --accent: #fb7185; }
+
+/* ---------- Stats strip: one bordered sheet, label on the left, value on the right ---------- */
+.md-typeset .spec {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1px;
+  margin: .8rem 0 1.6rem;
+  border: 1px solid rgba(127, 127, 127, .3);
+  border-radius: .3rem;
+  overflow: hidden;
+  background: rgba(127, 127, 127, .3);
+}
+.md-typeset .spec > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+  padding: .55rem .85rem;
+  background: var(--md-default-bg-color);
+}
+@media screen and (min-width: 36em) {
+  .md-typeset .spec { grid-template-columns: repeat(2, 1fr); }
+}
+/* an odd last item takes the full row instead of leaving a gap */
+.md-typeset .spec > div:last-child:nth-child(odd) { grid-column: 1 / -1; }
+.md-typeset .spec span { font-size: .8rem; color: var(--md-default-fg-color--light); }
+.md-typeset .spec b { font-weight: 700; color: var(--y); white-space: nowrap; }
+[data-md-color-scheme="default"] .md-typeset .spec b { color: var(--y-deep); }
+
+/* ---------- Jump links to the five slots ---------- */
+.md-typeset .slot-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .5rem;
+  margin: .6rem 0 .4rem;
+}
+.md-typeset .slot-nav a {
+  display: inline-flex;
+  align-items: center;
+  gap: .55rem;
+  padding: .3rem .8rem .3rem .3rem;
+  border: 1px solid color-mix(in srgb, var(--accent) 55%, transparent);
+  border-radius: .35rem;
+  font-size: .82rem;
+  font-weight: 600;
+  color: var(--md-default-fg-color);
+}
+.md-typeset .slot-nav a:hover { background: color-mix(in srgb, var(--accent) 14%, transparent); }
+.md-typeset .slot-nav a::before {
+  content: attr(data-slot);
+  display: grid;
+  place-items: center;
+  width: 1.45rem;
+  height: 1.45rem;
+  border-radius: .2rem;
+  background: var(--accent);
+  color: #111;
+  font-weight: 800;
+  font-size: .8rem;
+}
+
+/* ---------- One section per slot ---------- */
+.md-typeset .power-section { margin: 2.2rem 0 0; }
+.md-typeset .power-section h3 {
+  display: flex;
+  align-items: center;
+  gap: .8rem;
+  margin: 0 0 .5rem;
+  padding-bottom: .55rem;
+  font-size: 1.3rem;
+  font-weight: 700;
+  line-height: 1.2;
+  border-bottom: 1px solid color-mix(in srgb, var(--accent) 60%, transparent);
+}
+/* the big slot number, taken from data-slot="1" on the heading */
+.md-typeset .power-section h3::before {
+  content: attr(data-slot);
+  flex: none;
+  display: grid;
+  place-items: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: .35rem;
+  background: var(--accent);
+  color: #111;
+  font-size: 1.4rem;
+  font-weight: 800;
+  line-height: 1;
+}
+/* "Crouch" / "Non-Crouch" tag on the right, taken from data-mode="Crouch" */
+.md-typeset .power-section h3::after {
+  content: attr(data-mode);
+  margin-left: auto;
+  padding: .12rem .6rem;
+  border: 1px solid var(--accent);
+  border-radius: .3rem;
+  font-size: .78rem;
+  font-weight: 600;
+}
+.md-typeset .slot-intro {
+  max-width: 46rem;
+  margin: .2rem 0 1rem;
+  font-size: .86rem;
+  color: var(--md-default-fg-color--light);
+}
+
+/* ---------- Ability cards ---------- */
+.md-typeset .ability-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 17rem), 1fr));
+  gap: .75rem;
+}
+.md-typeset .ability {
+  display: flex;
+  flex-direction: column;
+  padding: .75rem .95rem .85rem;
+  border: 1px solid color-mix(in srgb, var(--accent) 30%, transparent);
+  border-left: 4px solid var(--accent);
+  border-radius: .3rem;
+  background: rgba(127, 127, 127, .06);
+}
+.md-typeset .ability.wide { grid-column: 1 / -1; }
+.md-typeset .ability h4 {
+  margin: 0 0 .3rem;
+  padding: 0;
+  border: 0;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.3;
+  letter-spacing: 0;
+  color: var(--md-default-fg-color);
+}
+.md-typeset .ability p {
+  margin: .25rem 0 0;
+  font-size: .83rem;
+  line-height: 1.55;
+}
+.md-typeset .chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .3rem;
+  margin-top: .55rem;
+}
+/* inside a card the chips sit at the bottom, so cards in a row line up */
+.md-typeset .ability .chips { margin-top: auto; padding-top: .55rem; }
+.md-typeset .chip {
+  padding: .05rem .5rem;
+  border: 1px solid color-mix(in srgb, var(--accent) 55%, transparent);
+  border-radius: .2rem;
+  background: color-mix(in srgb, var(--accent) 12%, transparent);
+  font-size: .72rem;
+  line-height: 1.6;
+}
+.md-typeset .chip b { font-weight: 700; }
+
+/* ---------- Notes list at the bottom of a page ---------- */
+.md-typeset .power-notes { margin-top: 2.2rem; }
+
+/* ===== Power overview card (top of a power page) =====
+   THE CARD COLOUR COMES FROM THE PAGE, not from this file. Set it on the card:
+
+     <div class="power-card" style="--hue:215" markdown>
+     <div class="power-card" style="--hue:355; --sat:85%; --lit:60%" markdown>
+
+   --hue is 0-360 (see the Power Colors page). --sat and --lit are optional.
+   If --hue is left out, the card falls back to blue (215).
+   Light mode automatically uses a darker version of the same colour.
+   A card can still be forced to one exact colour with style="--pc: #ff5a5a". */
+.md-typeset .power-card {
+  --pc: hsl(var(--hue, 215) var(--sat, 90%) var(--lit, 62%));
+  position: relative;
+  margin: 1.2rem 0 1.8rem;
+  padding: 1.25rem 1.35rem 1.2rem;
+  border: 1px solid color-mix(in srgb, var(--pc) 38%, transparent);
+  border-top: 3px solid var(--pc);
+  border-radius: .25rem;
+  overflow: hidden;
+  background:
+    linear-gradient(180deg, color-mix(in srgb, var(--pc) 22%, transparent), transparent 70%),
+    rgba(127, 127, 127, .06);
+}
+/* light mode: same hue, darker and a little less saturated so it reads on white.
+   Same selector weight as the rule above on purpose, so it wins in light mode. */
+[data-md-color-scheme="default"] .md-typeset .power-card {
+  --pc: hsl(var(--hue, 215) calc(var(--sat, 90%) - 15%) max(28%, calc(var(--lit, 62%) - 22%)));
+}
+
+/* header: medallion + name */
+.md-typeset .power-card .pc-head {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+}
+.md-typeset .power-card .pc-medal { flex: none; }
+.md-typeset .power-card .pc-medal p { margin: 0; display: flex; }
+.md-typeset .power-card .pc-icon {
+  width: 6rem;
+  height: 6rem;
+  image-rendering: pixelated;
+  filter: drop-shadow(0 0 .9rem color-mix(in srgb, var(--pc) 55%, transparent));
+}
+.md-typeset .power-card .pc-id { display: flex; flex-direction: column; gap: .25rem; min-width: 0; }
+.md-typeset .power-card .pc-eyebrow {
+  font-size: .7rem;
+  font-weight: 700;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--pc);
+}
+.md-typeset .power-card .pc-name {
+  font-size: 1.8rem;
+  font-weight: 800;
+  line-height: 1.1;
+  color: var(--md-default-fg-color);
+  text-shadow: 0 0 1.2rem color-mix(in srgb, var(--pc) 45%, transparent);
+}
+
+/* three fact tiles */
+.md-typeset .power-card .pc-facts {
+  display: grid;
+  gap: .7rem 1rem;
+  margin: 1.2rem 0 1rem;
+}
+.md-typeset .power-card .pc-facts > div {
+  display: flex;
+  flex-direction: column;
+  gap: .15rem;
+  padding-left: .75rem;
+  border-left: 2px solid color-mix(in srgb, var(--pc) 65%, transparent);
+}
+.md-typeset .power-card .pc-facts span {
+  font-size: .66rem;
+  font-weight: 700;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--md-default-fg-color--light);
+}
+.md-typeset .power-card .pc-facts b { font-size: 1.05rem; font-weight: 700; line-height: 1.3; }
+.md-typeset .power-card .pc-facts small { font-size: .74rem; color: var(--md-default-fg-color--light); line-height: 1.35; }
+
+/* description */
+.md-typeset .power-card .pc-desc {
+  margin: 0;
+  padding-top: .9rem;
+  border-top: 1px dashed color-mix(in srgb, var(--pc) 40%, transparent);
+  font-size: .9rem;
+  line-height: 1.7;
+}
+
+@media screen and (max-width: 36em) {
+  .md-typeset .power-card .pc-head { gap: .9rem; }
+  .md-typeset .power-card .pc-icon { width: 4.8rem; height: 4.8rem; }
+  .md-typeset .power-card .pc-name { font-size: 1.45rem; }
+}
+
+/* ===== Power overview card: source, power type and ranking =====
+   - Source tile:  class="pc-source src-biological"  (colours below; icon file goes in docs/uploads/power-images/sources)
+   - Power type:   <b class="pc-types"><i>Fighter</i><i>Utility</i>...</b>
+   - Ranking:      <div class="pc-tier" data-tier="S"> ... (S, A, B, C, D or E)               */
+
+/* the facts grid now has 3 columns; the Source tile is two columns wide */
+.md-typeset .power-card .pc-facts {
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1.2fr);
+  align-items: start;
+}
+.md-typeset .power-card .pc-facts .pc-source { grid-column: span 2; }
+
+/* source categories and their colours */
+.md-typeset .power-card .src-biological   { --src: #4ade80; }
+.md-typeset .power-card .src-technological { --src: #fb923c; }
+.md-typeset .power-card .src-mystical     { --src: #c084fc; }
+.md-typeset .power-card .src-cosmic       { --src: #f472b6; }
+
+.md-typeset .power-card .pc-facts > .pc-source {
+  flex-direction: row;
+  align-items: center;
+  gap: .9rem;
+  border-left-color: color-mix(in srgb, var(--src) 70%, transparent);
+}
+.md-typeset .power-card .pc-src-icon {
+  flex: none;
+  width: 3.7rem;
+  height: 3.7rem;
+  border-radius: .6rem;
+  border: 2px solid var(--src);
+  background-color: #11161d;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 76%;
+  image-rendering: pixelated;
+  box-shadow:
+    0 0 1.1rem color-mix(in srgb, var(--src) 38%, transparent),
+    inset 0 0 .9rem color-mix(in srgb, var(--src) 16%, transparent);
+}
+.md-typeset .power-card .src-biological .pc-src-icon { background-image: url("../uploads/power-images/sources/biological.png"); }
+.md-typeset .power-card .pc-src-text { display: flex; flex-direction: column; gap: .15rem; min-width: 0; }
+.md-typeset .power-card .pc-source b { color: var(--src); font-size: 1.15rem; }
+[data-md-color-scheme="default"] .md-typeset .power-card .pc-source b {
+  color: color-mix(in srgb, var(--src) 62%, black);
+}
+
+/* power type pills */
+.md-typeset .power-card .pc-types { display: flex; flex-wrap: wrap; gap: .3rem; padding: .1rem 0; }
+.md-typeset .power-card .pc-types i {
+  padding: .1rem .5rem;
+  border: 1px solid color-mix(in srgb, var(--pc) 70%, transparent);
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--pc) 16%, transparent);
+  font-style: normal;
+  font-size: .74rem;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+/* ranking badge: hexagon with the tier letter, on the right of the header */
+.md-typeset .power-card .pc-head { flex-wrap: wrap; }
+.md-typeset .power-card .pc-id { flex: 1 1 9rem; }
+.md-typeset .power-card .pc-tier {
+  margin-left: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: .3rem;
+}
+
+.md-typeset .power-card .pc-tier__label {
+  font-size: .62rem;
+  font-weight: 700;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--md-default-fg-color--light);
+}
+.md-typeset .power-card .pc-tier__rank {
+  position: relative;
+  isolation: isolate;
+  display: grid;
+  place-items: center;
+  width: 4.3rem;
+  height: 4.8rem;
+  font-size: 2.5rem;
+  font-weight: 900;
+  line-height: 1;
+  color: var(--t);
+  text-shadow: 0 0 .8rem color-mix(in srgb, var(--t) 60%, transparent);
+  filter: drop-shadow(0 0 .55rem color-mix(in srgb, var(--t) 50%, transparent));
+}
+.md-typeset .power-card .pc-tier__rank::before,
+.md-typeset .power-card .pc-tier__rank::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+}
+.md-typeset .power-card .pc-tier__rank::before { inset: 0; background: var(--t); }
+.md-typeset .power-card .pc-tier__rank::after  { inset: 3px; background: #15120a; }
+.md-typeset .power-card .pc-tier__cap {
+  font-size: .72rem;
+  font-weight: 800;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: var(--t);
+}
+[data-md-color-scheme="default"] .md-typeset .power-card .pc-tier__cap { color: color-mix(in srgb, var(--t) 60%, black); }
+[data-md-color-scheme="default"] .md-typeset .power-card .pc-tier__rank { color: var(--t); }
+
+/* narrower screens */
+@media screen and (max-width: 60em) {
+  .md-typeset .power-card .pc-facts { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media screen and (max-width: 36em) {
+  .md-typeset .power-card .pc-facts { grid-template-columns: minmax(0, 1fr); }
+  .md-typeset .power-card .pc-facts .pc-source { grid-column: auto; }
+  .md-typeset .power-card .pc-tier {
+    flex-direction: row;
+    width: 100%;
+    margin-left: 0;
+    gap: .8rem;
+    justify-content: flex-start;
+  }
+  .md-typeset .power-card .pc-tier__rank { width: 2.9rem; height: 3.2rem; font-size: 1.6rem; }
+}
+
+/* ===== Arachnid – Peter Parker slot colours ===== */
+.totem,     .md-typeset .slot-nav a.totem,     .md-typeset .power-section.totem     { --accent: #c084fc; --c: #c084fc; }
+.movement,  .md-typeset .slot-nav a.movement,  .md-typeset .power-section.movement  { --accent: #38bdf8; --c: #38bdf8; }
+.physiology,.md-typeset .slot-nav a.physiology,.md-typeset .power-section.physiology{ --accent: #fb923c; --c: #fb923c; }
+.webbing,   .md-typeset .slot-nav a.webbing,   .md-typeset .power-section.webbing   { --accent: #94a3b8; --c: #94a3b8; }
+.mutation,  .md-typeset .slot-nav a.mutation,  .md-typeset .power-section.mutation  { --accent: #f43f5e; --c: #f43f5e; }
+
+.md-typeset .power-section > h3:not([data-mode])::after { display: none; }
+
+/* ===== Power Colors reference page ===== */
+.md-typeset .pcol-strip { position: relative; height: 2.2rem; margin: 1.2rem 0 2.4rem; }
+.md-typeset .pcol-strip::before {
+  content: ""; position: absolute; inset: 0; border-radius: .6rem; opacity: .55;
+  background: linear-gradient(90deg, hsl(0 85% 55%), hsl(60 85% 55%), hsl(120 85% 45%), hsl(180 85% 45%), hsl(240 85% 60%), hsl(300 85% 55%), hsl(360 85% 55%));
+}
+.md-typeset .pcol-strip i {
+  position: absolute; top: 50%; left: calc(var(--hue) / 360 * 100%);
+  width: 1.1rem; height: 1.1rem; transform: translate(-50%, -50%); border-radius: 50%;
+  background: var(--pcd); border: 2px solid #fff; box-shadow: 0 0 0 2px rgb(0 0 0 / .45);
+}
+.md-typeset .pcol-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr)); gap: .9rem; }
+.md-typeset .pcol {
+  --pcd: hsl(var(--hue) var(--sat, 90%) var(--lit, 62%));
+  --pcl: hsl(var(--hue) calc(var(--sat, 90%) - 15%) max(28%, calc(var(--lit, 62%) - 22%)));
+  border: 1px solid var(--md-default-fg-color--lightest); border-radius: .7rem; overflow: hidden;
+  background: color-mix(in srgb, var(--md-default-fg-color) 4%, transparent);
+}
+.md-typeset .pcol-swatch { display: grid; grid-template-columns: 1fr 1fr; height: 3.2rem; }
+.md-typeset .pcol-swatch span { display: grid; place-items: center; font-size: .65rem; font-weight: 700; letter-spacing: .05em; color: #111; }
+.md-typeset .pcol-swatch span:first-child { background: var(--pcd); }
+.md-typeset .pcol-swatch span:last-child { background: var(--pcl); color: #fff; }
+.md-typeset .pcol-info { padding: .7rem 1rem .8rem; }
+.md-typeset .pcol-info b { display: block; font-size: 1rem; }
+.md-typeset .pcol-info small { color: var(--md-default-fg-color--light); font-family: var(--md-code-font-family); font-size: .74rem; }
+
+/* ===== Pages with categories instead of numbered slots (Arachnid – Miles Morales) =====
+   Leave data-slot off a section heading or a slot-nav link and its number square disappears.
+   Give the section and its link the same class (cat-...) to colour them. */
+.md-typeset .power-section h3:not([data-slot])::before { display: none; }
+.md-typeset .slot-nav a:not([data-slot])::before { display: none; }
+.md-typeset .slot-nav a:not([data-slot]) { padding-left: .8rem; }
+
+.cat-arachnid,     .md-typeset .slot-nav a.cat-arachnid,     .md-typeset .power-section.cat-arachnid     { --accent: #f87171; }
+.cat-stealth,      .md-typeset .slot-nav a.cat-stealth,      .md-typeset .power-section.cat-stealth      { --accent: #a78bfa; }
+.cat-combat,       .md-typeset .slot-nav a.cat-combat,       .md-typeset .power-section.cat-combat       { --accent: #fbbf24; }
+.cat-bioelectricity, .md-typeset .slot-nav a.cat-bioelectricity, .md-typeset .power-section.cat-bioelectricity { --accent: #38bdf8; }
+
+/* category pills in the overview card (replaces the numbered slot squares) */
+.md-typeset .power-card .pc-cats { display: flex; flex-wrap: wrap; gap: .3rem; padding: .1rem 0; }
+.md-typeset .power-card .pc-cats i {
+  padding: .1rem .5rem;
+  border: 1px solid color-mix(in srgb, var(--accent) 70%, transparent);
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--accent) 16%, transparent);
+  font-style: normal;
+  font-size: .74rem;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+/* ===== Ability icons: one small picture in front of each ability's name =====
+   HOW IT WORKS
+   1. Make a folder for the power inside docs/uploads, named like the power's icon file
+      (docs/uploads/arachnid-miles-morales.png  ->  docs/uploads/arachnid-miles-morales/ ).
+   2. Upload each ability's icon there. File name = the ability's name, lowercase,
+      spaces turned into hyphens:  "Arachnid Dodge" -> arachnid-dodge.png
+   3. In the page, an ability starts like this (the picture goes in front of the title):
+
+        <div class="ability" markdown>
+
+        <div class="ab-head" markdown>
+
+        ![](../../../../uploads/power-images/arachnid-miles-morales/arachnid-dodge.png){ .ab-icon }
+
+        #### Arachnid Dodge
+
+        </div>
+
+        The description...
+
+   A missing picture just leaves an empty frame, so icons can be uploaded one at a time.
+   The frame takes the colour of its section (cat-... / slot colour). */
+.md-typeset .ab-head {
+  display: flex;
+  align-items: center;
+  gap: .75rem;
+  margin: 0 0 .35rem;
+}
+.md-typeset .ab-head p { margin: 0; display: flex; flex: none; }
+.md-typeset .ab-head h4 { margin: 0; }
+.md-typeset .ab-head .ab-icon {
+  box-sizing: border-box;
+  flex: none;
+  width: 3.4rem;
+  height: 3.4rem;
+  padding: .2rem;
+  object-fit: contain;
+  image-rendering: pixelated;
+  border-radius: .55rem;
+  border: 2px solid color-mix(in srgb, var(--accent) 75%, transparent);
+  background: #0d0d10;
+  box-shadow: inset 0 0 .8rem color-mix(in srgb, var(--accent) 20%, transparent);
+}
+/* While an icon has not been uploaded yet, show a calm empty frame instead of the browser's
+   broken-image symbol. (This pseudo-element only ever shows when the picture is missing.) */
+.md-typeset .ab-head .ab-icon { position: relative; }
+.md-typeset .ab-head .ab-icon::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: .4rem;
+  background:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23888' fill-opacity='.45' d='M11 18h2v-2h-2zm1-16A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2m0 18a8 8 0 0 1-8-8 8 8 0 0 1 8-8 8 8 0 0 1 8 8 8 8 0 0 1-8 8m0-14a4 4 0 0 0-4 4h2a2 2 0 0 1 2-2 2 2 0 0 1 2 2c0 2-3 1.75-3 5h2c0-2.25 3-2.5 3-5a4 4 0 0 0-4-4'/%3E%3C/svg%3E")
+      center / 55% no-repeat,
+    #0d0d10;
+}
+
+/* ===== Arachnid – Miles Morales: category colours added ===== */
+.cat-venom, .md-typeset .slot-nav a.cat-venom, .md-typeset .power-section.cat-venom { --accent: #fbbf24; }
+
+/* optional per-card medallion background, for icons that are not on dark blue:
+   <div class="power-card" style="--medal-bg:#050505" markdown> */
+
+
+/* ===== Tier colours (S to F), following the usual tier-list colours but stronger ===== */
+.md-typeset .power-card .pc-tier                 { --t: #ff3b30; } /* S red     */
+.md-typeset .power-card .pc-tier[data-tier="A"] { --t: #ff9500; } /* A orange  */
+.md-typeset .power-card .pc-tier[data-tier="B"] { --t: #ffd60a; } /* B yellow  */
+.md-typeset .power-card .pc-tier[data-tier="C"] { --t: #34d84f; } /* C green   */
+.md-typeset .power-card .pc-tier[data-tier="D"] { --t: #19d3f0; } /* D cyan    */
+.md-typeset .power-card .pc-tier[data-tier="E"] { --t: #4f6bff; } /* E blue    */
+.md-typeset .power-card .pc-tier[data-tier="F"] { --t: #d946ef; } /* F magenta */
+
+/* ===== Clickable classification pills =====
+   The hook (hooks/pill_links.py) wraps each pill in:
+     <a class="pc-link c-fighter" href="...#fighter" data-tip="definition"><i class="c-fighter">Fighter</i></a>
+   Paste this block at the very bottom of power-pages.css.                                  */
+
+/* the tooltip is positioned against the row of pills, so it never runs off a narrow screen */
+.md-typeset .power-card .pc-types { position: relative; }
+
+.md-typeset .power-card .pc-types .pc-link {
+  position: static;
+  display: inline-flex;
+  border-radius: 999px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* hovered / focused pill: a little brighter */
+.md-typeset .power-card .pc-types .pc-link:hover i[class^="c-"],
+.md-typeset .power-card .pc-types .pc-link:focus-visible i[class^="c-"] {
+  background: color-mix(in srgb, var(--k) 32%, transparent);
+  border-color: var(--k);
+}
+.md-typeset .power-card .pc-types .pc-link:focus-visible {
+  outline: 2px solid var(--md-accent-fg-color);
+  outline-offset: 2px;
+}
+
+/* the tooltip itself */
+.md-typeset .power-card .pc-types .pc-link::after {
+  content: attr(data-tip);
+  position: absolute;
+  z-index: 40;
+  top: calc(100% + .45rem);
+  left: 0;
+  width: max(100%, 15rem);
+  max-width: calc(100vw - 2.5rem);
+  padding: .55rem .75rem;
+  border: 1px solid var(--k);
+  border-radius: .5rem;
+  background: var(--md-default-bg-color);
+  color: var(--md-default-fg-color);
+  box-shadow: 0 .5rem 1.4rem rgba(0, 0, 0, .45);
+  font-size: .76rem;
+  font-weight: 500;
+  line-height: 1.45;
+  letter-spacing: 0;
+  text-align: left;
+  white-space: normal;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-.2rem);
+  pointer-events: none;
+  transition: opacity .12s ease, transform .12s ease, visibility .12s;
+}
+.md-typeset .power-card .pc-types .pc-link:hover::after,
+.md-typeset .power-card .pc-types .pc-link:focus-visible::after {
+  opacity: 1;
+  visibility: visible;
+  transform: none;
+}
+
+/* the card clips its content; let the tooltip out while a pill is hovered or focused */
+.md-typeset .power-card:has(.pc-link:hover, .pc-link:focus-visible) { overflow: visible; }
+
+/* Power Classifications page: the card you landed on stands out */
+.md-typeset .cls:has(h4:target) {
+  border-color: var(--k);
+  box-shadow:
+    0 0 0 2px color-mix(in srgb, var(--k) 55%, transparent),
+    0 0 1.4rem color-mix(in srgb, var(--k) 30%, transparent);
+}
+
+/* ===== Previous / Next buttons at the end of every page =====
+   Added by hooks/page_nav.py. Paste this block at the very bottom of power-pages.css. */
+
+.md-typeset .page-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .8rem;
+  margin: 2.6rem 0 .4rem;
+  padding-top: 1.2rem;
+  border-top: 1px dashed var(--md-default-fg-color--lighter);
+}
+
+.md-typeset .page-nav .pn {
+  display: flex;
+  align-items: center;
+  gap: .85rem;
+  flex: 1 1 15rem;
+  max-width: 24rem;
+  min-width: 0;
+  padding: .7rem 1rem;
+  border: 1px solid var(--md-default-fg-color--lightest);
+  border-radius: .6rem;
+  background: color-mix(in srgb, var(--md-default-fg-color) 4%, transparent);
+  color: var(--md-default-fg-color);
+  text-decoration: none;
+  transition: border-color .15s ease, background .15s ease, transform .15s ease;
+}
+.md-typeset .page-nav .pn:hover,
+.md-typeset .page-nav .pn:focus-visible {
+  color: var(--md-default-fg-color);
+  border-color: var(--md-accent-fg-color);
+  background: color-mix(in srgb, var(--md-accent-fg-color) 12%, transparent);
+  transform: translateY(-2px);
+}
+
+/* Next sits on the right, with the arrow after the text (text aligned left like Previous) */
+.md-typeset .page-nav .pn-next {
+  margin-left: auto;
+  flex-direction: row;
+  justify-content: space-between;
+  text-align: left;
+}
+.md-typeset .page-nav .pn-prev { text-align: left; }
+
+.md-typeset .page-nav .pn-arrow {
+  flex: none;
+  font-size: 1.4rem;
+  line-height: 1;
+  color: var(--md-accent-fg-color);
+}
+.md-typeset .page-nav .pn-text {
+  display: flex;
+  flex-direction: column;
+  gap: .1rem;
+  min-width: 0;
+}
+.md-typeset .page-nav .pn-text small {
+  font-size: .66rem;
+  font-weight: 700;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--md-default-fg-color--light);
+}
+.md-typeset .page-nav .pn-text b {
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.3;
+  overflow-wrap: anywhere;
+}
+
+/* phones: stack the two buttons */
+@media screen and (max-width: 36em) {
+  .md-typeset .page-nav .pn { flex-basis: 100%; max-width: none; }
+}
+
+/* ===== Relevant Information: table-style card (rows with dividers) ===== */
+.md-typeset .power-notes > ul,
+.md-typeset .power-notes > .spec {
+  list-style: none;
+  margin: .9rem 0 1.2rem;
+  padding: 0;
+  border: 1px solid rgba(127, 127, 127, .28);
+  border-radius: .9rem;
+  overflow: hidden;
+  background: rgba(127, 127, 127, .06);
+  box-shadow: 0 .4rem 1.2rem rgba(0, 0, 0, .18);
+}
+.md-typeset .power-notes > ul::before,
+.md-typeset .power-notes > .spec::before {
+  display: block;
+  padding: .7rem 1.1rem;
+  font-size: .8rem;
+  font-weight: 600;
+  color: var(--md-default-fg-color--light);
+  background: rgba(127, 127, 127, .1);
+}
+.md-typeset .power-notes > ul::before { content: "Information"; }
+.md-typeset .power-notes > .spec::before { content: "Stat Bonuses"; }
+.md-typeset .power-notes > ul > li {
+  list-style: none;
+  margin: 0;
+  padding: .85rem 1.1rem;
+  border-top: 1px solid rgba(127, 127, 127, .22);
+}
+.md-typeset .power-notes > ul > li::marker { content: none; }
+.md-typeset .power-notes > .spec { display: block; background: rgba(127, 127, 127, .06); gap: 0; }
+.md-typeset .power-notes > .spec > div {
+  background: transparent;
+  padding: .85rem 1.1rem;
+  border-top: 1px solid rgba(127, 127, 127, .22);
+}
+.md-typeset .power-notes > .spec span { font-size: .95rem; color: var(--md-default-fg-color); }
+.md-typeset .power-notes > p { margin: 1rem 0 .2rem; }
+
+/* ===== Page design: sharp "HUD" style, coloured by the page's power =====
+   hooks/power_cards.py copies the colour of a page's power card onto .md-content,
+   so a power page follows its own colour. Every other page uses the normal yellow.
+   Only the content area is touched: the left sidebar and the top bar are not. */
+.md-content { --pg: hsl(var(--hue, 45) var(--sat, 100%) var(--lit, 58%)); --y: var(--pg); }
+[data-md-color-scheme="default"] .md-content {
+  --pg: hsl(var(--hue, 45) calc(var(--sat, 100%) - 15%) max(28%, calc(var(--lit, 58%) - 22%)));
+  --y-deep: var(--pg);
+}
+/* the soft colour glow is only on power pages (the hook adds the class "power-page") */
+.md-content.power-page {
+  background: linear-gradient(180deg, color-mix(in srgb, var(--pg) 14%, transparent), transparent 45%);
+  background-attachment: fixed;
+}
+
+/* headings */
+.md-content .md-typeset h1 {
+  font-size: 2.1rem;
+  text-transform: uppercase;
+  letter-spacing: .06em;
+  border-bottom: 0;
+}
+.md-content .md-typeset h2 {
+  display: flex;
+  align-items: center;
+  gap: .8rem;
+  font-size: .95rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: .14em;
+  color: var(--pg);
+  border: 0;
+}
+.md-content .md-typeset h2::after {
+  content: "";
+  flex: 1;
+  height: 2px;
+  background: linear-gradient(90deg, var(--pg), transparent);
+}
+.md-content .md-typeset .power-section h3 { text-transform: uppercase; letter-spacing: .08em; font-size: 1.05rem; }
+
+/* boxes: soft rounded corners */
+.md-content .md-typeset .power-card {
+  border-radius: .8rem;
+  border: 1px solid color-mix(in srgb, var(--pc) 50%, transparent);
+  background: linear-gradient(135deg, color-mix(in srgb, var(--pc) 28%, var(--md-default-bg-color)), var(--md-default-bg-color) 70%);
+}
+.md-content .md-typeset .spec,
+.md-content .md-typeset .power-notes > ul,
+.md-content .md-typeset .power-notes > .spec {
+  border-radius: .6rem;
+}
+.md-content .md-typeset .ability {
+  border: 1px solid color-mix(in srgb, var(--accent, var(--pg)) 30%, transparent);
+  border-radius: .6rem;
+  background: linear-gradient(90deg, color-mix(in srgb, var(--accent, var(--pg)) 12%, transparent), rgba(127, 127, 127, .05));
+}
+.md-content .md-typeset .slot-nav a {
+  border-radius: .5rem;
+  padding-inline: 1.2rem;
+}
+.md-content .md-typeset a.pcard,
+.md-content .md-typeset .dir-card {
+  border-radius: .9rem;
+}
+.md-content .md-typeset .admonition { border-radius: .6rem; }
+
+@media screen and (max-width: 36em) {
+  .md-content .md-typeset h1 { font-size: 1.6rem; }
+}
+
+/* ===== Power card: compact layout for powers with many classifications / categories =====
+   Row 1: Source | Obtained from | Signature look
+   Row 2: Power classification (full width, pills wrap in a row)
+   Row 3: Ability categories   (full width, pills wrap in a row)                                */
+.md-typeset .power-card .pc-facts { grid-template-columns: minmax(0, 1.9fr) minmax(0, 1fr) minmax(0, 1.1fr); }
+.md-typeset .power-card .pc-facts > .pc-source { grid-column: auto; order: 1; }
+.md-typeset .power-card .pc-facts > div:nth-child(3) { order: 2; }
+.md-typeset .power-card .pc-facts > div:nth-child(5) { order: 3; }
+.md-typeset .power-card .pc-facts > div:nth-child(2) { order: 4; grid-column: 1 / -1; }
+.md-typeset .power-card .pc-facts > div:nth-child(4) { order: 5; grid-column: 1 / -1; }
+@media screen and (max-width: 60em) {
+  .md-typeset .power-card .pc-facts { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .md-typeset .power-card .pc-facts > .pc-source { grid-column: 1 / -1; }
+}
+@media screen and (max-width: 36em) {
+  .md-typeset .power-card .pc-facts { grid-template-columns: minmax(0, 1fr); }
+  .md-typeset .power-card .pc-facts > div:nth-child(n) { grid-column: auto; }
+}
+
+/* ===== Motion: page fade-in and hover effects =====
+   Everything here is switched off for people who have "reduce motion" turned on. */
+@keyframes page-rise {
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: none; }
+}
+.md-content__inner > * { animation: page-rise .6s cubic-bezier(.2, .7, .2, 1) both; }
+.md-content__inner > :nth-child(2) { animation-delay: .08s; }
+.md-content__inner > :nth-child(3) { animation-delay: .16s; }
+.md-content__inner > :nth-child(4) { animation-delay: .24s; }
+.md-content__inner > :nth-child(5) { animation-delay: .32s; }
+.md-content__inner > :nth-child(n+6) { animation-delay: .4s; }
+
+/* hub cards: lift, glow and a tilting icon */
+.md-typeset a.pcard,
+.md-typeset .dir-card { transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease; }
+.md-typeset a.pcard:hover,
+.md-typeset .dir-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--pc, var(--pg));
+  box-shadow: inset 0 0 2.5rem -1rem color-mix(in srgb, var(--pc, var(--pg)) 60%, transparent);
+}
+.md-typeset .pcard-icon { transition: transform .25s ease, filter .25s ease; }
+.md-typeset a.pcard:hover .pcard-icon {
+  transform: scale(1.12) rotate(-3deg);
+  filter: drop-shadow(0 0 1.1rem color-mix(in srgb, var(--pc) 100%, transparent));
+}
+.md-typeset a.pcard:hover .pcard-name { text-shadow: 0 0 .9rem color-mix(in srgb, var(--pc) 70%, transparent); }
+
+/* ability cards and category tabs */
+.md-content .md-typeset .ability { transition: transform .18s ease, box-shadow .18s ease; }
+.md-content .md-typeset .ability:hover {
+  transform: translateY(-3px);
+  box-shadow: inset 0 0 1.8rem -.8rem var(--accent, var(--pg));
+}
+.md-content .md-typeset .slot-nav a { transition: transform .15s ease, background .15s ease; }
+.md-content .md-typeset .slot-nav a:hover {
+  transform: translateY(-2px);
+  background: color-mix(in srgb, var(--accent, var(--pg)) 25%, transparent);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .md-content__inner > * { animation: none; }
+  .md-typeset a.pcard, .md-typeset .dir-card, .md-typeset .pcard-icon,
+  .md-content .md-typeset .ability, .md-content .md-typeset .slot-nav a { transition: none; }
+  .md-typeset a.pcard:hover, .md-typeset .dir-card:hover,
+  .md-content .md-typeset .ability:hover, .md-content .md-typeset .slot-nav a:hover,
+  .md-typeset a.pcard:hover .pcard-icon { transform: none; }
+}

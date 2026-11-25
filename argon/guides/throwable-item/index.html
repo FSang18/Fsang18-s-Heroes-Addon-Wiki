@@ -1,0 +1,1170 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Documentation for Argon, the Palladium library behind FSang18's Heroes - abilities, conditions, values, actions, effects and systems.">
+      
+      
+      
+        <link rel="canonical" href="https://FSang18.github.io/Fsang18-s-Heroes-Addon-Wiki/argon/guides/throwable-item/">
+      
+      
+        <link rel="prev" href="../tech-table/">
+      
+      
+        <link rel="next" href="../wall-crawling/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../uploads/2703a3f0b163b13baac62a9fe5115772/logo_big.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>argon:throwable_item - FSang18's Heroes Addon Wiki - Argon</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+      <link rel="stylesheet" href="../../stylesheets/power-pages.css">
+    
+      <link rel="stylesheet" href="../../stylesheets/argon.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="custom">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#argonthrowable_item" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <div data-md-color-scheme="default" data-md-component="outdated" hidden>
+        
+      </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="FSang18&#39;s Heroes Addon Wiki - Argon" class="md-header__button md-logo" aria-label="FSang18's Heroes Addon Wiki - Argon" data-md-component="logo">
+      
+  <img src="../../uploads/2703a3f0b163b13baac62a9fe5115772/logo_big.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            FSang18's Heroes Addon Wiki - Argon
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              argon:throwable_item
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="custom"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="FSang18&#39;s Heroes Addon Wiki - Argon" class="md-nav__button md-logo" aria-label="FSang18's Heroes Addon Wiki - Argon" data-md-component="logo">
+      
+  <img src="../../uploads/2703a3f0b163b13baac62a9fe5115772/logo_big.png" alt="logo">
+
+    </a>
+    FSang18's Heroes Addon Wiki - Argon
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../getting-started/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Getting Started
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Guides
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Guides
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../flight/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Controlled Flight
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gravity/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Directional Gravity
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dna-transfer/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    DNA Transfer Station
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../path-vision/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Path Vision
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tech-table/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tech Table
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Throwable Item
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Throwable Item
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#layout" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Layout
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sections-and-keys" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sections and keys
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-it-behaves" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How it behaves
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#targeting-homing-and-ricochet" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Targeting, homing and ricochet
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#steering-and-the-projectile-camera" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Steering and the projectile camera
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pinning-deflection-perfect-catch-and-animations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pinning, deflection, perfect catch and animations
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#damage" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Damage
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#known-limits" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Known limits
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../wall-crawling/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Wall Crawling
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../reference/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Reference
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../content/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Content
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#layout" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Layout
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sections-and-keys" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sections and keys
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-it-behaves" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How it behaves
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#targeting-homing-and-ricochet" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Targeting, homing and ricochet
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#steering-and-the-projectile-camera" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Steering and the projectile camera
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pinning-deflection-perfect-catch-and-animations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pinning, deflection, perfect catch and animations
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#damage" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Damage
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#known-limits" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Known limits
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="argonthrowable_item">argon:throwable_item</h1>
+<p>One reusable Palladium ability that makes any item throwable. The projectile looks like the real item, keeps the exact item with all its data, can bounce or embed in blocks, damage and embed in entities, return on its own, be recalled, hit enemies on the way back, home in, ricochet, be steered through a camera, and be caught. Everything is configured in the ability JSON; nothing is specific to one item.</p>
+<h2 id="layout">Layout</h2>
+<p>Everything except <code>item</code> is optional, and so is every section and every key inside a section.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="p">{</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">  </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"argon:throwable_item"</span><span class="p">,</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">  </span><span class="nt">"item"</span><span class="p">:</span><span class="w"> </span><span class="s2">"fsang:mjolnir"</span><span class="p">,</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">  </span><span class="nt">"hand"</span><span class="p">:</span><span class="w"> </span><span class="s2">"main_hand"</span><span class="p">,</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">  </span><span class="nt">"throw"</span><span class="p">:</span><span class="w">        </span><span class="p">{</span><span class="w"> </span><span class="nt">"speed"</span><span class="p">:</span><span class="w"> </span><span class="mf">2.6</span><span class="p">,</span><span class="w"> </span><span class="nt">"windup"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="nt">"gravity_mode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"none"</span><span class="p">,</span><span class="w"> </span><span class="nt">"drag"</span><span class="p">:</span><span class="w"> </span><span class="mf">1.0</span><span class="p">,</span><span class="w"> </span><span class="nt">"maximum_time"</span><span class="p">:</span><span class="w"> </span><span class="mi">160</span><span class="w"> </span><span class="p">},</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">  </span><span class="nt">"combat"</span><span class="p">:</span><span class="w">       </span><span class="p">{</span><span class="w"> </span><span class="nt">"damage"</span><span class="p">:</span><span class="w"> </span><span class="mi">9</span><span class="p">,</span><span class="w"> </span><span class="nt">"maximum_targets"</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="nt">"entity_impact"</span><span class="p">:</span><span class="w"> </span><span class="s2">"continue"</span><span class="w"> </span><span class="p">},</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">  </span><span class="nt">"block_impact"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">"mode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"embed"</span><span class="w"> </span><span class="p">},</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">  </span><span class="nt">"return"</span><span class="p">:</span><span class="w">       </span><span class="p">{</span><span class="w"> </span><span class="nt">"triggers"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"after_hit"</span><span class="p">],</span><span class="w"> </span><span class="nt">"speed"</span><span class="p">:</span><span class="w"> </span><span class="mf">3.0</span><span class="p">,</span><span class="w"> </span><span class="nt">"block_collision"</span><span class="p">:</span><span class="w"> </span><span class="s2">"pass_through"</span><span class="p">,</span><span class="w"> </span><span class="nt">"damage_enabled"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w"> </span><span class="nt">"recall"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w"> </span><span class="p">},</span>
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="w">  </span><span class="nt">"targeting"</span><span class="p">:</span><span class="w">    </span><span class="p">{</span><span class="w"> </span><span class="nt">"mode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"none"</span><span class="w"> </span><span class="p">},</span>
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="w">  </span><span class="nt">"homing"</span><span class="p">:</span><span class="w">       </span><span class="p">{</span><span class="w"> </span><span class="nt">"accuracy"</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="w"> </span><span class="p">},</span>
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="w">  </span><span class="nt">"ricochet"</span><span class="p">:</span><span class="w">     </span><span class="p">{</span><span class="w"> </span><span class="nt">"enabled"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w"> </span><span class="p">},</span>
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="w">  </span><span class="nt">"steering"</span><span class="p">:</span><span class="w">     </span><span class="p">{</span><span class="w"> </span><span class="nt">"mode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"none"</span><span class="w"> </span><span class="p">},</span>
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="w">  </span><span class="nt">"camera"</span><span class="p">:</span><span class="w">       </span><span class="p">{</span><span class="w"> </span><span class="nt">"distance"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="w"> </span><span class="p">},</span>
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="w">  </span><span class="nt">"perfect_catch"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">"enabled"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w"> </span><span class="p">},</span>
+<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="w">  </span><span class="nt">"pin"</span><span class="p">:</span><span class="w">          </span><span class="p">{</span><span class="w"> </span><span class="nt">"enabled"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w"> </span><span class="nt">"duration"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="p">},</span>
+<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a><span class="w">  </span><span class="nt">"deflection"</span><span class="p">:</span><span class="w">   </span><span class="p">{</span><span class="w"> </span><span class="nt">"enabled"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w"> </span><span class="p">},</span>
+<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a><span class="w">  </span><span class="nt">"render"</span><span class="p">:</span><span class="w">       </span><span class="p">{</span><span class="w"> </span><span class="nt">"scale"</span><span class="p">:</span><span class="w"> </span><span class="mf">1.8</span><span class="p">,</span><span class="w"> </span><span class="nt">"rotation_mode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"spin"</span><span class="p">,</span><span class="w"> </span><span class="nt">"rotation_axis"</span><span class="p">:</span><span class="w"> </span><span class="s2">"x"</span><span class="p">,</span><span class="w"> </span><span class="nt">"rotation_offset"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="mi">180</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="p">},</span>
+<a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a><span class="w">  </span><span class="nt">"sounds"</span><span class="p">:</span><span class="w">       </span><span class="p">{</span><span class="w"> </span><span class="nt">"throw"</span><span class="p">:</span><span class="w"> </span><span class="s2">"fsang:mjolnir_throw"</span><span class="p">,</span><span class="w"> </span><span class="nt">"flight"</span><span class="p">:</span><span class="w"> </span><span class="s2">"fsang:mjolnir_flight"</span><span class="w"> </span><span class="p">},</span>
+<a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a><span class="w">  </span><span class="nt">"state"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">"enabling"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"palladium:key_bind"</span><span class="p">,</span><span class="w"> </span><span class="nt">"behaviour"</span><span class="p">:</span><span class="w"> </span><span class="s2">"activation"</span><span class="p">,</span><span class="w"> </span><span class="nt">"time"</span><span class="p">:</span><span class="w"> </span><span class="mi">11</span><span class="p">,</span><span class="w"> </span><span class="nt">"cooldown"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">}</span>
+<a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a><span class="p">}</span>
+</code></pre></div>
+<p>Every number that is a Value can be driven by Palladium (power age, data attachments, molang) and is read when the item is thrown, except the <code>return</code> settings (<code>speed</code>, <code>acceleration</code>, <code>turn_rate</code>, <code>accuracy</code>, <code>maximum_duration</code>, <code>damage_multiplier</code>, <code>catch_radius</code>), which are read again at the moment of recall.</p>
+<h2 id="sections-and-keys">Sections and keys</h2>
+<ul>
+<li><strong>item / hand / pickup</strong>: <code>item</code> (id, list or tag; required), <code>hand</code> (main_hand, off_hand, either), <code>pickup.on_touch</code> (true) and <code>pickup.radius</code> (1.5): the owner picks the item up by walking near it while it is embedded in a block or resting.</li>
+<li><strong>throw</strong>: <code>speed</code> (1.8), <code>windup</code> (0 ticks; the item stays in the hand and the aim is taken at release), <code>gravity_mode</code> (none, vanilla, scaled), <code>gravity</code> (1), <code>drag</code> (0.99), <code>inaccuracy</code> (0), <code>inherit_owner_velocity</code> (0.35), <code>maximum_time</code> (200), <code>maximum_distance</code> (96), <code>maximum_owner_distance</code> (128), <code>out_of_range</code> (return, recover or drop; the item is never deleted).</li>
+<li><strong>combat</strong>: <code>damage</code> (6), <code>knockback</code> (0.6), <code>damage_type</code>, <code>maximum_targets</code> (1, 0 = unlimited), <code>entity_impact</code> (continue, bounce, return, stop, embed), <code>allow_repeat_targets</code>, <code>rehit_cooldown</code> (10).</li>
+<li><strong>block_impact</strong>: <code>mode</code> (bounce, embed, return, drop, stop), <code>restitution</code> (0.6), <code>friction</code> (0.85), <code>maximum_bounces</code> (3), <code>embed_depth</code> (0.3), <code>embed_duration</code> (0 = until recalled or picked up).</li>
+<li><strong>return</strong>: <code>triggers</code> (a list of none, after_hit, after_block_impact, after_timeout, after_distance, always), <code>timeout</code> (60), <code>distance</code> (32), <code>speed</code> (2.4), <code>acceleration</code> (0.3), <code>turn_rate</code> (30), <code>accuracy</code> (100), <code>maximum_duration</code> (200), <code>block_collision</code> (pass_through, stop), <code>damage_enabled</code>, <code>damage_multiplier</code>, <code>maximum_damage_targets</code>, <code>catch_radius</code> (1.25), <code>recall</code>.</li>
+<li><strong>targeting</strong>: <code>mode</code> (none, automatic, marked, hybrid), <code>accuracy</code> (100), <code>detection_range</code> (16), <code>cone</code> (90), <code>line_of_sight</code> (true), <code>filter</code> (hostile, living, players, non_players), <code>entity_types</code>, <code>priority</code> (nearest, look_direction, lowest_health, random).</li>
+<li><strong>homing</strong>: <code>accuracy</code> (100), <code>turn_rate</code> (14), <code>acceleration</code>, <code>max_speed</code>, <code>prediction</code>, <code>target_offset</code> (0.5), <code>lost_target</code> (continue, reacquire, return).</li>
+<li><strong>ricochet</strong>: <code>enabled</code>, <code>maximum</code>, <code>target_range</code> (10), <code>speed</code> (2.6), <code>turn_rate</code> (40), <code>damage_multiplier</code>.</li>
+<li><strong>steering</strong>: <code>mode</code> (none, look_direction, projectile_camera), <code>turn_rate</code> (10), <code>strength</code> (1), <code>maximum_speed</code> (0 = the throw speed), <code>acceleration</code> (0.08), <code>return_on_release</code>, <code>owner_control</code> (normal, limited, immobile).</li>
+<li><strong>camera</strong>: <code>distance</code> (5), <code>fov</code> (0 = unchanged), <code>smoothing</code> (0.35), <code>roll</code> (0).</li>
+<li><strong>perfect_catch</strong>: <code>enabled</code>, <code>window</code> (8), <code>damage_bonus</code> (1.5), <code>bonus_duration</code> (100).</li>
+<li><strong>pin</strong>: <code>enabled</code>, <code>duration</code> (60; 0 = until recalled), <code>distance</code> (4).</li>
+<li><strong>deflection</strong>: <code>enabled</code>, <code>radius</code> (1.6), <code>strength</code> (1), <code>target_filter</code>.</li>
+<li><strong>render</strong>: <code>scale</code> (1 = the item model at its full block size; flat item sprites like swords are a block across, so 0.6 to 0.8 usually looks right), <code>rotation_mode</code> (none, spin, tumble), <code>rotation_speed</code> (36), <code>rotation_axis</code> (x, y, z), <code>rotation_offset</code> ([x, y, z] degrees), <code>face_velocity</code> (true), <code>embed_spin_angle</code>.</li>
+<li><strong>sounds</strong>: plain sound ids from <code>sounds.json</code>, all optional: <code>throw</code>, <code>entity_hit</code>, <code>block_hit</code>, <code>recall</code>, <code>return</code>, <code>catch</code>, <code>flight</code> (loops while flying).</li>
+</ul>
+<h2 id="how-it-behaves">How it behaves</h2>
+<ol>
+<li>Pressing the key (a <code>palladium:key_bind</code> with <code>behaviour: activation</code>) while the item is in the chosen hand throws it. The item leaves the hand and is saved in a per-player record (full ItemStack, original slot, projectile id) in the <code>argon:thrown_records</code> attachment. No placeholder is left, so there is no second copy.</li>
+<li>Pressing the same key while the item is out recalls it (needs <code>return.recall</code>).</li>
+<li>The projectile is server-driven; the client only interpolates and renders.</li>
+<li>The item returns to its original slot (or any free slot, or the owner's feet if full) when it is caught, picked up, recovered by a safety rule, or when the owner logs out, dies, changes dimension or logs back in. The record is removed before the item is given back, so it is restored exactly once, and a watchdog restores it if the projectile disappears.</li>
+<li>Phases: OUTBOUND (swept in sub-steps of at most 0.9 blocks), EMBEDDED in a block, EMBEDDED in an entity, RESTING, RETURNING (turns toward the owner's chest at <code>return.turn_rate</code> times <code>return.accuracy</code>, caught inside <code>catch_radius</code>; <code>return.maximum_duration</code> restores the item directly as a safety net).</li>
+</ol>
+<h2 id="targeting-homing-and-ricochet">Targeting, homing and ricochet</h2>
+<ul>
+<li><code>targeting.mode</code>: none (no selection; ricochet still picks its own targets), automatic, marked (only targets marked with <code>argon:throw_marker</code>, in the order marked) or hybrid (marked first, then automatic).</li>
+<li>Acquisition attempts happen at the throw, after each ricochet and when a target is lost. Each succeeds with <code>targeting.accuracy</code> percent when the mode is automatic or hybrid, rolled on the server. It is never re-rolled every tick, never stops a real collision from hitting, and marked targets need no roll.</li>
+<li>Candidates must be inside <code>detection_range</code> (and, for the first target, the <code>cone</code>), visible when <code>line_of_sight</code> is on, pass <code>filter</code> and <code>entity_types</code>, and not be the owner, allies, the owner's pets, or players the owner may not harm.</li>
+<li>Homing is separate from acquisition: <code>homing.accuracy</code> scales <code>homing.turn_rate</code>. Accuracy 0 acquires a target but never steers. A target that dies, leaves range or stays out of sight for more than 12 ticks follows <code>homing.lost_target</code>. Gravity and drag are skipped while chasing.</li>
+<li>Ricochet flies on to the next valid target after each hit (physically, at <code>ricochet.speed</code> and <code>ricochet.turn_rate</code>, damage times <code>damage_multiplier</code>), up to <code>ricochet.maximum</code> (0 = one fewer than <code>combat.maximum_targets</code>), then the return rules apply. Targets already struck are skipped unless <code>allow_repeat_targets</code>.</li>
+<li><code>argon:throw_marker</code> marks (or unmarks) the living entity you look at, up to <code>maximum_marked_targets</code>. Marks are shown only to the marker as sparks, cleared on logout, and used up by the next marked or hybrid throw.</li>
+</ul>
+<h2 id="steering-and-the-projectile-camera">Steering and the projectile camera</h2>
+<ul>
+<li>Set <code>steering.mode</code> to <code>look_direction</code> or <code>projectile_camera</code> and give the player an <code>argon:throw_steer</code> ability with a held key bind. While held, every flying projectile of theirs with a mode turns toward where they look. Gravity, drag and homing are off while steering. Letting go hands the projectile back to its normal flight, or sends it back with <code>return_on_release</code>.</li>
+<li><code>projectile_camera</code> also moves the camera to a chase view behind the projectile (<code>camera.distance</code>, clipped by blocks) with optional <code>fov</code>, <code>smoothing</code> and <code>roll</code>. The player stays the camera entity, so movement, look and packets keep working. Argon's flight and gravity camera adjustments, the wall-crawl roll, the first-person hand and first-person screen overlays are skipped while it is active.</li>
+<li>The camera ends the moment the key is released, the projectile hits something that stops it, is recalled, caught or removed, or the owner dies, logs out or changes dimension; the client also drops it by itself if the projectile entity disappears.</li>
+<li><code>owner_control</code> while the camera is active: normal, limited (movement speed -65 percent) or immobile (no walking or jumping), done with transient attribute modifiers.</li>
+</ul>
+<h2 id="pinning-deflection-perfect-catch-and-animations">Pinning, deflection, perfect catch and animations</h2>
+<ul>
+<li><code>pin</code>: a mob hit by the outbound item is moved against a wall within <code>pin.distance</code> behind it and held there (maximum slowness, position locked) for <code>pin.duration</code> ticks, or with 0 until the owner recalls (refreshed every second so a crash cannot leave anything slowed). While a mob is pinned the item does not start an automatic return at all; it stops and falls where it is. Players, the Ender Dragon, the Wither and <code>#c:bosses</code> are never pinned.</li>
+<li><code>entity_impact: embed</code>: the item lodges in the mob it hits and follows it until recalled, the mob dies (it then falls) or <code>block_impact.embed_duration</code> runs out. Ends the throw at that hit; does not combine with ricochet.</li>
+<li><code>deflection</code>: while flying, any projectile within <code>radius</code> that is not the owner's is reversed with vanilla's deflection and becomes the owner's.</li>
+<li><code>perfect_catch</code>: pressing the ability while the item is returning and within <code>window</code> ticks of arriving catches it at once; the next throw within <code>bonus_duration</code> ticks deals <code>damage_bonus</code> times damage.</li>
+<li><code>argon:throw_event</code> is a condition that is true for a number of ticks after the entity threw, recalled or caught with a throwable (<code>event</code>, <code>ticks</code>, optional <code>arm</code> right or left to match the player's main arm), so animation controllers can play throw, recall and catch clips and mirrored ones for left-handed players. The times are a synced attachment, so other players see them too.</li>
+</ul>
+<h2 id="damage">Damage</h2>
+<p>Damage uses <code>combat.damage_type</code> if set, otherwise the vanilla thrown-projectile source attributed to the owner. The item's own attack damage and enchantments are not added, so nothing is applied twice. The owner, allies, the owner's tamed pets, spectators and players the owner may not harm are skipped.</p>
+<h2 id="known-limits">Known limits</h2>
+<ul>
+<li>Removing the power while the item is out does not interrupt the flight; the item still returns, can be picked up, or is restored on logout, death or dimension change.</li>
+<li>The release point is computed from the shoulder and the look direction, not read from the player model, so it can sit slightly off the visible hand with some animations and suits.</li>
+</ul>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      This wiki covers Argon, the library used by the Heroes Addon 26.1 Test version (unreleased) for Minecraft 26.1<br> <a href="https://www.curseforge.com/minecraft/mc-mods/fsang18s-heropack">CurseForge</a> · <a href="https://modrinth.com/datapack/fsang18s-heropack">Modrinth</a> · <a href="https://discord.com/invite/BThgxXpBVs">Discord</a>
+    </div>
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.instant", "navigation.prune", "navigation.indexes", "navigation.top", "navigation.tracking", "search.suggest", "search.highlight", "toc.follow", "content.code.copy", "content.tabs.link"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="../../javascripts/move-version.js"></script>
+      
+        <script src="../../javascripts/copy-id.js"></script>
+      
+    
+  </body>
+</html>

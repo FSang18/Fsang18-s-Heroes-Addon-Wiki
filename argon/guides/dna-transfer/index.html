@@ -1,0 +1,1373 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Documentation for Argon, the Palladium library behind FSang18's Heroes - abilities, conditions, values, actions, effects and systems.">
+      
+      
+      
+        <link rel="canonical" href="https://FSang18.github.io/Fsang18-s-Heroes-Addon-Wiki/argon/guides/dna-transfer/">
+      
+      
+        <link rel="prev" href="../gravity/">
+      
+      
+        <link rel="next" href="../path-vision/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../uploads/2703a3f0b163b13baac62a9fe5115772/logo_big.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>DNA Transfer Station (the DNA Power Transfer Machine) - FSang18's Heroes Addon Wiki - Argon</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+      <link rel="stylesheet" href="../../stylesheets/power-pages.css">
+    
+      <link rel="stylesheet" href="../../stylesheets/argon.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="custom">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#dna-transfer-station-the-dna-power-transfer-machine" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <div data-md-color-scheme="default" data-md-component="outdated" hidden>
+        
+      </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="FSang18&#39;s Heroes Addon Wiki - Argon" class="md-header__button md-logo" aria-label="FSang18's Heroes Addon Wiki - Argon" data-md-component="logo">
+      
+  <img src="../../uploads/2703a3f0b163b13baac62a9fe5115772/logo_big.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            FSang18's Heroes Addon Wiki - Argon
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              DNA Transfer Station (the DNA Power Transfer Machine)
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="custom"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="FSang18&#39;s Heroes Addon Wiki - Argon" class="md-nav__button md-logo" aria-label="FSang18's Heroes Addon Wiki - Argon" data-md-component="logo">
+      
+  <img src="../../uploads/2703a3f0b163b13baac62a9fe5115772/logo_big.png" alt="logo">
+
+    </a>
+    FSang18's Heroes Addon Wiki - Argon
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../getting-started/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Getting Started
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Guides
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Guides
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../flight/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Controlled Flight
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gravity/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Directional Gravity
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    DNA Transfer Station
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    DNA Transfer Station
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#building-it" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Building it
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#using-it" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Using it
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vials" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Vials
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#which-powers-the-machine-touches" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Which powers the machine touches
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#config-argon-dna-transfertoml" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Config (argon-dna-transfer.toml)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#power-block" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Power Block
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#access-lock" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Access lock
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#safety-and-multiplayer-rules" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Safety and multiplayer rules
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#limits" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Limits
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#credits" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Credits
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../path-vision/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Path Vision
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tech-table/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tech Table
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../throwable-item/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Throwable Item
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../wall-crawling/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Wall Crawling
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../reference/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Reference
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../content/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Content
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#building-it" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Building it
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#using-it" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Using it
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vials" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Vials
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#which-powers-the-machine-touches" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Which powers the machine touches
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#config-argon-dna-transfertoml" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Config (argon-dna-transfer.toml)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#power-block" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Power Block
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#access-lock" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Access lock
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#safety-and-multiplayer-rules" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Safety and multiplayer rules
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#limits" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Limits
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#credits" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Credits
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="dna-transfer-station-the-dna-power-transfer-machine">DNA Transfer Station (the DNA Power Transfer Machine)</h1>
+<p>A multiblock machine that takes a Palladium superpower out of a player and into a vial, or gives a power from a vial to a player. DNA vials are only containers: they never grant anything by themselves. The machine does every transfer.</p>
+<p>Config: <code>config/argon-dna-transfer.toml</code>.</p>
+<h2 id="building-it">Building it</h2>
+<p>Seen from the front, the machine is four blocks. All of them have to face the same way, and the Chassis can be on either side.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a> [Station] [Chassis top]
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a> [Power ] [Chassis bottom]
+</code></pre></div>
+<table>
+<thead>
+<tr>
+<th>Block</th>
+<th>ID</th>
+<th>What it is</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>DNA Transfer Station</td>
+<td><code>argon:dna_transfer_screen</code></td>
+<td>The controller. Right-click for the screen. Its face shows the machine state (dark, lit, blinking), and its screen is the frame of the machine screen.</td>
+</tr>
+<tr>
+<td>Power Block</td>
+<td><code>argon:dna_transfer_power_block</code></td>
+<td>Directly under the Station. Required. Stores the RF (FE) the machine runs on; right-click it for its screen.</td>
+</tr>
+<tr>
+<td>Chamber (the Chassis in the code and below)</td>
+<td><code>argon:dna_transfer_chassis</code></td>
+<td>Two blocks high (placed like a door). The chamber the player stands in, with a sliding glass door.</td>
+</tr>
+</tbody>
+</table>
+<p>The Station scans only these positions (never loads a chunk), claims the Chassis so no second Station can run it, and lets go of it when it is broken or the structure stops being valid. A transfer running at that moment is cancelled and the door opens.</p>
+<h2 id="using-it">Using it</h2>
+<ol>
+<li>Open the door (right-click the Chassis from outside), step in. You must be inside the chamber, between its walls.</li>
+<li>Right-click the chamber wall (or the Station from outside) for the screen. Sneak and right-click inside to open or shut the door without the screen.</li>
+<li>Put a <strong>filled vial</strong> in the top slot and/or an <strong>empty vial</strong> in the bottom slot. If you have more than one power the machine can touch, pick one in the list.</li>
+<li>Shut the chamber door (the door icon on the screen, or right-click the Chamber from outside before you step in, then close it from the screen). START only works with the door shut; the status line says <strong>CLOSE THE CHAMBER DOOR TO START</strong> until it is.</li>
+<li>Press START. The door is locked for the whole transfer (100 ticks by default; nothing can open it, from inside or out), then it opens by itself (<code>open_door_on_completion</code>). If a transfer is cancelled the door opens at once.</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>Vials</th>
+<th>Player has a registered power</th>
+<th>Result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Empty only</td>
+<td>yes</td>
+<td><strong>Extract</strong>: power goes into the empty vial.</td>
+</tr>
+<tr>
+<td>Filled only</td>
+<td>no</td>
+<td><strong>Grant</strong>: the filled vial is left empty.</td>
+</tr>
+<tr>
+<td>Filled only</td>
+<td>yes</td>
+<td><strong>Overwrite</strong>: the power they have is destroyed and replaced. Needs an explicit CONFIRM OVERWRITE every time.</td>
+</tr>
+<tr>
+<td>Filled + empty</td>
+<td>yes</td>
+<td><strong>Exchange</strong>: their power goes into the empty vial, the new one is granted.</td>
+</tr>
+<tr>
+<td>Filled + empty</td>
+<td>no</td>
+<td><strong>Grant</strong> (the empty vial is left alone).</td>
+</tr>
+</tbody>
+</table>
+<p>Damage: <code>damage_per_vial_operation</code> (0.5 HP) for each vial filled or emptied, dealt only when the transfer completes. An exchange is two. By default it can never take the player below half a heart.</p>
+<p>A transfer is cancelled, changing nothing and costing nothing, if the occupant leaves, dies or disconnects, a part of the structure is removed, the energy runs out, or anything about the player or the vials differs from what was agreed when Start was pressed.</p>
+<h2 id="vials">Vials</h2>
+<ul>
+<li><code>argon:empty_dna_vial</code>, <code>argon:filled_dna_vial</code>.</li>
+<li>A filled vial holds <code>argon:stored_power</code> (the power id and its liquid colour) and, for powers with <code>persistent_data</code>, <code>argon:stored_power_state</code> (that power's saved progress: level, experience, skill points, bought abilities). Filled vials do not stack, so different powers never merge.</li>
+<li>Extracting with state preserved also clears the progress from the donor, so progress exists in one place only.</li>
+<li><code>/argon dna_vial &lt;player&gt; &lt;power&gt;</code> (permission level 2) gives a filled vial of a registered power, for testing and staff.</li>
+</ul>
+<h2 id="which-powers-the-machine-touches">Which powers the machine touches</h2>
+<p>The machine only ever works on powers listed in data, and only on a player's <strong>superpowers</strong> (the ones Palladium keeps in the player's superpower list: <code>SuperpowerUtil</code>). Suit powers, ability-given powers and anything else are never listed by it and so are never touched.</p>
+<p>Each file in <code>data/&lt;namespace&gt;/dna_transfer/powers/</code> can register one power, or a whole list of them in one script. It can take any of three shapes:</p>
+<p><strong>1. One power</strong> (an object):</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="p">{</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">  </span><span class="nt">"power"</span><span class="p">:</span><span class="w"> </span><span class="s2">"fsang:dc/kryptonian/absolute"</span><span class="p">,</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">  </span><span class="nt">"can_extract"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">  </span><span class="nt">"can_grant"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">  </span><span class="nt">"can_overwrite"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">  </span><span class="nt">"can_be_overwritten"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="w">  </span><span class="nt">"preserve_state"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="w">  </span><span class="nt">"display_name"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">"text"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Kryptonian"</span><span class="w"> </span><span class="p">},</span>
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="w">  </span><span class="nt">"colors"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"#3BF2C4"</span><span class="p">,</span><span class="w"> </span><span class="s2">"#1B7A8C"</span><span class="p">],</span>
+<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="w">  </span><span class="nt">"requires"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span>
+<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="w">  </span><span class="nt">"blocked_if_holding"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span>
+<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="w">  </span><span class="nt">"energy_cost_to_start"</span><span class="p">:</span><span class="w"> </span><span class="mi">2000</span><span class="p">,</span>
+<a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a><span class="w">  </span><span class="nt">"energy_cost_per_tick"</span><span class="p">:</span><span class="w"> </span><span class="mi">30</span><span class="p">,</span>
+<a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a><span class="w">  </span><span class="nt">"processing_ticks"</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span>
+<a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a><span class="p">}</span>
+</code></pre></div>
+<p><strong>2. An array of powers.</strong> Each item is an object like the one above, or just a power id:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="p">[</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">  </span><span class="s2">"mypack:mutant/regeneration"</span><span class="p">,</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">  </span><span class="p">{</span><span class="w"> </span><span class="nt">"power"</span><span class="p">:</span><span class="w"> </span><span class="s2">"mypack:mutant/telepathy"</span><span class="p">,</span><span class="w"> </span><span class="nt">"can_overwrite"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w"> </span><span class="p">}</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="p">]</span>
+</code></pre></div>
+<p><strong>3. An object with a <code>powers</code> list and a <code>defaults</code> area.</strong> Whatever <code>defaults</code> sets (the costs, or any other field below) applies to every power in the list that does not set it itself, so a pack's costs are written once and a power overrides them only if it needs to:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="p">{</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">  </span><span class="nt">"defaults"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="w">    </span><span class="nt">"energy_cost_to_start"</span><span class="p">:</span><span class="w"> </span><span class="mi">2000</span><span class="p">,</span>
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="w">    </span><span class="nt">"energy_cost_per_tick"</span><span class="p">:</span><span class="w"> </span><span class="mi">30</span><span class="p">,</span>
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="w">    </span><span class="nt">"processing_ticks"</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span>
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="w">  </span><span class="p">},</span>
+<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="w">  </span><span class="nt">"powers"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="w">    </span><span class="p">{</span><span class="w"> </span><span class="nt">"power"</span><span class="p">:</span><span class="w"> </span><span class="s2">"mypack:mutant/regeneration"</span><span class="w"> </span><span class="p">},</span>
+<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="w">    </span><span class="p">{</span><span class="w"> </span><span class="nt">"power"</span><span class="p">:</span><span class="w"> </span><span class="s2">"mypack:mutant/telepathy"</span><span class="p">,</span><span class="w"> </span><span class="nt">"processing_ticks"</span><span class="p">:</span><span class="w"> </span><span class="mi">160</span><span class="w"> </span><span class="p">},</span>
+<a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a><span class="w">    </span><span class="p">{</span><span class="w"> </span><span class="nt">"power"</span><span class="p">:</span><span class="w"> </span><span class="s2">"mypack:cosmic/herald"</span><span class="p">,</span><span class="w"> </span><span class="nt">"energy_cost_to_start"</span><span class="p">:</span><span class="w"> </span><span class="mi">8000</span><span class="p">,</span><span class="w"> </span><span class="nt">"energy_cost_per_tick"</span><span class="p">:</span><span class="w"> </span><span class="mi">80</span><span class="p">,</span><span class="w"> </span><span class="nt">"processing_ticks"</span><span class="p">:</span><span class="w"> </span><span class="mi">300</span><span class="w"> </span><span class="p">}</span>
+<a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a><span class="w">  </span><span class="p">]</span>
+<a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a><span class="p">}</span>
+</code></pre></div>
+<p><strong>Vial colours in a script.</strong> <code>colors</code> is an ordinary field, so it works in <code>defaults</code> too: put it there for every power in the file to share, and give a power its own <code>colors</code> to replace it (the whole array is replaced, not merged):</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="p">{</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="w">  </span><span class="nt">"defaults"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">"colors"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"#3BF2C4"</span><span class="p">]</span><span class="w"> </span><span class="p">},</span>
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="w">  </span><span class="nt">"powers"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="w">    </span><span class="p">{</span><span class="w"> </span><span class="nt">"power"</span><span class="p">:</span><span class="w"> </span><span class="s2">"mypack:mutant/regeneration"</span><span class="w"> </span><span class="p">},</span>
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="w">    </span><span class="p">{</span><span class="w"> </span><span class="nt">"power"</span><span class="p">:</span><span class="w"> </span><span class="s2">"mypack:mutant/telepathy"</span><span class="p">,</span><span class="w"> </span><span class="nt">"colors"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"#B07CFF"</span><span class="p">]</span><span class="w"> </span><span class="p">},</span>
+<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="w">    </span><span class="p">{</span><span class="w"> </span><span class="nt">"power"</span><span class="p">:</span><span class="w"> </span><span class="s2">"mypack:cosmic/herald"</span><span class="p">,</span><span class="w"> </span><span class="nt">"colors"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"#55FF55"</span><span class="p">,</span><span class="w"> </span><span class="s2">"#8B1A1A"</span><span class="p">]</span><span class="w"> </span><span class="p">},</span>
+<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="w">    </span><span class="p">{</span><span class="w"> </span><span class="nt">"power"</span><span class="p">:</span><span class="w"> </span><span class="s2">"mypack:speed/force"</span><span class="p">,</span><span class="w"> </span><span class="nt">"colors"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"#FFD83B"</span><span class="p">,</span><span class="w"> </span><span class="s2">"#FF7A1A"</span><span class="p">,</span><span class="w"> </span><span class="s2">"#8B1A1A"</span><span class="p">]</span><span class="w"> </span><span class="p">}</span>
+<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a><span class="w">  </span><span class="p">]</span>
+<a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a><span class="p">}</span>
+</code></pre></div>
+<p>The first power gets the default colour, the second its own single colour, the third a two-tone liquid (green on the upper left, dark red on the lower right) and the fourth three diagonal bands, yellow then orange then dark red. A power with no colour anywhere gets one picked from its id. A vial keeps the colours it was filled with, so changing a script does not recolour vials that already exist.</p>
+<p>FSang's own powers are one script like this (<code>data/fsang/dna_transfer/powers/fsang_powers.json</code>). An entry that does not parse is logged and skipped; the rest of the file still loads.</p>
+<p>All fields except <code>power</code> / <code>power_tag</code> are optional and the values above are the defaults.</p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>power</code> or <code>power_tag</code></td>
+<td>The power's id, or a power tag to register many at once. An id wins over a tag.</td>
+</tr>
+<tr>
+<td><code>enabled</code></td>
+<td><code>false</code> takes the power out again. Use it in a later pack to exclude a power another pack or a tag registered.</td>
+</tr>
+<tr>
+<td><code>can_extract</code></td>
+<td>May be taken out of a player and stored in an empty vial.</td>
+</tr>
+<tr>
+<td><code>can_grant</code></td>
+<td>A vial holding it may be used to give it to a player.</td>
+</tr>
+<tr>
+<td><code>can_overwrite</code></td>
+<td>When granted, it may replace a power the player already has.</td>
+</tr>
+<tr>
+<td><code>can_be_overwritten</code></td>
+<td>A player's copy may be destroyed by an overwrite (no vial to keep it).</td>
+</tr>
+<tr>
+<td><code>preserve_state</code></td>
+<td>The vial also carries the power's saved progress. Also needs the power's own <code>persistent_data</code>, and is off everywhere if the config says so.</td>
+</tr>
+<tr>
+<td><code>display_name</code></td>
+<td>A text component to show instead of the power's own name.</td>
+</tr>
+<tr>
+<td><code>colors</code></td>
+<td>The colours of its vials' liquid: an array of one to three hex codes (<code>"#3BF2C4"</code>, <code>"0x3BF2C4"</code> or <code>"3BF2C4"</code>; plain numbers work too). <strong>The order written is the order they are used.</strong> One colour fills the liquid. Two split it along the diagonal from its top right corner to its bottom left corner, the first on the upper left and the second on the lower right. Three cut it into three diagonal bands, the first on the upper left, the second in the middle and the third on the lower right. A lone <code>"color": "#3BF2C4"</code> still works as a one-entry array. By default one colour is picked from the power's id.</td>
+</tr>
+<tr>
+<td><code>requires</code></td>
+<td>Powers the player must already hold for this one to be granted.</td>
+</tr>
+<tr>
+<td><code>blocked_if_holding</code></td>
+<td>Powers that stop this one being granted while the player holds them.</td>
+</tr>
+<tr>
+<td><code>energy_cost_to_start</code></td>
+<td>Energy (FE) taken from the Power Block when a transfer of this power starts. Default: the config's <code>energy_cost_to_start</code>.</td>
+</tr>
+<tr>
+<td><code>energy_cost_per_tick</code></td>
+<td>Energy (FE) taken every tick while it runs. Default: the config's <code>energy_cost_per_tick</code>.</td>
+</tr>
+<tr>
+<td><code>processing_ticks</code></td>
+<td>How long the transfer takes, in ticks (20 = one second). Default: the config's <code>processing_ticks</code>.</td>
+</tr>
+</tbody>
+</table>
+<p>Whose costs a transfer uses: an extraction uses the power taken out, a grant or an overwrite the power that arrives, and an exchange (which moves both) the larger of the two for each of the three numbers.</p>
+<p>Powers that are the parent of another power the player holds cannot be extracted or overwritten until the child is gone. A grant also has to fit Palladium's own rules (a free superpower slot, or the parent power for a child power); the machine checks this before changing anything.</p>
+<p>Examples:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="p">{</span><span class="w"> </span><span class="nt">"power_tag"</span><span class="p">:</span><span class="w"> </span><span class="s2">"mypack:dna_compatible"</span><span class="w"> </span><span class="p">}</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="p">{</span><span class="w"> </span><span class="nt">"power"</span><span class="p">:</span><span class="w"> </span><span class="s2">"mypack:mutant/regeneration"</span><span class="p">,</span><span class="w"> </span><span class="nt">"can_overwrite"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w"> </span><span class="nt">"requires"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"mypack:mutant/gene"</span><span class="p">]</span><span class="w"> </span><span class="p">}</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="p">{</span><span class="w"> </span><span class="nt">"power"</span><span class="p">:</span><span class="w"> </span><span class="s2">"fsang:marvel/mutant/toad"</span><span class="p">,</span><span class="w"> </span><span class="nt">"enabled"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w"> </span><span class="p">}</span>
+</code></pre></div>
+<h2 id="config-argon-dna-transfertoml">Config (<code>argon-dna-transfer.toml</code>)</h2>
+<p><code>processing_ticks</code> (100), <code>damage_per_vial_operation</code> (0.5), <code>damage_can_kill</code> (false), <code>energy_cost_to_start</code> (2000), <code>energy_cost_per_tick</code> (30), <code>energy_transfer_rate</code> (2000), <code>fuel_energy_per_tick</code> (40), <code>allow_username_lock</code> (true), <code>open_door_on_completion</code> (true), <code>require_occupant_to_start</code> (true), <code>preserve_power_state</code> (true), <code>max_state_bytes</code> (65536).</p>
+<p>A default transfer therefore costs 2,000 FE to start plus 30 FE a tick (5,000 FE in all over the default 100 ticks). Set both to 0 and the machine needs no energy at all. If you already have a <code>argon-dna-transfer.toml</code>, edit it or delete it to get the new defaults.</p>
+<h2 id="power-block">Power Block</h2>
+<p>The Power Block (id <code>argon:dna_transfer_power_block</code>) stores the energy (FE) the machine runs on. Cables and generators can fill it from any side, and nothing can pull energy back out through them.</p>
+<p>Right-click it for its screen: an energy bar, a <strong>charge from</strong> slot on the left (an item that holds energy, such as a battery, is emptied into the block) and a <strong>charge to</strong> slot on the right (an item that takes energy is charged from the block), up to <code>energy_transfer_rate</code> FE a tick each. Any item that can hold energy works, including Argon's energy items. A <strong>fuel</strong> slot in the middle burns anything a furnace burns into energy: <code>fuel_energy_per_tick</code> FE for every tick of the item's burn time (40 FE a tick, so a piece of coal gives 64,000 FE). It only burns while the buffer has room for the energy, so nothing is wasted.</p>
+<p><strong>Capacity and keeping the energy.</strong> A Power Block holds 100,000 FE by default. Capacity modules are installed from the Tech Table's Modify tab (put the Power Block in the device slot): each module adds 50,000 FE, up to 500,000 FE (eight modules). The capacity is not a config value: it is the <code>argon:energy_capacity</code> component on the item, which the <code>argon:energy_capacity</code> modification effect changes, so the numbers live in the modification file (in FSang: <code>data/fsang/argon/suit_modification/power_block_capacity.json</code>, using <code>fsang:module_capacity</code>; copy it with your own module item for another pack). The DNA Transfer Station takes no modules.</p>
+<p>When a Power Block is broken it drops as an item that keeps its capacity (<code>argon:energy_capacity</code>), the Tech Table modules recorded as installed (<code>argon:suit_modifications</code>, which is what the Tech Table reads back) and the energy it held (<code>argon:energy</code>), and placing it again gives them back. This is done by its loot table copying those three components from the block entity. The Power Block item is itself an energy item, so it can also be charged, or drained into another Power Block. The slot contents (including the fuel) drop separately, as with any container.</p>
+<p>A transfer is paid for from this block: the start cost is taken when Start is accepted, and the per-tick cost every tick while it runs. If the buffer runs dry the transfer is cancelled and nothing changes.</p>
+<h2 id="access-lock">Access lock</h2>
+<p>Public, Private (owner only), or a named player. The player who places the Station owns it. In named-player mode <strong>only</strong> that player can use the machine (the owner included, who can still change the lock to let themselves back in). Only the owner (or an operator) can change the lock. The lock stores UUIDs; names are only shown. It limits who may use the machine and never traps anyone. Clicking the access button cycles Public, Private, then the named player (once one has been set), then back to Public.</p>
+<h2 id="safety-and-multiplayer-rules">Safety and multiplayer rules</h2>
+<ul>
+<li>Every decision is made on the server from its own data: who is in the chamber (found from positions), what powers they hold (Palladium), what the vials hold, and whether the lock allows it. Packets from the screen are only requests and are checked again. A client cannot send a power id to be granted; the text is only compared with what the occupant really has.</li>
+<li>By default only the player inside the chamber can start a transfer, so nobody can strip another player from outside.</li>
+<li>Both vial slots shut while a transfer runs; the door cannot be opened by hand until it ends.</li>
+<li>The chamber interior is empty, so a closed door never suffocates anyone. A world reload never leaves a transfer running; it just leaves the door as it was, and the player can open it from inside.</li>
+</ul>
+<h2 id="limits">Limits</h2>
+<ul>
+<li>Powers a player gets from anything other than the superpower list (suit sets, abilities) are not superpowers, so the machine leaves them alone on purpose.</li>
+<li>Saved power data in a vial can be edited by anyone with creative or NBT tools. The machine caps its size (<code>max_state_bytes</code>) but cannot judge what is inside.</li>
+</ul>
+<h2 id="credits">Credits</h2>
+<p>Machine, vial and chassis textures are adapted from the "unused-textures" pack by Malcolm Riley (https://github.com/malcolmriley/unused-textures), licensed CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/). Changes: copied and renamed, and the chassis glass has its transparent middle filled with a faint translucent blue. The machine screen is framed with the Station block's own front texture and uses the SOL menu's button outline from this workspace, with a grid and scan lines copied from the Tech Table's look; its chamber picture is drawn from the Chassis block's textures.</p>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      This wiki covers Argon, the library used by the Heroes Addon 26.1 Test version (unreleased) for Minecraft 26.1<br> <a href="https://www.curseforge.com/minecraft/mc-mods/fsang18s-heropack">CurseForge</a> · <a href="https://modrinth.com/datapack/fsang18s-heropack">Modrinth</a> · <a href="https://discord.com/invite/BThgxXpBVs">Discord</a>
+    </div>
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.instant", "navigation.prune", "navigation.indexes", "navigation.top", "navigation.tracking", "search.suggest", "search.highlight", "toc.follow", "content.code.copy", "content.tabs.link"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="../../javascripts/move-version.js"></script>
+      
+        <script src="../../javascripts/copy-id.js"></script>
+      
+    
+  </body>
+</html>
