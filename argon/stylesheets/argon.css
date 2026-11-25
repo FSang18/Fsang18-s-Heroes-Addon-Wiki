@@ -69,3 +69,5 @@ table.argon-fields abbr { text-decoration: underline dotted; cursor: help; }
 
 [data-md-color-scheme="default"] table.argon-fields th { background: color-mix(in srgb, var(--y, #ffc928) 30%, transparent); }
 [data-md-color-scheme="default"] .argon-meta-label { color: var(--y-deep, #8a6500); }
+
+.home-blurb { max-width: 40rem; margin: 0 auto 1.4rem; font-size: .92rem; line-height: 1.6; }
