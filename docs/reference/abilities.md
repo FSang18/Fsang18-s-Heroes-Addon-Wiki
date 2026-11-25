@@ -6,7 +6,7 @@ title: Abilities
 
 <p class="argon-intro">Abilities are what a power actually does. They go into the <code>abilities</code> field of a Palladium power, and their state decides when they are unlocked and enabled. Every ability that comes with Argon is listed below.</p>
 
-<p class="argon-count">127 listed &middot; Argon 0.3.31</p>
+<p class="argon-count">127 listed &middot; Argon 1.0.0</p>
 
 ### Ability Bar {#argonability_bar}
 

@@ -6,7 +6,7 @@ title: Render Layers
 
 <p class="argon-intro">Render layers draw extra models or effects on top of an entity. These are the render layers Argon adds.</p>
 
-<p class="argon-count">3 listed &middot; Argon 0.3.31</p>
+<p class="argon-count">3 listed &middot; Argon 1.0.0</p>
 
 ### Anchored Lightning Sparks {#argonanchored_lightning_sparks}
 

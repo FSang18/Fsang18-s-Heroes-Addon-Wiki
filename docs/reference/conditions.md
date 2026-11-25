@@ -6,7 +6,7 @@ title: Conditions
 
 <p class="argon-intro">Conditions are checks that return true or false. They are used in ability states, targets, visibility rules and anywhere else a condition is accepted. Every condition that comes with Argon is listed below.</p>
 
-<p class="argon-count">59 listed &middot; Argon 0.3.31</p>
+<p class="argon-count">59 listed &middot; Argon 1.0.0</p>
 
 ### Ability Bar Active {#argonability_bar_active}
 

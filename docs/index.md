@@ -6,19 +6,35 @@ hide:
 
 <div class="hero home-hero" markdown>
 
-<div class="home-logo"><img src="uploads/2703a3f0b163b13baac62a9fe5115772/logo_big.png" alt="FSang18's Heroes logo"></div>
+<div class="home-logo"><img src="uploads/argon/argon.png" alt="Argon logo"></div>
 
 # Argon Wiki
 
-<p class="home-tag">Abilities, conditions and systems for Palladium addon packs</p>
+<p class="home-tag">A library mod for Palladium on Minecraft 26.1.2</p>
 
-<p class="home-tag">Covers Argon 0.3.31</p>
+<p class="home-tag">Covers Argon 1.0.0</p>
 
-<div class="home-warn"><span class="home-warn-badge">Unreleased version</span><p><b>Argon is the library behind the 26.1 build of FSang18's Heroes, which is not public yet. Settings and IDs may still change until it is released.</b></p><p>The reference pages are generated from the game itself, so they always match the build they were made from.</p></div>
+<p class="home-blurb">Argon helps pack developers increase what they can make. It adds abilities, conditions, render types and whole systems to Palladium, so advanced powers can be built in plain JSON without writing any Java.</p>
 
-<div class="home-actions"><a class="md-button md-button--primary" href="getting-started/">Get started</a><a class="md-button" href="reference/abilities/">Abilities</a><a class="md-button" href="reference/conditions/">Conditions</a></div>
+<div class="home-actions"><a class="md-button md-button--primary" href="getting-started/">Get started</a><a class="md-button" href="reference/abilities/">Abilities</a><a class="md-button" href="reference/conditions/">Conditions</a><a class="md-button" href="https://modrinth.com/mod/argon-fsang18">Modrinth</a></div>
 
 </div>
+
+## What is in Argon
+
+- **Abilities.** Energy beams (charged, cone shaped and bouncing), area bursts, ground zones, wards, domes, damage scaling and reduction, cooldown control, dispelling, cloning, possession, telekinesis, grappling, web swinging, teleporting, time control and more.
+- **Conditions.** Nearby entities, biome, height, sky access, health and more.
+- **Effects.** Bleeding, burning, freezing, shock, fear, pacified, power dampening and a few others.
+- **Movement.** Controlled flight with momentum and banking, directional gravity, wall crawling, charged takeoffs, and carrying entities or blocks.
+- **Ability bar.** A ready made bar with presets and crouch variants, so a power can have more abilities than keys.
+- **Workstations.** A Tech Table for crafting, modifying and customizing suit modules and accessories, a DNA transfer machine and a Chemical Synthesizer.
+- **Built in documentation.** Every ability and condition documents its own options in Palladium's documentation.
+
+Argon only holds features that are not part of Palladium. Anything added to Palladium itself stays there.
+
+## Requirements
+
+Minecraft 26.1.2 with NeoForge, Palladium 26.1.2 and Curios API. Argon does nothing on its own, so players usually install it because a pack requires it.
 
 ## Explore the wiki
 

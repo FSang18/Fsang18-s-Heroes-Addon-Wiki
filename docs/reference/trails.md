@@ -6,7 +6,7 @@ title: Trails
 
 <p class="argon-intro">Trails follow an entity as it moves. These are the trail types Argon adds.</p>
 
-<p class="argon-count">1 listed &middot; Argon 0.3.31</p>
+<p class="argon-count">1 listed &middot; Argon 1.0.0</p>
 
 ### Motion Blur Trail {#argonmotion_blur}
 

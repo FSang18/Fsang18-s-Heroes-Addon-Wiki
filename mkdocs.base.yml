@@ -4,9 +4,8 @@ site_url: !ENV [SITE_URL, ""]
 repo_url: !ENV [REPO_URL, ""]
 edit_uri: !ENV [EDIT_URI, ""]
 copyright: >-
-  This wiki covers Argon, the library used by the Heroes Addon 26.1 Test version (unreleased) for Minecraft 26.1<br>
-  <a href="https://www.curseforge.com/minecraft/mc-mods/fsang18s-heropack">CurseForge</a> ·
-  <a href="https://modrinth.com/datapack/fsang18s-heropack">Modrinth</a> ·
+  This wiki covers Argon, a library mod for Palladium on Minecraft 26.1.2<br>
+  <a href="https://modrinth.com/mod/argon-fsang18">Modrinth</a> ·
   <a href="https://discord.com/invite/BThgxXpBVs">Discord</a>
 
 extra:

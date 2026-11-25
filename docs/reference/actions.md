@@ -6,7 +6,7 @@ title: Actions
 
 <p class="argon-intro">Actions are things that happen once, for example running inside an action ability or when a beam hits something. These are the actions Argon adds.</p>
 
-<p class="argon-count">3 listed &middot; Argon 0.3.31</p>
+<p class="argon-count">3 listed &middot; Argon 1.0.0</p>
 
 ### Directional Leap {#argondirectional_leap}
 
