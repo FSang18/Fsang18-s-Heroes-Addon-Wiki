@@ -17,4 +17,4 @@ These pages are generated from the game, so the keys, types and descriptions alw
 <a class="home-card hc-guide" href="widgets/" style="--c:#94a3b8"><span class="home-ico"></span><b>UI Widgets</b><span>Building blocks of power screens.</span><i class="home-go">&rarr;</i></a>
 </div>
 
-Also in this section: [Trails](trails.md), [Dynamic Textures](dynamic-textures.md), [Flight Types](flight-types.md) and [MoLang Queries](molang.md).
+Also in this section: [Module Functions](module-functions.md), [Trails](trails.md), [Dynamic Textures](dynamic-textures.md), [Flight Types](flight-types.md) and [MoLang Queries](molang.md).

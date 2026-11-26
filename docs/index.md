@@ -12,7 +12,7 @@ hide:
 
 <p class="home-tag">A library mod for Palladium on Minecraft 26.1.2</p>
 
-<p class="home-tag">Covers Argon 1.0.0</p>
+<p class="home-tag">Covers Argon 1.0.1</p>
 
 <p class="home-blurb">Argon helps pack developers increase what they can make. It adds abilities, conditions, render types and whole systems to Palladium, so advanced powers can be built in plain JSON without writing any Java.</p>
 

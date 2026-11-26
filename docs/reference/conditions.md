@@ -6,7 +6,7 @@ title: Conditions
 
 <p class="argon-intro">Conditions are checks that return true or false. They are used in ability states, targets, visibility rules and anywhere else a condition is accepted. Every condition that comes with Argon is listed below.</p>
 
-<p class="argon-count">59 listed &middot; Argon 1.0.0</p>
+<p class="argon-count">61 listed &middot; Argon 1.0.1</p>
 
 ### Ability Bar Active {#argonability_bar_active}
 
@@ -638,6 +638,28 @@ title: Conditions
 
 ---
 
+### Has Tech Slot Item {#argonhas_tech_slot_item}
+
+<div class="argon-meta"><span class="argon-meta-label">ID</span><code class="argon-id" title="Click to copy">argon:has_tech_slot_item</code></div>
+
+<div class="argon-desc">True while the item in the given player slot has something in one of its Tech Table Customize slots. "tech_slot" limits it to one slot ID, "items" to certain items or item tags ("#namespace:tag").</div>
+
+=== "Settings"
+
+    <div class="argon-table-wrap"><table class="argon-fields"><thead><tr><th>Key</th><th>Type</th><th>Description</th><th>Required</th><th>Fallback</th></tr></thead><tbody><tr><td><code>slot</code></td><td><code>mainhand</code><br><code>offhand</code><br><code>head</code><br><code>chest</code><br><code>legs</code><br><code>feet</code><br><code>body</code><br><code>curios:head</code><br><code>curios:necklace</code></td><td>The player slot holding the customized item.</td><td class="argon-center"><span class="argon-yes">&#10003;</span></td><td class="argon-fallback">/</td></tr><tr><td><code>tech_slot</code></td><td>Identifier</td><td>Only check the Customize slot with this ID.</td><td class="argon-center"><span class="argon-no">&#10007;</span></td><td class="argon-fallback">/</td></tr><tr><td><code>items</code></td><td>String, String[]</td><td>Only count these items or item tags.</td><td class="argon-center"><span class="argon-no">&#10007;</span></td><td class="argon-fallback">/</td></tr></tbody></table></div>
+
+=== "Example"
+
+    ```json
+    {
+      "type": "argon:has_tech_slot_item",
+      "slot": "chest",
+      "tech_slot": "example:core"
+    }
+    ```
+
+---
+
 ### Health {#argonhealth}
 
 <div class="argon-meta"><span class="argon-meta-label">ID</span><code class="argon-id" title="Click to copy">argon:health</code></div>
@@ -1140,6 +1162,28 @@ title: Conditions
     {
       "type": "argon:targeted_by_mob",
       "range": 24
+    }
+    ```
+
+---
+
+### Tech Toggle {#argontech_toggle}
+
+<div class="argon-meta"><span class="argon-meta-label">ID</span><code class="argon-id" title="Click to copy">argon:tech_toggle</code></div>
+
+<div class="argon-desc">True while a Tech Table Customize button is switched on for the item in the given player slot.</div>
+
+=== "Settings"
+
+    <div class="argon-table-wrap"><table class="argon-fields"><thead><tr><th>Key</th><th>Type</th><th>Description</th><th>Required</th><th>Fallback</th></tr></thead><tbody><tr><td><code>slot</code></td><td><code>mainhand</code><br><code>offhand</code><br><code>head</code><br><code>chest</code><br><code>legs</code><br><code>feet</code><br><code>body</code><br><code>curios:head</code><br><code>curios:necklace</code></td><td>The player slot holding the customized item.</td><td class="argon-center"><span class="argon-yes">&#10003;</span></td><td class="argon-fallback">/</td></tr><tr><td><code>toggle</code></td><td>Identifier</td><td>The ID of the button.</td><td class="argon-center"><span class="argon-yes">&#10003;</span></td><td class="argon-fallback">/</td></tr></tbody></table></div>
+
+=== "Example"
+
+    ```json
+    {
+      "type": "argon:tech_toggle",
+      "slot": "chest",
+      "toggle": "example:overdrive"
     }
     ```
 

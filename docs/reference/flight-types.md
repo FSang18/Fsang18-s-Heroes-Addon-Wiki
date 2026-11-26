@@ -6,7 +6,7 @@ title: Flight Types
 
 <p class="argon-intro">Flight types are used as the <code>flight_type</code> of a flight ability and decide how flying feels.</p>
 
-<p class="argon-count">2 listed &middot; Argon 1.0.0</p>
+<p class="argon-count">2 listed &middot; Argon 1.0.1</p>
 
 ### Controlled Flight {#argoncontrolled_flight}
 

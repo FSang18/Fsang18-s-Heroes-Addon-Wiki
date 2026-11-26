@@ -6,7 +6,7 @@ title: Values
 
 <p class="argon-intro">Values are numbers, text or colors that are calculated while the game runs, so a setting can follow a level, a dial, a stat or any other changing source instead of staying fixed.</p>
 
-<p class="argon-count">6 listed &middot; Argon 1.0.0</p>
+<p class="argon-count">6 listed &middot; Argon 1.0.1</p>
 
 ### Ability Bar Slot {#argonability_bar_slot}
 

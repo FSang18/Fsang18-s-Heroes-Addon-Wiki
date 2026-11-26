@@ -6,7 +6,7 @@ title: Beams
 
 <p class="argon-intro">Beam renderers decide how a beam looks. Use their ID as the <code>beam_renderer</code> of an ability that shoots a beam.</p>
 
-<p class="argon-count">5 listed &middot; Argon 1.0.0</p>
+<p class="argon-count">5 listed &middot; Argon 1.0.1</p>
 
 ### Boxed Textured {#argonboxed_textured}
 

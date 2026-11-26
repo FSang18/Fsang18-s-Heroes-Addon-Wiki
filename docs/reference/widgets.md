@@ -6,7 +6,7 @@ title: UI Widgets
 
 <p class="argon-intro">Widgets are the building blocks of power screens and HUD layouts. These are the widgets Argon adds.</p>
 
-<p class="argon-count">2 listed &middot; Argon 1.0.0</p>
+<p class="argon-count">2 listed &middot; Argon 1.0.1</p>
 
 ### Ability Bar {#argonability_bar}
 
