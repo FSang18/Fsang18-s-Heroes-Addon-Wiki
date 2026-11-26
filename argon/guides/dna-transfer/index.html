@@ -569,10 +569,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#config-argon-dna-transfertoml" class="md-nav__link">
+  <a href="#transfer-cost" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Config (argon-dna-transfer.toml)
+        Transfer cost
       
     </span>
   </a>
@@ -1008,10 +1008,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#config-argon-dna-transfertoml" class="md-nav__link">
+  <a href="#transfer-cost" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Config (argon-dna-transfer.toml)
+        Transfer cost
       
     </span>
   </a>
@@ -1095,7 +1095,6 @@
 
 <h1 id="dna-transfer-station-the-dna-power-transfer-machine">DNA Transfer Station (the DNA Power Transfer Machine)</h1>
 <p>A multiblock machine that takes a Palladium superpower out of a player and into a vial, or gives a power from a vial to a player. DNA vials are only containers: they never grant anything by themselves. The machine does every transfer.</p>
-<p>Config: <code>config/argon-dna-transfer.toml</code>.</p>
 <h2 id="building-it">Building it</h2>
 <p>Seen from the front, the machine is four blocks. All of them have to face the same way, and the Chassis can be on either side.</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a> [Station] [Chassis top]
@@ -1134,7 +1133,7 @@
 <li>Right-click the chamber wall (or the Station from outside) for the screen. Sneak and right-click inside to open or shut the door without the screen.</li>
 <li>Put a <strong>filled vial</strong> in the top slot and/or an <strong>empty vial</strong> in the bottom slot. If you have more than one power the machine can touch, pick one in the list.</li>
 <li>Shut the chamber door (the door icon on the screen, or right-click the Chamber from outside before you step in, then close it from the screen). START only works with the door shut; the status line says <strong>CLOSE THE CHAMBER DOOR TO START</strong> until it is.</li>
-<li>Press START. The door is locked for the whole transfer (100 ticks by default; nothing can open it, from inside or out), then it opens by itself (<code>open_door_on_completion</code>). If a transfer is cancelled the door opens at once.</li>
+<li>Press START. The door is locked for the whole transfer (100 ticks by default; nothing can open it, from inside or out), then it opens by itself. If a transfer is cancelled the door opens at once.</li>
 </ol>
 <table>
 <thead>
@@ -1172,7 +1171,7 @@
 </tr>
 </tbody>
 </table>
-<p>Damage: <code>damage_per_vial_operation</code> (0.5 HP) for each vial filled or emptied, dealt only when the transfer completes. An exchange is two. By default it can never take the player below half a heart.</p>
+<p>Damage: 0.5 HP for each vial filled or emptied, dealt only when the transfer completes. An exchange is two. It can never take the player below half a heart.</p>
 <p>A transfer is cancelled, changing nothing and costing nothing, if the occupant leaves, dies or disconnects, a part of the structure is removed, the energy runs out, or anything about the player or the vials differs from what was agreed when Start was pressed.</p>
 <h2 id="vials">Vials</h2>
 <ul>
@@ -1269,7 +1268,7 @@
 </tr>
 <tr>
 <td><code>preserve_state</code></td>
-<td>The vial also carries the power's saved progress. Also needs the power's own <code>persistent_data</code>, and is off everywhere if the config says so.</td>
+<td>The vial also carries the power's saved progress. Also needs the power's own <code>persistent_data</code>.</td>
 </tr>
 <tr>
 <td><code>display_name</code></td>
@@ -1289,15 +1288,15 @@
 </tr>
 <tr>
 <td><code>energy_cost_to_start</code></td>
-<td>Energy (FE) taken from the Power Block when a transfer of this power starts. Default: the config's <code>energy_cost_to_start</code>.</td>
+<td>Energy (FE) taken from the Power Block when a transfer of this power starts. Default: 2000.</td>
 </tr>
 <tr>
 <td><code>energy_cost_per_tick</code></td>
-<td>Energy (FE) taken every tick while it runs. Default: the config's <code>energy_cost_per_tick</code>.</td>
+<td>Energy (FE) taken every tick while it runs. Default: 30.</td>
 </tr>
 <tr>
 <td><code>processing_ticks</code></td>
-<td>How long the transfer takes, in ticks (20 = one second). Default: the config's <code>processing_ticks</code>.</td>
+<td>How long the transfer takes, in ticks (20 = one second). Default: 100.</td>
 </tr>
 </tbody>
 </table>
@@ -1310,13 +1309,12 @@
 </code></pre></div>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="p">{</span><span class="w"> </span><span class="nt">"power"</span><span class="p">:</span><span class="w"> </span><span class="s2">"fsang:marvel/mutant/toad"</span><span class="p">,</span><span class="w"> </span><span class="nt">"enabled"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w"> </span><span class="p">}</span>
 </code></pre></div>
-<h2 id="config-argon-dna-transfertoml">Config (<code>argon-dna-transfer.toml</code>)</h2>
-<p><code>processing_ticks</code> (100), <code>damage_per_vial_operation</code> (0.5), <code>damage_can_kill</code> (false), <code>energy_cost_to_start</code> (2000), <code>energy_cost_per_tick</code> (30), <code>energy_transfer_rate</code> (2000), <code>fuel_energy_per_tick</code> (40), <code>allow_username_lock</code> (true), <code>open_door_on_completion</code> (true), <code>require_occupant_to_start</code> (true), <code>preserve_power_state</code> (true), <code>max_state_bytes</code> (65536).</p>
-<p>A default transfer therefore costs 2,000 FE to start plus 30 FE a tick (5,000 FE in all over the default 100 ticks). Set both to 0 and the machine needs no energy at all. If you already have a <code>argon-dna-transfer.toml</code>, edit it or delete it to get the new defaults.</p>
+<h2 id="transfer-cost">Transfer cost</h2>
+<p>A transfer costs 2,000 FE to start plus 30 FE a tick (5,000 FE in all over 100 ticks). A power can set its own numbers with <code>energy_cost_to_start</code>, <code>energy_cost_per_tick</code> and <code>processing_ticks</code> in its transfer file. Set both costs to 0 and that power needs no energy at all.</p>
 <h2 id="power-block">Power Block</h2>
 <p>The Power Block (id <code>argon:dna_transfer_power_block</code>) stores the energy (FE) the machine runs on. Cables and generators can fill it from any side, and nothing can pull energy back out through them.</p>
-<p>Right-click it for its screen: an energy bar, a <strong>charge from</strong> slot on the left (an item that holds energy, such as a battery, is emptied into the block) and a <strong>charge to</strong> slot on the right (an item that takes energy is charged from the block), up to <code>energy_transfer_rate</code> FE a tick each. Any item that can hold energy works, including Argon's energy items. A <strong>fuel</strong> slot in the middle burns anything a furnace burns into energy: <code>fuel_energy_per_tick</code> FE for every tick of the item's burn time (40 FE a tick, so a piece of coal gives 64,000 FE). It only burns while the buffer has room for the energy, so nothing is wasted.</p>
-<p><strong>Capacity and keeping the energy.</strong> A Power Block holds 100,000 FE by default. Capacity modules are installed from the Tech Table's Modify tab (put the Power Block in the device slot): each module adds 50,000 FE, up to 500,000 FE (eight modules). The capacity is not a config value: it is the <code>argon:energy_capacity</code> component on the item, which the <code>argon:energy_capacity</code> modification effect changes, so the numbers live in the modification file (in FSang: <code>data/fsang/argon/suit_modification/power_block_capacity.json</code>, using <code>fsang:module_capacity</code>; copy it with your own module item for another pack). The DNA Transfer Station takes no modules.</p>
+<p>Right-click it for its screen: an energy bar, a <strong>charge from</strong> slot on the left (an item that holds energy, such as a battery, is emptied into the block) and a <strong>charge to</strong> slot on the right (an item that takes energy is charged from the block), up to 2,000 FE a tick each. Any item that can hold energy works, including Argon's energy items. A <strong>fuel</strong> slot in the middle burns anything a furnace burns into energy: 40 FE for every tick of the item's burn time (so a piece of coal gives 64,000 FE). It only burns while the buffer has room for the energy, so nothing is wasted.</p>
+<p><strong>Capacity and keeping the energy.</strong> A Power Block holds 100,000 FE by default. Capacity modules are installed from the Tech Table's Modify tab (put the Power Block in the device slot): each module adds 50,000 FE, up to 500,000 FE (eight modules). The capacity is the <code>argon:energy_capacity</code> component on the item, which the <code>argon:energy_capacity</code> modification effect changes, so the numbers live in the modification file (in FSang: <code>data/fsang/argon/suit_modification/power_block_capacity.json</code>, using <code>fsang:module_capacity</code>; copy it with your own module item for another pack). The DNA Transfer Station takes no modules.</p>
 <p>When a Power Block is broken it drops as an item that keeps its capacity (<code>argon:energy_capacity</code>), the Tech Table modules recorded as installed (<code>argon:suit_modifications</code>, which is what the Tech Table reads back) and the energy it held (<code>argon:energy</code>), and placing it again gives them back. This is done by its loot table copying those three components from the block entity. The Power Block item is itself an energy item, so it can also be charged, or drained into another Power Block. The slot contents (including the fuel) drop separately, as with any container.</p>
 <p>A transfer is paid for from this block: the start cost is taken when Start is accepted, and the per-tick cost every tick while it runs. If the buffer runs dry the transfer is cancelled and nothing changes.</p>
 <h2 id="access-lock">Access lock</h2>
@@ -1324,14 +1322,14 @@
 <h2 id="safety-and-multiplayer-rules">Safety and multiplayer rules</h2>
 <ul>
 <li>Every decision is made on the server from its own data: who is in the chamber (found from positions), what powers they hold (Palladium), what the vials hold, and whether the lock allows it. Packets from the screen are only requests and are checked again. A client cannot send a power id to be granted; the text is only compared with what the occupant really has.</li>
-<li>By default only the player inside the chamber can start a transfer, so nobody can strip another player from outside.</li>
+<li>Only the player inside the chamber can start a transfer, so nobody can strip another player from outside.</li>
 <li>Both vial slots shut while a transfer runs; the door cannot be opened by hand until it ends.</li>
 <li>The chamber interior is empty, so a closed door never suffocates anyone. A world reload never leaves a transfer running; it just leaves the door as it was, and the player can open it from inside.</li>
 </ul>
 <h2 id="limits">Limits</h2>
 <ul>
 <li>Powers a player gets from anything other than the superpower list (suit sets, abilities) are not superpowers, so the machine leaves them alone on purpose.</li>
-<li>Saved power data in a vial can be edited by anyone with creative or NBT tools. The machine caps its size (<code>max_state_bytes</code>) but cannot judge what is inside.</li>
+<li>Saved power data in a vial can be edited by anyone with creative or NBT tools. The machine caps its size (65,536 bytes) but cannot judge what is inside.</li>
 </ul>
 <h2 id="credits">Credits</h2>
 <p>Machine, vial and chassis textures are adapted from the "unused-textures" pack by Malcolm Riley (https://github.com/malcolmriley/unused-textures), licensed CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/). Changes: copied and renamed, and the chassis glass has its transparent middle filled with a faint translucent blue. The machine screen is framed with the Station block's own front texture and uses the SOL menu's button outline from this workspace, with a grid and scan lines copied from the Tech Table's look; its chamber picture is drawn from the Chassis block's textures.</p>

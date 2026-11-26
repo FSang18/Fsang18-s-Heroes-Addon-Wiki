@@ -834,10 +834,10 @@
 </tbody>
 </table>
 <h2 id="hammers">Hammers</h2>
-<p>Hammers are heavy tools that stagger what they hit. There is one for each material: wooden, stone, copper, iron, golden, diamond and netherite (<code>argon:wooden_hammer</code>, <code>argon:stone_hammer</code>, <code>argon:copper_hammer</code>, <code>argon:iron_hammer</code>, <code>argon:golden_hammer</code>, <code>argon:diamond_hammer</code>, <code>argon:netherite_hammer</code>).</p>
+<p>Argon adds the hammer tool type, not hammers of its own. A pack makes one with the <code>argon:hammer</code> item type, or turns any item into a hammer with the <code>argon:hammer</code> data component. Hammers are heavy tools that stagger what they hit.</p>
 <ul>
 <li>A hit applies the <a href="../effects/">Stagger</a> effect, which slows the target. Creatures in the <code>argon:stagger_immune</code> tag ignore it, and <code>argon:stagger_reduced</code> creatures are slowed less.</li>
-<li>Any item can become a hammer by giving it the <code>argon:hammer</code> data component, which is how modded and addon hammers are made. All hammers belong to the <code>argon:hammers</code> item tag.</li>
+<li>Add a pack's hammers to the <code>argon:hammers</code> item tag so the hammer enchantments can go on them.</li>
 </ul>
 
 
