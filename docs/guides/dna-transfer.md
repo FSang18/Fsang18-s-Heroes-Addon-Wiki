@@ -8,8 +8,6 @@ blurb: A multiblock machine that moves powers between players and vials.
 
 A multiblock machine that takes a Palladium superpower out of a player and into a vial, or gives a power from a vial to a player. DNA vials are only containers: they never grant anything by themselves. The machine does every transfer.
 
-Config: `config/argon-dna-transfer.toml`.
-
 ## Building it
 
 Seen from the front, the machine is four blocks. All of them have to face the same way, and the Chassis can be on either side.
@@ -33,7 +31,7 @@ The Station scans only these positions (never loads a chunk), claims the Chassis
 2. Right-click the chamber wall (or the Station from outside) for the screen. Sneak and right-click inside to open or shut the door without the screen.
 3. Put a **filled vial** in the top slot and/or an **empty vial** in the bottom slot. If you have more than one power the machine can touch, pick one in the list.
 4. Shut the chamber door (the door icon on the screen, or right-click the Chamber from outside before you step in, then close it from the screen). START only works with the door shut; the status line says **CLOSE THE CHAMBER DOOR TO START** until it is.
-5. Press START. The door is locked for the whole transfer (100 ticks by default; nothing can open it, from inside or out), then it opens by itself (`open_door_on_completion`). If a transfer is cancelled the door opens at once.
+5. Press START. The door is locked for the whole transfer (100 ticks by default; nothing can open it, from inside or out), then it opens by itself. If a transfer is cancelled the door opens at once.
 
 | Vials | Player has a registered power | Result |
 | --- | --- | --- |
@@ -43,7 +41,7 @@ The Station scans only these positions (never loads a chunk), claims the Chassis
 | Filled + empty | yes | **Exchange**: their power goes into the empty vial, the new one is granted. |
 | Filled + empty | no | **Grant** (the empty vial is left alone). |
 
-Damage: `damage_per_vial_operation` (0.5 HP) for each vial filled or emptied, dealt only when the transfer completes. An exchange is two. By default it can never take the player below half a heart.
+Damage: 0.5 HP for each vial filled or emptied, dealt only when the transfer completes. An exchange is two. It can never take the player below half a heart.
 
 A transfer is cancelled, changing nothing and costing nothing, if the occupant leaves, dies or disconnects, a part of the structure is removed, the energy runs out, or anything about the player or the vials differs from what was agreed when Start was pressed.
 
@@ -134,14 +132,14 @@ All fields except `power` / `power_tag` are optional and the values above are th
 | `can_grant` | A vial holding it may be used to give it to a player. |
 | `can_overwrite` | When granted, it may replace a power the player already has. |
 | `can_be_overwritten` | A player's copy may be destroyed by an overwrite (no vial to keep it). |
-| `preserve_state` | The vial also carries the power's saved progress. Also needs the power's own `persistent_data`, and is off everywhere if the config says so. |
+| `preserve_state` | The vial also carries the power's saved progress. Also needs the power's own `persistent_data`. |
 | `display_name` | A text component to show instead of the power's own name. |
 | `colors` | The colours of its vials' liquid: an array of one to three hex codes (`"#3BF2C4"`, `"0x3BF2C4"` or `"3BF2C4"`; plain numbers work too). **The order written is the order they are used.** One colour fills the liquid. Two split it along the diagonal from its top right corner to its bottom left corner, the first on the upper left and the second on the lower right. Three cut it into three diagonal bands, the first on the upper left, the second in the middle and the third on the lower right. A lone `"color": "#3BF2C4"` still works as a one-entry array. By default one colour is picked from the power's id. |
 | `requires` | Powers the player must already hold for this one to be granted. |
 | `blocked_if_holding` | Powers that stop this one being granted while the player holds them. |
-| `energy_cost_to_start` | Energy (FE) taken from the Power Block when a transfer of this power starts. Default: the config's `energy_cost_to_start`. |
-| `energy_cost_per_tick` | Energy (FE) taken every tick while it runs. Default: the config's `energy_cost_per_tick`. |
-| `processing_ticks` | How long the transfer takes, in ticks (20 = one second). Default: the config's `processing_ticks`. |
+| `energy_cost_to_start` | Energy (FE) taken from the Power Block when a transfer of this power starts. Default: 2000. |
+| `energy_cost_per_tick` | Energy (FE) taken every tick while it runs. Default: 30. |
+| `processing_ticks` | How long the transfer takes, in ticks (20 = one second). Default: 100. |
 
 Whose costs a transfer uses: an extraction uses the power taken out, a grant or an overwrite the power that arrives, and an exchange (which moves both) the larger of the two for each of the three numbers.
 
@@ -161,19 +159,17 @@ Examples:
 { "power": "fsang:marvel/mutant/toad", "enabled": false }
 ```
 
-## Config (`argon-dna-transfer.toml`)
+## Transfer cost
 
-`processing_ticks` (100), `damage_per_vial_operation` (0.5), `damage_can_kill` (false), `energy_cost_to_start` (2000), `energy_cost_per_tick` (30), `energy_transfer_rate` (2000), `fuel_energy_per_tick` (40), `allow_username_lock` (true), `open_door_on_completion` (true), `require_occupant_to_start` (true), `preserve_power_state` (true), `max_state_bytes` (65536).
-
-A default transfer therefore costs 2,000 FE to start plus 30 FE a tick (5,000 FE in all over the default 100 ticks). Set both to 0 and the machine needs no energy at all. If you already have a `argon-dna-transfer.toml`, edit it or delete it to get the new defaults.
+A transfer costs 2,000 FE to start plus 30 FE a tick (5,000 FE in all over 100 ticks). A power can set its own numbers with `energy_cost_to_start`, `energy_cost_per_tick` and `processing_ticks` in its transfer file. Set both costs to 0 and that power needs no energy at all.
 
 ## Power Block
 
 The Power Block (id `argon:dna_transfer_power_block`) stores the energy (FE) the machine runs on. Cables and generators can fill it from any side, and nothing can pull energy back out through them.
 
-Right-click it for its screen: an energy bar, a **charge from** slot on the left (an item that holds energy, such as a battery, is emptied into the block) and a **charge to** slot on the right (an item that takes energy is charged from the block), up to `energy_transfer_rate` FE a tick each. Any item that can hold energy works, including Argon's energy items. A **fuel** slot in the middle burns anything a furnace burns into energy: `fuel_energy_per_tick` FE for every tick of the item's burn time (40 FE a tick, so a piece of coal gives 64,000 FE). It only burns while the buffer has room for the energy, so nothing is wasted.
+Right-click it for its screen: an energy bar, a **charge from** slot on the left (an item that holds energy, such as a battery, is emptied into the block) and a **charge to** slot on the right (an item that takes energy is charged from the block), up to 2,000 FE a tick each. Any item that can hold energy works, including Argon's energy items. A **fuel** slot in the middle burns anything a furnace burns into energy: 40 FE for every tick of the item's burn time (so a piece of coal gives 64,000 FE). It only burns while the buffer has room for the energy, so nothing is wasted.
 
-**Capacity and keeping the energy.** A Power Block holds 100,000 FE by default. Capacity modules are installed from the Tech Table's Modify tab (put the Power Block in the device slot): each module adds 50,000 FE, up to 500,000 FE (eight modules). The capacity is not a config value: it is the `argon:energy_capacity` component on the item, which the `argon:energy_capacity` modification effect changes, so the numbers live in the modification file (in FSang: `data/fsang/argon/suit_modification/power_block_capacity.json`, using `fsang:module_capacity`; copy it with your own module item for another pack). The DNA Transfer Station takes no modules.
+**Capacity and keeping the energy.** A Power Block holds 100,000 FE by default. Capacity modules are installed from the Tech Table's Modify tab (put the Power Block in the device slot): each module adds 50,000 FE, up to 500,000 FE (eight modules). The capacity is the `argon:energy_capacity` component on the item, which the `argon:energy_capacity` modification effect changes, so the numbers live in the modification file (in FSang: `data/fsang/argon/suit_modification/power_block_capacity.json`, using `fsang:module_capacity`; copy it with your own module item for another pack). The DNA Transfer Station takes no modules.
 
 When a Power Block is broken it drops as an item that keeps its capacity (`argon:energy_capacity`), the Tech Table modules recorded as installed (`argon:suit_modifications`, which is what the Tech Table reads back) and the energy it held (`argon:energy`), and placing it again gives them back. This is done by its loot table copying those three components from the block entity. The Power Block item is itself an energy item, so it can also be charged, or drained into another Power Block. The slot contents (including the fuel) drop separately, as with any container.
 
@@ -186,14 +182,14 @@ Public, Private (owner only), or a named player. The player who places the Stati
 ## Safety and multiplayer rules
 
 * Every decision is made on the server from its own data: who is in the chamber (found from positions), what powers they hold (Palladium), what the vials hold, and whether the lock allows it. Packets from the screen are only requests and are checked again. A client cannot send a power id to be granted; the text is only compared with what the occupant really has.
-* By default only the player inside the chamber can start a transfer, so nobody can strip another player from outside.
+* Only the player inside the chamber can start a transfer, so nobody can strip another player from outside.
 * Both vial slots shut while a transfer runs; the door cannot be opened by hand until it ends.
 * The chamber interior is empty, so a closed door never suffocates anyone. A world reload never leaves a transfer running; it just leaves the door as it was, and the player can open it from inside.
 
 ## Limits
 
 * Powers a player gets from anything other than the superpower list (suit sets, abilities) are not superpowers, so the machine leaves them alone on purpose.
-* Saved power data in a vial can be edited by anyone with creative or NBT tools. The machine caps its size (`max_state_bytes`) but cannot judge what is inside.
+* Saved power data in a vial can be edited by anyone with creative or NBT tools. The machine caps its size (65,536 bytes) but cannot judge what is inside.
 
 ## Credits
 
