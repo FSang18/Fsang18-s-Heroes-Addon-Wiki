@@ -49,4 +49,4 @@ Argon ships these tags so packs can adjust its behavior by adding or removing en
 | `argon:karma_boss`, `argon:karma_dangerous`, `argon:karma_exempt` | Entity type | How killing a creature changes karma. |
 | `argon:beam_unmeltable` | Block | Blocks that beams can't melt. |
 | `argon:mineable/hammer` | Block | Blocks hammers mine efficiently. |
-| `argon:hammers` | Item | Every hammer. |
+| `argon:hammers` | Item | Items that count as hammers. Empty until a pack adds its own. |

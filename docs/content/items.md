@@ -12,7 +12,7 @@ title: Items
 
 ## Hammers
 
-Hammers are heavy tools that stagger what they hit. There is one for each material: wooden, stone, copper, iron, golden, diamond and netherite (`argon:wooden_hammer`, `argon:stone_hammer`, `argon:copper_hammer`, `argon:iron_hammer`, `argon:golden_hammer`, `argon:diamond_hammer`, `argon:netherite_hammer`).
+Argon adds the hammer tool type, not hammers of its own. A pack makes one with the `argon:hammer` item type, or turns any item into a hammer with the `argon:hammer` data component. Hammers are heavy tools that stagger what they hit.
 
 - A hit applies the [Stagger](effects.md) effect, which slows the target. Creatures in the `argon:stagger_immune` tag ignore it, and `argon:stagger_reduced` creatures are slowed less.
-- Any item can become a hammer by giving it the `argon:hammer` data component, which is how modded and addon hammers are made. All hammers belong to the `argon:hammers` item tag.
+- Add a pack's hammers to the `argon:hammers` item tag so the hammer enchantments can go on them.
