@@ -562,6 +562,24 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Blocks
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -578,6 +596,64 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#crafting-recipes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Crafting recipes
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Crafting recipes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tech-table" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tech Table
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#chemical-synthesizer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Chemical Synthesizer
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -723,6 +799,53 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#crafting-recipes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Crafting recipes
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Crafting recipes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tech-table" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tech Table
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#chemical-synthesizer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Chemical Synthesizer
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -779,6 +902,76 @@
 </tbody>
 </table>
 <p>The three DNA blocks are built together as one machine. See the <a href="../../guides/dna-transfer/">DNA Transfer Station</a> guide.</p>
+<h2 id="crafting-recipes">Crafting recipes</h2>
+<p>Added in Argon 1.1.0. Each block has two recipes, and only one is active at a time:</p>
+<ul>
+<li>With the <code>palladium:material/circuits</code> feature flag <strong>enabled</strong>, the recipe uses a Palladium Quartz Circuit.</li>
+<li>With the flag <strong>disabled</strong>, the same recipe uses a Redstone Comparator in that spot.</li>
+</ul>
+<p>A pack enables the flag in its <code>pack.mcmeta</code>:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="p">{</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">  </span><span class="nt">"pack"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"My pack"</span><span class="w"> </span><span class="p">},</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">  </span><span class="nt">"features"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">    </span><span class="nt">"enabled"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"palladium:material/circuits"</span><span class="p">]</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">  </span><span class="p">}</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="p">}</span>
+</code></pre></div>
+<h3 id="tech-table">Tech Table</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Left</th>
+<th style="text-align: center;">Middle</th>
+<th style="text-align: center;">Right</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">Iron Ingot</td>
+<td style="text-align: center;"><strong>Quartz Circuit</strong> or <strong>Redstone Comparator</strong></td>
+<td style="text-align: center;">Iron Ingot</td>
+</tr>
+<tr>
+<td style="text-align: center;">Redstone Dust</td>
+<td style="text-align: center;">Crafting Table</td>
+<td style="text-align: center;">Redstone Dust</td>
+</tr>
+<tr>
+<td style="text-align: center;">Iron Ingot</td>
+<td style="text-align: center;"><em>(empty)</em></td>
+<td style="text-align: center;">Iron Ingot</td>
+</tr>
+</tbody>
+</table>
+<p>Makes one <code>argon:tech_table</code>.</p>
+<h3 id="chemical-synthesizer">Chemical Synthesizer</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Left</th>
+<th style="text-align: center;">Middle</th>
+<th style="text-align: center;">Right</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">Glass</td>
+<td style="text-align: center;">Brewing Stand</td>
+<td style="text-align: center;">Glass</td>
+</tr>
+<tr>
+<td style="text-align: center;">Glass</td>
+<td style="text-align: center;"><strong>Quartz Circuit</strong> or <strong>Redstone Comparator</strong></td>
+<td style="text-align: center;">Glass</td>
+</tr>
+<tr>
+<td style="text-align: center;">Iron Ingot</td>
+<td style="text-align: center;">Iron Ingot</td>
+<td style="text-align: center;">Iron Ingot</td>
+</tr>
+</tbody>
+</table>
+<p>Makes one <code>argon:chemical_synthesizer</code>.</p>
 
 
 
@@ -819,7 +1012,7 @@
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      This wiki covers Argon, a library mod for Palladium on Minecraft 26.1.2<br> <a href="https://modrinth.com/mod/argon-fsang18">Modrinth</a> · <a href="https://discord.com/invite/BThgxXpBVs">Discord</a>
+      This wiki covers Argon, a library mod for Palladium on Minecraft 26.1.2<br> <a href="https://modrinth.com/mod/argon-fsang18">Modrinth</a> · <a href="https://www.curseforge.com/minecraft/mc-mods/fsang18s-argon-library">CurseForge</a> · <a href="https://discord.com/invite/BThgxXpBVs">Discord</a>
     </div>
   
   
