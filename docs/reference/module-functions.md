@@ -6,7 +6,7 @@ title: Module Functions
 
 <p class="argon-intro">Module functions change an item at the Tech Table. They go in the <code>effects</code> of a <a href="../../guides/tech-table/modules/">module</a>, or in the <code>functions</code> of a <a href="../../guides/tech-table/customize/">Customize slot or button</a>. Entries marked "Modules only" can't be used in Customize files. On a suit module, powers and attribute bonuses go on the chestplate (or the first piece the suit has) and the other functions go on every piece, unless <code>pieces</code> says otherwise.</p>
 
-<p class="argon-count">10 listed &middot; Argon 1.0.1</p>
+<p class="argon-count">10 listed &middot; Argon 1.1.0</p>
 
 ### Add Power {#argonadd_power}
 

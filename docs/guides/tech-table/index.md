@@ -14,6 +14,10 @@ The Tech Table (`argon:tech_table`) is a workbench for powered gear. It has thre
 | **Modify** | Installs modules on a suit or a device. | `data/<namespace>/argon/suit_modification/` |
 | **Customize** | Puts items into an item's own slots, presses its buttons and picks its colors. | `data/<namespace>/argon/tech_table_customization/` |
 
+## Getting a Tech Table
+
+The table is crafted from iron, redstone, a crafting table and either a Quartz Circuit or a Redstone Comparator. See the [crafting recipes](../../content/blocks.md#crafting-recipes).
+
 ## Which one to use
 
 - Use a **module** for an upgrade that costs materials, can have levels, and can be permanent. See [Modules](modules.md).

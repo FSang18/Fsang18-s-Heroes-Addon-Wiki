@@ -6,7 +6,7 @@ title: Abilities
 
 <p class="argon-intro">Abilities are what a power actually does. They go into the <code>abilities</code> field of a Palladium power, and their state decides when they are unlocked and enabled. Every ability that comes with Argon is listed below.</p>
 
-<p class="argon-count">127 listed &middot; Argon 1.0.1</p>
+<p class="argon-count">127 listed &middot; Argon 1.1.0</p>
 
 ### Ability Bar {#argonability_bar}
 
@@ -5999,7 +5999,7 @@ title: Abilities
 
 === "Settings"
 
-    <div class="argon-table-wrap"><table class="argon-fields"><thead><tr><th>Key</th><th>Type</th><th>Description</th><th>Required</th><th>Fallback</th></tr></thead><tbody><tr><td><code>item</code></td><td>Item ID</td><td>The item to display in the animation.</td><td class="argon-center"><span class="argon-yes">&#10003;</span></td><td class="argon-fallback">/</td></tr></tbody></table></div>
+    <div class="argon-table-wrap"><table class="argon-fields"><thead><tr><th>Key</th><th>Type</th><th>Description</th><th>Required</th><th>Fallback</th></tr></thead><tbody><tr><td><code>item</code></td><td>Item ID</td><td>The item to display in the animation.</td><td class="argon-center"><span class="argon-yes">&#10003;</span></td><td class="argon-fallback">/</td></tr><tr><td><code>sound</code></td><td>Boolean</td><td>Whether the totem sound plays with the animation.</td><td class="argon-center"><span class="argon-no">&#10007;</span></td><td class="argon-fallback">true</td></tr></tbody></table></div>
 
 === "Example"
 

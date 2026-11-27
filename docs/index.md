@@ -12,11 +12,11 @@ hide:
 
 <p class="home-tag">A library mod for Palladium on Minecraft 26.1.2</p>
 
-<p class="home-tag">Covers Argon 1.0.1</p>
+<p class="home-tag">Covers Argon 1.1.0</p>
 
 <p class="home-blurb">Argon helps pack developers increase what they can make. It adds abilities, conditions, render types and whole systems to Palladium, so advanced powers can be built in plain JSON without writing any Java.</p>
 
-<div class="home-actions"><a class="md-button md-button--primary" href="getting-started/">Get started</a><a class="md-button" href="reference/abilities/">Abilities</a><a class="md-button" href="reference/conditions/">Conditions</a><a class="md-button" href="https://modrinth.com/mod/argon-fsang18">Modrinth</a></div>
+<div class="home-actions"><a class="md-button md-button--primary" href="getting-started/">Get started</a><a class="md-button" href="reference/abilities/">Abilities</a><a class="md-button" href="reference/conditions/">Conditions</a><a class="md-button" href="https://modrinth.com/mod/argon-fsang18">Modrinth</a><a class="md-button" href="https://www.curseforge.com/minecraft/mc-mods/fsang18s-argon-library">CurseForge</a></div>
 
 </div>
 

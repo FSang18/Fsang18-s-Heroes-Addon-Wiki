@@ -6,7 +6,7 @@ title: Ability State Handlers
 
 <p class="argon-intro">State handlers decide when an ability is unlocked or enabled. These are the ones Argon adds on top of Palladium's own.</p>
 
-<p class="argon-count">1 listed &middot; Argon 1.0.1</p>
+<p class="argon-count">1 listed &middot; Argon 1.1.0</p>
 
 ### Buyables {#argonbuyables}
 

@@ -6,7 +6,7 @@ title: Conditions
 
 <p class="argon-intro">Conditions are checks that return true or false. They are used in ability states, targets, visibility rules and anywhere else a condition is accepted. Every condition that comes with Argon is listed below.</p>
 
-<p class="argon-count">61 listed &middot; Argon 1.0.1</p>
+<p class="argon-count">61 listed &middot; Argon 1.1.0</p>
 
 ### Ability Bar Active {#argonability_bar_active}
 
@@ -1052,7 +1052,7 @@ title: Conditions
 
 === "Settings"
 
-    <div class="argon-table-wrap"><table class="argon-fields"><thead><tr><th>Key</th><th>Type</th><th>Description</th><th>Required</th><th>Fallback</th></tr></thead><tbody><tr><td><code>ability</code></td><td>Ability Reference</td><td>The argon:time_growth ability whose age to check.</td><td class="argon-center"><span class="argon-yes">&#10003;</span></td><td class="argon-fallback">/</td></tr><tr><td><code>min</code></td><td>Double</td><td>The lowest age in days that passes.</td><td class="argon-center"><span class="argon-no">&#10007;</span></td><td class="argon-fallback">0.0</td></tr><tr><td><code>max</code></td><td>Double</td><td>The highest age in days that passes. Unset means no upper limit.</td><td class="argon-center"><span class="argon-no">&#10007;</span></td><td class="argon-fallback">/</td></tr></tbody></table></div>
+    <div class="argon-table-wrap"><table class="argon-fields"><thead><tr><th>Key</th><th>Type</th><th>Description</th><th>Required</th><th>Fallback</th></tr></thead><tbody><tr><td><code>ability</code></td><td>Ability Reference</td><td>The argon:time_growth ability whose age to check.</td><td class="argon-center"><span class="argon-yes">&#10003;</span></td><td class="argon-fallback">/</td></tr><tr><td><code>min</code></td><td>Double</td><td>The lowest age in days that passes.</td><td class="argon-center"><span class="argon-no">&#10007;</span></td><td class="argon-fallback">0.0</td></tr><tr><td><code>max</code></td><td>Double</td><td>The highest age in days that passes. Unset means no upper limit.</td><td class="argon-center"><span class="argon-no">&#10007;</span></td><td class="argon-fallback">/</td></tr><tr><td><code>every</code></td><td>Double</td><td>If above 0, only passes for a moment (20 ticks) each time the age reaches another multiple of this many days, for example 1 to react to every new day.</td><td class="argon-center"><span class="argon-no">&#10007;</span></td><td class="argon-fallback">0.0</td></tr></tbody></table></div>
 
 === "Example"
 

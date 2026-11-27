@@ -6,7 +6,7 @@ title: Dynamic Textures
 
 <p class="argon-intro">Dynamic textures change while the game runs. These are the ones Argon adds.</p>
 
-<p class="argon-count">4 listed &middot; Argon 1.0.1</p>
+<p class="argon-count">4 listed &middot; Argon 1.1.0</p>
 
 ### Armor Or Skin Texture {#argonarmor_or_skin}
 
